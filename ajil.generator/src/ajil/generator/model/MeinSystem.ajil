@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajil:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajil="http://www.example.org/ajil">
+  <services xsi:type="ajil:FunctionalService" name="FilmService" port="7777" serviceDependencies="//@services.2/@providedInterfaces.0" discoveredBy="//@services.1">
+    <domain name="FilmDomain">
+      <entities name="Film">
+        <attributes xsi:type="ajil:String" name="Titel"/>
+      </entities>
+    </domain>
+    <providedInterfaces name="functionalService1Interface1">
+      <abilities xsi:type="ajil:Create" name="CreateMovie" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajil:MultiRead" name="ReadMovies" subject="//@services.0/@domain/@entities.0"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajil:DiscoveryService" name="discoveryService1" knownFunctionalServices="//@services.0 //@services.2 //@services.3"/>
+  <services xsi:type="ajil:FunctionalService" name="SchauspielerService" port="6666" discoveredBy="//@services.1">
+    <domain name="SchauspielerDomain">
+      <entities name="Schauspieler">
+        <attributes xsi:type="ajil:String" name="Name"/>
+      </entities>
+    </domain>
+    <providedInterfaces name="functionalService2Interface1">
+      <abilities xsi:type="ajil:Create" name="CreateActor" subject="//@services.2/@domain/@entities.0"/>
+      <abilities xsi:type="ajil:MultiRead" name="ReadActors" subject="//@services.2/@domain/@entities.0"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajil:FunctionalService" name="BewertungsService" port="8889" discoveredBy="//@services.1">
+    <domain name="BewertungsServiceDomain">
+      <entities name="Bewertung">
+        <attributes xsi:type="ajil:Integer" name="Wertung"/>
+      </entities>
+    </domain>
+    <providedInterfaces name="BewertungsServiceInterface1"/>
+  </services>
+</ajil:System>

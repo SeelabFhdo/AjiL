@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+      
+server:
+  port: [%=discovery.port%]
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  application:
+    name: [%=discovery.name.firstToLowerCase()%]
