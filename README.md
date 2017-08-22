@@ -1,13 +1,14 @@
 # AjiL
-This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language a supportive tool to describe and create Microservice Architecture (MSA).
+This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language and  supportive tool to describe and create Microservice Architecture (MSA).
 
-## Description
+## The Modeling Language
 
-As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. 
+As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. They can be found as the ajil project 
 
-### Abstract Syntax aka Metamodel
+### Abstract Syntax/Metamodel
 
-![AjiL metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
+![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
+*Figure 1: AjiL Metamodel*
 
 As depicted in figure 1, starting from the system as the root element, a MSA consists of several microservices which can
 be classified as functional or their infrastructural purpose. Each service consists of a domain
@@ -23,9 +24,14 @@ Constraint Language (OCL). The constraints are detailed as follows.
 
 ### Concrete Syntax
 
-![AjiL notation](pictures/examplemodel.png "Figure 2: Notation Example")
+![AjiL Notation](pictures/examplemodel.png "Figure 2: Notation Example")
+*Figure 2: Notation Example*
 
 AjiL's concrete syntax, exemplified in figure 2, can be characterized as a Box-and-Line diagram type. It uses uses shapes and colors to distinguish between the different language elements. 
+
+## Corresponding tools
+
+To create and work with AjiL models to support MSA developement, the modeling language comes with an editor and a code generator.
 
 ### Editor
 For creating AjiL diagrams, AjiL comes with an editor which is realized using the [Eclipse Sirius
