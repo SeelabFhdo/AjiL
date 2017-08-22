@@ -5,9 +5,9 @@ This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling 
 
 As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. 
 
-###Abstract Syntax aka Metamodel
+### Abstract Syntax aka Metamodel
 
-(/picture/metamodel.png "Figure 1: AjiL Metamodel")
+![AjiL metamodel](/picture/metamodel.png "Figure 1: AjiL Metamodel")
 
 As depicted in figure 1, starting from the system as the root element, a MSA consists of several microservices which can
 be classified as functional or their infrastructural purpose. Each service consists of a domain
@@ -23,7 +23,7 @@ Constraint Language (OCL). The constraints are detailed as follows.
 
 ### Concrete Syntax
 
-(/picture/examplemodel.png "Figure 2: Notation Example")
+![AjiL notation](/picture/examplemodel.png "Figure 2: Notation Example")
 
 AjiL's concrete syntax, exemplified in figure 2, can be characterized as a Box-and-Line diagram type. It uses uses shapes and colors to distinguish between the different language elements. 
 
