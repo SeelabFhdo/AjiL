@@ -7,7 +7,7 @@ As a modeling language, AjiL comprises three components: (i) Abstract syntax, (i
 
 ### Abstract Syntax aka Metamodel
 
-![AjiL metamodel](/picture/metamodel.png "Figure 1: AjiL Metamodel")
+![AjiL metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
 
 As depicted in figure 1, starting from the system as the root element, a MSA consists of several microservices which can
 be classified as functional or their infrastructural purpose. Each service consists of a domain
@@ -23,24 +23,21 @@ Constraint Language (OCL). The constraints are detailed as follows.
 
 ### Concrete Syntax
 
-![AjiL notation](/picture/examplemodel.png "Figure 2: Notation Example")
+![AjiL notation](pictures/examplemodel.png "Figure 2: Notation Example")
 
 AjiL's concrete syntax, exemplified in figure 2, can be characterized as a Box-and-Line diagram type. It uses uses shapes and colors to distinguish between the different language elements. 
 
 ### Editor
-Eclipse Sirius Framework HYPERLINK
-For
-creating such diagrams, AjiL comes with an editor which is realized using the Eclipse Sirius
-Framework.
-###Generator
-Eclipse Epislon Generation Language HYPERLINK
+For creating AjiL diagrams, AjiL comes with an editor which is realized using the [Eclipse Sirius
+Framework](https://projects.eclipse.org/projects/modeling.sirius).
 
-At last, AjiL as a tool comprises a template-based generator realized with the Epsilon
-Generation Language (EGL) [4]. The generator is able to convert persisted AjiL diagrams
-created with the editor into a runnable MSA. The MSA is based upon Java and the Spring
-framework.
+### Generator
+At last, AjiL as a tool comprises a template-based generator realized with the [Epsilon
+Generation Language (EGL)](https://eclipse.org/epsilon/). The generator is able to convert *.ajil model files to runnable microservices which rely on Spring Boot.
 
 ## Installation
+
+## Usage
 
 ## Contact and Acknowledgement
 
