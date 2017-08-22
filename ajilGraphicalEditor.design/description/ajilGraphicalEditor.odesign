@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="ajil" version="11.1.1.201610211630">
+  <ownedViewpoints name="ajilViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ajilSystem" initialisation="true" domainClass="ajil.System" enablePopupBars="true">
+      <metamodel href="http://www.example.org/ajil#/"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="functionalServiceNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:services" domainClass="ajil.FunctionalService">
+          <borderedNodeMappings name="domainModelNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:domain" domainClass="ajil.DomainModel">
+            <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelExpression="aql:self.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ajilGraphicalEditor.design/description/graphics/Normal.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="discoveryServiceNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:services" domainClass="ajil.DiscoveryService">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ajilGraphicalEditor.design/description/graphics/Discovery.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="apiServiceNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:services" domainClass="ajil.APIService">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ajilGraphicalEditor.design/description/graphics/Gateway.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="configurationServiceNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:services" domainClass="ajil.ConfigurationService">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/ajilGraphicalEditor.design/description/graphics/Configuration.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="serviceInterfaceEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']" targetFinderExpression="feature:providedInterfaces">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="PROVIDES">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="domainEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode']/@borderedNodeMappings[name='domainModelNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:entities">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="entityEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="ajil.Relation" useDomainElement="true">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="aql:if (self.multiplicity.toString() = 'ONE') then 'HAS ONE' else 'HAS MANY' endif">
+              <labelFormat>italic</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="createEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='createNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="CREATES">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="readEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='readNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="READS">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="multiReadEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='multiReadNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="READS MULTIPLE">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="updateEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='updateNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="UPDATES">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="deleteEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='deleteNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="DELETES">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="inheritsEntityEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:parent">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="EXTENDS">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="discoverEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='apiServiceNode'] //@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode'] //@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='configurationServiceNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='discoveryServiceNode']" targetFinderExpression="feature:discoveredBy">
+          <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription labelSize="6" showIcon="false" labelExpression="IS DISCOVERED BY">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="gatewayEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='apiServiceNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']" targetFinderExpression="feature:exposedServices">
+          <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="serviceDependencyEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@containerMappings[name='interfaceContainer']" targetFinderExpression="feature:serviceDependencies">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="CONSUMES">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="configureEdge" sourceMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode']" targetMapping="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='configurationServiceNode']" targetFinderExpression="feature:configuredBy">
+          <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription labelSize="6" showIcon="false" labelExpression="IS CONFIGURED BY">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="entityContainer" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" domainClass="ajil.Entity" childrenPresentation="List">
+          <subNodeMappings name="attributeNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:attributes" domainClass="ajil.PrimitiveDataType">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql: self.name + ': '+ self.type" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="interfaceContainer" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" domainClass="ajil.ServiceInterface">
+          <subNodeMappings name="createNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.Create">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="updateNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.Update">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="deleteNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.Delete">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="readNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.Read">
+            <style xsi:type="style:SquareDescription" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="multiReadNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.MultiRead">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="customNode" deletionDescription="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20Element']" semanticCandidatesExpression="feature:abilities" domainClass="ajil.Custom">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="General Tools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="delete Element">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:RemoveElement"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFunctionalService" nodeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='functionalServiceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.FunctionalService" referenceName="services" variableName="functionalServiceInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'functionalService'+container.services->filter(ajil::FunctionalService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDiscoveryService" nodeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='discoveryServiceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.DiscoveryService" referenceName="services" variableName="functionalServiceInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'discoveryService'+container.services->filter(ajil::DiscoveryService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAPIService" nodeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='apiServiceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.APIService" referenceName="services" variableName="apiServiceInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'discoveryService'+container.services->filter(ajil::DiscoveryService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createConfigurationService" precondition="aql:container.services->count(ajil::ConfigurationService)&lt;=1" nodeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@nodeMappings[name='configurationServiceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.ConfigurationService" referenceName="services" variableName="configurationServiceInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'configurationService'+container.services->filter(ajil::ConfigurationService)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Service Tools">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Domain Model" precondition="aql:(service.oclIsKindOf(ajil::FunctionalService) and service.oclAsType(ajil::FunctionalService).domain->isEmpty())">
+            <element name="service"/>
+            <elementView name="serviceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:service">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.DomainModel" referenceName="domain" variableName="domainInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: service.name+'Domain'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Interface" precondition="aql:(service.oclIsKindOf(ajil::FunctionalService))">
+            <element name="service"/>
+            <elementView name="serviceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:service">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.ServiceInterface" referenceName="providedInterfaces" variableName="serviceInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:service.oclAsType(ajil::FunctionalService).name+'Interface'+service.oclAsType(ajil::FunctionalService).providedInterfaces->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="add DiscoveredBy" precondition="aql:(preSource.oclIsKindOf(ajil::FunctionalService) or preSource.oclIsKindOf(ajil::APIService) or preSource.oclIsKindOf(ajil::ConfigurationService)) and preTarget.oclIsKindOf(ajil::DiscoveryService)" edgeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@edgeMappings[name='discoverEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="discoveredBy" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="add ConfiguredBy" precondition="aql:preSource.oclIsKindOf(ajil::FunctionalService) and preTarget.oclIsKindOf(ajil::ConfigurationService)" edgeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@edgeMappings[name='configureEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="configuredBy" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="add DependsOn" precondition="aql:(preSource.oclIsKindOf(ajil::FunctionalService) and preTarget.oclIsKindOf(ajil::ServiceInterface)" edgeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@edgeMappings[name='serviceDependencyEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="serviceDependencies" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Domain Model Tools">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Entity" precondition="aql:(domain.oclIsKindOf(ajil::DomainModel))">
+            <element name="domain"/>
+            <elementView name="domainView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:domain">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Entity" referenceName="entities" variableName="entityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Entity'+domain.entities->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Entity Tools">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Integer" precondition="aql:(entity.oclIsKindOf(ajil::Entity))">
+            <element name="entity"/>
+            <elementView name="entityView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:entity">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Integer" referenceName="attributes" variableName="integerInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+entity.attributes->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add String" precondition="aql:(entity.oclIsKindOf(ajil::Entity))">
+            <element name="entity"/>
+            <elementView name="entityView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:entity">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.String" referenceName="attributes" variableName="stringInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+entity.attributes->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Boolean" precondition="aql:(entity.oclIsKindOf(ajil::Entity))">
+            <element name="entity"/>
+            <elementView name="entityView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:entity">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Boolean" referenceName="attributes" variableName="booleanInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+entity.attributes->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Float" precondition="aql:(entity.oclIsKindOf(ajil::Entity))">
+            <element name="entity"/>
+            <elementView name="entityView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:entity">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Boolean" referenceName="attributes" variableName="booleanInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+entity.attributes->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Char" precondition="aql:(entity.oclIsKindOf(ajil::Entity))">
+            <element name="entity"/>
+            <elementView name="entityView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:entity">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Char" referenceName="attributes" variableName="charInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+entity.attributes->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="add Relation" precondition="aql:preTarget.differs(preSource) and preSource.oclIsKindOf(ajil::Entity) and preTarget.oclIsKindOf(ajil::Entity)" edgeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@edgeMappings[name='entityEntityEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Relation" referenceName="relations" variableName="relationInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="aql:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="add Inheritance" precondition="aql:preTarget.differs(preSource) and preSource.oclIsKindOf(ajil::Entity) and preTarget.oclIsKindOf(ajil::Entity)" edgeMappings="//@ownedViewpoints[name='ajilViewpoint']/@ownedRepresentations[name='ajilSystem']/@defaultLayer/@edgeMappings[name='inheritsEntityEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Interface Tools">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Create" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Create" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Create'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Read" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Read" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Read'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add MultiRead" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.MultiRead" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'MultiRead'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Delete" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Delete" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Delete'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Update" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Update" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Update'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="add Custom" precondition="aql:(interface.oclIsKindOf(ajil::ServiceInterface))">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajil.Custom" referenceName="abilities" variableName="abilityInstance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Custom'"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ajil.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

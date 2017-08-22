@@ -1,0 +1,88 @@
+[% out.setContentType("Java");%]
+[%
+var location : String = "C:/Users/Jonas/dev/GeneratedServices/";
+var path_entity : String = "functionalService/entity/entity.egl";
+var path_interface : String = "functionalService/interfaces/interface.egl";
+var path_repository : String = "functionalService/repositories/repository.egl";
+var t_entity : Template = TemplateFactory.load(path_entity);
+var t_interface : Template = TemplateFactory.load(path_interface);
+var t_repository : Template = TemplateFactory.load(path_repository);
+var package_entity : String;
+var package_repository : String;
+var package_interface : String;
+var package : String = "de.fh_dortmund.idial";
+var path : String = location+service.name+"/src/main/java/de/fh_dortmund/idial/";
+%]
+package [%=package%];
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+[% if (service.discoveredBy <> null) { %]
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+[% } %]
+[% if (service.discoveredBy <> null) { %]
+@EnableDiscoveryClient
+[% } %]
+@SpringBootApplication
+public class [%=service.name.firstToUpperCase()%]Application {
+    public static void main(String[] args) {
+        SpringApplication.run( [%=service.name.firstToUpperCase()%]Application.class, args);
+    }
+}
+[* if service has a domain model and is populated by entities ... generate them and the corresponding repositories! *]
+[%  
+if(service.domain <> null) {
+	package_entity = package+"."+service.domain.name+".entities";
+    package_repository = package+"."+service.domain.name+".repositories";
+	
+	for (entity in service.domain.entities) {
+		t_entity.generateEntity(path+service.domain.name+"/entities/"+entity.name.firstToUpperCase()+".java", path_entity, entity, package_entity);
+		t_repository.generateRepository(path+service.domain.name+"/repositories/"+entity.name.firstToUpperCase()+"Repository.java", path_repository, entity, package_entity, package_repository);		 
+	} 
+} 
+%] 
+[* if service has one or multiple interfaces ... generate them! *]
+[%  
+if(service.providedInterfaces.size() > 0) {
+	for (interface in service.providedInterfaces) {
+	   package_interface = package+"."+service.name+"Controller";					
+	   t_interface.generateInterface(path+service.name+"Controller/"+interface.name.firstToUpperCase()+"Controller.java", path_interface, interface, service.domain, package_entity, package_repository, package_interface); 
+	} 
+} 
+%] 
+[* Template definitions *]
+
+[* DATA *]
+[* Generate Entities for service... *]
+[%
+  operation Template generateEntity(filename : String, template_path : String, entity : Entity, package_entity : String) {
+    var t : Template = TemplateFactory.load(template_path);
+    t.populate("entity", entity);   
+    t.populate("package_entity", package_entity);
+    t.generate(filename);
+  } 
+%]
+[* DATA STORAGE *]
+[* Generate Repositories for entities... *]
+[%
+  operation Template generateRepository(filename : String, template_path : String, entity : Entity, package_entity : String, package_repository : String) {
+    var t : Template = TemplateFactory.load(template_path);
+    t.populate("entity", entity);   
+    t.populate("package_entity", package_entity);
+    t.populate("package_repository", package_repository);    
+    t.generate(filename);
+  } 
+%]
+[* DATA ACCESS *]
+[* Generate Interfaces for service... *]
+[%
+  operation Template generateInterface(filename : String, template_path : String, interface : ServiceInterface, domain : DomainModel, package_entity : String, package_repository : String, package_interface : String) {
+    var t : Template = TemplateFactory.load(template_path);
+    t.populate("interface", interface);
+    t.populate("domain", domain);        
+    t.populate("package_interface", package_interface);
+    t.populate("package_entity", package_entity);
+    t.populate("package_repository", package_repository);
+    t.generate(filename);
+  } 
+%]

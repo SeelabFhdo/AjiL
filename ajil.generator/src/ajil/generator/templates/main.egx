@@ -1,0 +1,33 @@
+pre {
+	var location : String = "C:/Users/Jonas/dev/GeneratedServices/";
+}
+rule Discovery_pom 
+  transform discovery : DiscoveryService {  
+  template : "discoveryService/pom.egl"  
+  target : location+discovery.name.firstToLowerCase()+"/pom.xml"
+}
+rule Discovery_java 
+  transform discovery : DiscoveryService {  
+  template : "discoveryService/service.egl"  
+  target : location+discovery.name.firstToLowerCase()+"/src/main/java/de/fh_dortmund/idial/"+discovery.name.firstToUpperCase()+"Application.java"
+}
+rule Discovery_yml 
+  transform discovery : DiscoveryService {  
+  template : "discoveryService/yml.egl"  
+  target : location+discovery.name.firstToLowerCase()+"/src/main/resources/application.yml"
+}
+rule Functional_java 
+  transform service : FunctionalService {  
+  template : "functionalService/service.egl"  
+  target : location+service.name.firstToLowerCase()+"/src/main/java/de/fh_dortmund/idial/"+service.name.firstToUpperCase()+"Application.java"
+}
+rule Functional_pom 
+  transform service : FunctionalService {  
+  template : "functionalService/pom.egl"  
+  target : location+service.name.firstToLowerCase()+"/pom.xml"
+}
+rule Functional_yml 
+  transform service : FunctionalService {  
+  template : "functionalService/yml.egl"  
+  target : location+service.name.firstToLowerCase()+"/src/main/resources/application.yml"
+}

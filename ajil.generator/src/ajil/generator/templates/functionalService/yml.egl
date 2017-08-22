@@ -1,0 +1,18 @@
+[% var address : String = "localhost"; %]
+# Spring Properties
+spring:
+  application:
+     name: [%=service.name.firstToLowerCase()%]
+
+[% if (service.discoveredBy <> null) {%]
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://[%=address%]:[%=service.discoveredBy.port%]/eureka/
+[%}%]
+# HTTP Server
+server:
+  port: [%=service.port%]   # HTTP (Tomcat) port
+
+

@@ -1,0 +1,64 @@
+[% out.setContentType("Java");%]
+package [%=package_entity%];
+import java.util.UUID;
+
+
+public class [%=entity.name.firstToUpperCase()%] [% if(entity.parent <> null) { %] extends [%=entity.parent.name.firstToUpperCase()%] [% } %] {
+
+[* Generat identifier*]
+	private UUID id;
+[* Generat attributes*]
+[% 
+for(attribute in entity.attributes) { 
+%]
+	private [%=attribute.type%] [%=attribute.name.toLowerCase()%]; 
+[%	
+}
+%]
+[* Generate references *]
+[% 
+for(ref in entity.relations) {
+	if(ref.multiplicity = 0) { 
+%]
+	private [%=ref.target.name.firstToUpperCase()%] [%=ref.name.toLowerCase()%]; 
+[%
+	} else { %]
+	private List<[%=ref.target.name.firstToUpperCase()%]> [%=ref.name.toLowerCase()%];
+[%	}	
+}
+%]
+[* Generate Constructor *]
+	public [%=entity.name.firstToUpperCase()%]() {
+		this.id = UUID.randomUUID();
+		[% for(ref in entity.relations) {if(ref.multiplicity = 1) { %] [%=ref.name.toLowerCase()%] = new ArrayList<[%=ref.target.name.firstToUpperCase()%]>(); [% }} %] 
+	}
+	public String getId() {
+		return this.id.toString();
+	}
+[* Generate Getter & Setter for attributes*]
+[%
+for(attribute in entity.attributes) { 
+%]
+	public [%=attribute.type%] get[%=attribute.name.firstToUpperCase()%]() {
+	    return this.[%=attribute.name.toLowerCase()%];
+	}
+	public void set[%=attribute.name.firstToUpperCase()%]([%=attribute.type%] [%=attribute.name.toLowerCase()%]) {
+	    this.[%=attribute.name.toLowerCase()%] = [%=attribute.name.toLowerCase()%];
+	}
+[%	
+}
+%]
+[* Generate Getter & Setter for relations *]
+[%
+for(ref in entity.relations) { 
+%]
+	public [%=ref.target.name.firstToUpperCase()%] get[%=ref.name.firstToUpperCase()%]() {
+	    return this.[%=ref.name.toLowerCase()%];
+	}
+	public void set[%=attribute.name.firstToUpperCase()%]([%=ref.target.name.firstToUpperCase()%] [%=ref.name.toLowerCase()%]) {
+	    this.[%=ref.name.toLowerCase()%] = [%=ref.name.toLowerCase()%];
+	}
+[%	
+}
+%]
+}
