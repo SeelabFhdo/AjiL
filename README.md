@@ -1,13 +1,14 @@
 # AjiL
-This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language and  supportive tool to describe and create Microservice Architecture (MSA).
+This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language with associated tools to support the developement of Microservice Architecture (MSA). If you want to know more about Model-Driven Engineering (MDE) I recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al.
 
 ## The Modeling Language
 
-As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. They can be found as the ajil project 
+As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following. 
 
 ### Abstract Syntax/Metamodel
 
 ![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
+
 *Figure 1: AjiL Metamodel*
 
 As depicted in figure 1, starting from the system as the root element, a MSA consists of several microservices which can
@@ -25,11 +26,12 @@ Constraint Language (OCL). The constraints are detailed as follows.
 ### Concrete Syntax
 
 ![AjiL Notation](pictures/examplemodel.png "Figure 2: Notation Example")
+
 *Figure 2: Notation Example*
 
 AjiL's concrete syntax, exemplified in figure 2, can be characterized as a Box-and-Line diagram type. It uses uses shapes and colors to distinguish between the different language elements. 
 
-## Corresponding tools
+## Associated Tools
 
 To create and work with AjiL models to support MSA developement, the modeling language comes with an editor and a code generator.
 
@@ -41,11 +43,16 @@ Framework](https://projects.eclipse.org/projects/modeling.sirius).
 At last, AjiL as a tool comprises a template-based generator realized with the [Epsilon
 Generation Language (EGL)](https://eclipse.org/epsilon/). The generator is able to convert *.ajil model files to runnable microservices which rely on Spring Boot.
 
-## Installation
+## Installation and Usage
+To use AjiL you need *Eclipse Modeling Editon* as IDE which directly includes the Epsilon and Sirius frameworks. AjiL was developed with *Neon.1* but should also work with *Oxygen*.
 
-## Usage
+To use the tools you need to import the sources as individual eclipse modeling projects and generate the necessary EMF projects with the genmodel mechanism in the *ajil* project. Here you are also able to change the metamodel (ecore file) with the included emf notation (*ajil.emf*). 
+
+To run the editor you need to execute the *ajilGraphicalEditor.design* project (Sirius Framework).
+
+The generator is solely useable because the corresponding Aji ecore model is redundantly included. Therefore, if you change the metamodel, you need to change the ecore file in the generator project. The generator is currently hardcoded and therefore certain changes are needed to customize it to your needs.
+These changes can be done in *AjilEglGenerator.java* where the paths to the model and metamodel file need to be altered. Additionally, you need to change the target path in the *main.egx* file.
 
 ## Contact and Acknowledgement
 
-
-
+For any questions feel free to contact me here on github or visit [Dortmund's University of Applied Sciences and Arts](https://www.fh-dortmund.de/en/addresses/idial/sorgalla_jonas.php) website.
