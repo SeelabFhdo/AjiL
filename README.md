@@ -1,12 +1,12 @@
-#Changelog
-Currently we work on improving the Aji Modeling Language in several apspects. Among the list of changes the most severe probably the naming :) We noticed that the abbreviation AjiL sometimes missleads people to think that Aji is an actual programming language for service comparable to languages like Jolie. Therefore, to emphasize its characteristic as a modeling language, we intend to use *AjiML* as abbreviation in upcoming developements. Furthermore, the following list contains a short summary of our planed changes we are working on in this dev branch. 
+# Changelog 12072017
+Currently we work on improving the Aji Modeling Language in several apspects. Among the list of changes the most severe probably the naming :) We noticed that the abbreviation AjiL sometimes missleads people to think that Aji is an actual programming language for service comparable to languages like Jolie. Therefore, to emphasize its characteristic as a modeling language, we intend to use **AjiML** as abbreviation in upcoming developements. Furthermore, the following list contains a short summary of our planed changes we are working on in this dev branch. 
 * Ease installation with a simpler routine
 * Improve documentation regarding the usage of AjiML, possibly with a short series of videos
 * Split the underlying metamodel in two different models. One representing the non-technical concepts, the other model the more technical and non-semantic information, e.g. which generator should be used for a certain service.
 * Adjust the modeling editor to adjust a more reduced system overview and, in addition, another more detailed view for each service and its inner workings. 
 
-Because the intended changes demand a complete refactoring of the code, the branch currently only contains the newly splitted Ecore Metamodels. The generator and graphical editor will be added in the future when the compatibility to the ecore files is established.
- 
+Because the intended changes demand a complete refactoring of the code, the branch currently only contains the already finished splitted Ecore Metamodels. The generator and graphical editor will be added in the future when the compatibility to the ecore files is established.s
+
 ---
 *Note that the following documentation is currently (Dec 2017) deprecated and is going to be reworked!*
 ---
