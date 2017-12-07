@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ajiML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ajiMLT.presentation.AjiMLTModelWizardID"
+            name="%_UI_AjiMLTModelWizard_label"
+            class="ajiMLT.presentation.AjiMLTModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AjiMLTModelFile.gif">
+         <description>%_UI_AjiMLTModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ajiML -->
+      <editor
+            id="ajiMLT.presentation.AjiMLTEditorID"
+            name="%_UI_AjiMLTEditor_label"
+            icon="icons/full/obj16/AjiMLTModelFile.gif"
+            extensions="ajimlt"
+            class="ajiMLT.presentation.AjiMLTEditor"
+            contributorClass="ajiMLT.presentation.AjiMLTActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ajiML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ajiML.presentation.AjiMLModelWizardID"
+            name="%_UI_AjiMLModelWizard_label"
+            class="ajiML.presentation.AjiMLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AjiMLModelFile.gif">
+         <description>%_UI_AjiMLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ajiML -->
+      <editor
+            id="ajiML.presentation.AjiMLEditorID"
+            name="%_UI_AjiMLEditor_label"
+            icon="icons/full/obj16/AjiMLModelFile.gif"
+            extensions="ajiml"
+            class="ajiML.presentation.AjiMLEditor"
+            contributorClass="ajiML.presentation.AjiMLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

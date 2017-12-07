@@ -1,13 +1,26 @@
-# AjiL
-This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language with associated tools to support the developement of Microservice Architecture (MSA). The language is mainly developed by the SEELAB research group of Dortmund's University of Applied Sciences and Arts. If you want to know more about Model-Driven Engineering (MDE) we recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al.
+#Changelog
+Currently we work on improving the Aji Modeling Language in several apspects. Among the list of changes the most severe probably the naming :) We noticed that the abbreviation AjiL sometimes missleads people to think that Aji is an actual programming language for service comparable to languages like Jolie. Therefore, to emphasize its characteristic as a modeling language, we intend to use *AjiML* as abbreviation in upcoming developements. Furthermore, the following list contains a short summary of our planed changes we are working on in this dev branch. 
+* Ease installation with a simpler routine
+* Improve documentation regarding the usage of AjiML, possibly with a short series of videos
+* Split the underlying metamodel in two different models. One representing the non-technical concepts, the other model the more technical and non-semantic information, e.g. which generator should be used for a certain service.
+* Adjust the modeling editor to adjust a more reduced system overview and, in addition, another more detailed view for each service and its inner workings. 
+
+Because the intended changes demand a complete refactoring of the code, the branch currently only contains the newly splitted Ecore Metamodels. The generator and graphical editor will be added in the future when the compatibility to the ecore files is established.
+ 
+---
+*Note that the following documentation is currently (Dec 2017) deprecated and is going to be reworked!*
+---
+
+# AjiML
+This repository is home of the Aji Modeling Language (AjiML). AjiML is a modeling language with associated tools to support the developement of Microservice Architecture (MSA). The language is mainly developed by the SEELAB research group of Dortmund's University of Applied Sciences and Arts. If you want to know more about Model-Driven Engineering (MDE) we recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al.
 
 ## The Modeling Language
 
-As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following sections. Although we eagerly work on improving the language itself as well as its documentation, we are still in an early developement stage. Please feel free to help improve AjiL.
+As a modeling language, AjiML comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following sections. Although we eagerly work on improving the language itself as well as its documentation, we are still in an early developement stage. Please feel free to help improve AjiL.
 
 ### Abstract Syntax/Metamodel
 
-![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
+![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiML Metamodel")
 
 *Figure 1: AjiL Metamodel*
 
