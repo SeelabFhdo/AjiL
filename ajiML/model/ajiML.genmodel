@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ajiML/src" modelPluginID="ajiML" modelName="AjiML"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>ajiMLT.ecore</foreignModel>
+  <genPackages prefix="AjiMLT" disposableProviderFactory="true" ecorePackage="ajiMLT.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiMLT.ecore#//EGenerator">
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//EGenerator/SpringCloud"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiMLT.ecore#//ECommunicationMechanism">
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//ECommunicationMechanism/RESTfulHTTP"/>
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//ECommunicationMechanism/PublishSubscribe"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiMLT.ecore#//EDatabase">
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//EDatabase/MongoDB"/>
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//EDatabase/MySQL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiMLT.ecore#//EMultiplicity">
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//EMultiplicity/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="ajiMLT.ecore#//EMultiplicity/MANY"/>
+    </genEnums>
+    <genClasses ecoreClass="ajiMLT.ecore#//FunctionalServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//FunctionalServiceT/generator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//FunctionalServiceT/database"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//FunctionalServiceT/containerized"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//DiscoveryServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//DiscoveryServiceT/generator"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//APIServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//APIServiceT/generator"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//ConfigurationServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//ConfigurationServiceT/generator"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//SecurityServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/generator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/certificatePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/certificatePassword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/KeyPairName"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//ServiceInterfaceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//ServiceInterfaceT/mechanism"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//UserManagementServiceT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//UserManagementServiceT/generator"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiMLT.ecore#//SystemT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//DataModelT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//EntityT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//RelationT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//CreateT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//ReadT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//MultiReadT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//UpdateT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//DeleteT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//CustomT"/>
+  </genPackages>
+  <genPackages prefix="AjiML" disposableProviderFactory="true" ecorePackage="ajiML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiML.ecore#//EMultiplicity">
+      <genEnumLiterals ecoreEnumLiteral="ajiML.ecore#//EMultiplicity/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="ajiML.ecore#//EMultiplicity/MANY"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="ajiML.ecore#//Multiplicity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Multiplicity/multiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//System/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//System/services"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ajiML.ecore#//Microservice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Microservice/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Microservice/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Microservice/loadBalanced"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Microservice/circuitBreaker"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Microservice/discoveredBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Microservice/configuredBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Microservice/securedBy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ajiML.ecore#//InfrastructureService"/>
+    <genClasses ecoreClass="ajiML.ecore#//FunctionalService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//FunctionalService/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//FunctionalService/providedInterfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//FunctionalService/serviceDependencies"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//DiscoveryService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//DiscoveryService/discoveredServices"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//APIService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//APIService/exposedServices"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//ConfigurationService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//ConfigurationService/configuredServices"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//SecurityService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//SecurityService/securedServices"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//UserManagementService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//UserManagementService/providesUsers"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//ServiceInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//ServiceInterface/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//ServiceInterface/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//ServiceInterface/abilities"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//ServiceInterface/exposedToGateways"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//ServiceInterface/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//DataModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//DataModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//DataModel/entities"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//DataModel/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Entity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Entity/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//Entity/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ajiML.ecore#//Entity/relations"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//Entity/domainModel"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Relation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Relation/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//Relation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Relation/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ajiML.ecore#//Ability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Ability/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ajiML.ecore#//Ability/owner"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Create">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Create/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Read">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Read/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//MultiRead">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//MultiRead/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Update">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Update/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Delete">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//Delete/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Custom"/>
+    <genClasses image="false" ecoreClass="ajiML.ecore#//PrimitiveDataType"/>
+    <genClasses ecoreClass="ajiML.ecore#//Integer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Integer/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Integer/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Boolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Boolean/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Boolean/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Float">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Float/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Float/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//String/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//String/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//Char">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Char/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//Char/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

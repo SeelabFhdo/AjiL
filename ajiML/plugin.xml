@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ajiML -->
+      <package
+            uri="http://www.fh-dortmund.de/idial/ajiML"
+            class="ajiML.AjiMLPackage"
+            genModel="model/ajiML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ajiML -->
+      <package
+            uri="http://www.fh-dortmund.de/idial/ajiML/tech"
+            class="ajiMLT.AjiMLTPackage"
+            genModel="model/ajiML.genmodel"/>
+   </extension>
+</plugin>
