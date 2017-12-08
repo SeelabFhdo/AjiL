@@ -71,11 +71,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#Eclipse Genmodel stuff
-ajil.edit/
-ajil.editor/
-ajil.tests/
-
 # Compiled class file
 *.class
 
