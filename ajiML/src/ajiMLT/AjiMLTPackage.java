@@ -859,6 +859,52 @@ public interface AjiMLTPackage extends EPackage {
 	int USER_MANAGEMENT_SERVICE_T_OPERATION_COUNT = AjiMLPackage.USER_MANAGEMENT_SERVICE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ajiMLT.impl.SystemTImpl <em>System T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.SystemTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getSystemT()
+	 * @generated
+	 */
+	int SYSTEM_T = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_T__NAME = AjiMLPackage.SYSTEM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_T__SERVICES = AjiMLPackage.SYSTEM__SERVICES;
+
+	/**
+	 * The number of structural features of the '<em>System T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_T_FEATURE_COUNT = AjiMLPackage.SYSTEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>System T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_T_OPERATION_COUNT = AjiMLPackage.SYSTEM_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -866,7 +912,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEGenerator()
 	 * @generated
 	 */
-	int EGENERATOR = 7;
+	int EGENERATOR = 8;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.ECommunicationMechanism <em>ECommunication Mechanism</em>}' enum.
@@ -876,7 +922,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getECommunicationMechanism()
 	 * @generated
 	 */
-	int ECOMMUNICATION_MECHANISM = 8;
+	int ECOMMUNICATION_MECHANISM = 9;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EDatabase <em>EDatabase</em>}' enum.
@@ -886,7 +932,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEDatabase()
 	 * @generated
 	 */
-	int EDATABASE = 9;
+	int EDATABASE = 10;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EMultiplicity <em>EMultiplicity</em>}' enum.
@@ -896,7 +942,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEMultiplicity()
 	 * @generated
 	 */
-	int EMULTIPLICITY = 10;
+	int EMULTIPLICITY = 11;
 
 
 	/**
@@ -1100,6 +1146,16 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUserManagementServiceT_Generator();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.SystemT <em>System T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System T</em>'.
+	 * @see ajiMLT.SystemT
+	 * @generated
+	 */
+	EClass getSystemT();
 
 	/**
 	 * Returns the meta object for enum '{@link ajiMLT.EGenerator <em>EGenerator</em>}'.
@@ -1329,6 +1385,16 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute USER_MANAGEMENT_SERVICE_T__GENERATOR = eINSTANCE.getUserManagementServiceT_Generator();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.SystemTImpl <em>System T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.SystemTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getSystemT()
+		 * @generated
+		 */
+		EClass SYSTEM_T = eINSTANCE.getSystemT();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.

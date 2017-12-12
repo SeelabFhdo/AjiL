@@ -1,0 +1,17 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.fh-dortmund.de/idial/ajiML/tech')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSystemT
+ */]
+[template public generateElement(aSystemT : SystemT)]
+[comment @main/]
+[file (aSystemT.name, false, 'UTF-8')]
+
+[/file]
+[/template]

@@ -54,4 +54,6 @@
     <eLiterals name="ONE"/>
     <eLiterals name="MANY" value="1"/>
   </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemT" eSuperTypes="ajiML.ecore#//System">
+  </eClassifiers>
 </ecore:EPackage>

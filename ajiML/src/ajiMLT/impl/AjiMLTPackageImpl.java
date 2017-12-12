@@ -18,6 +18,7 @@ import ajiMLT.EMultiplicity;
 import ajiMLT.FunctionalServiceT;
 import ajiMLT.SecurityServiceT;
 import ajiMLT.ServiceInterfaceT;
+import ajiMLT.SystemT;
 import ajiMLT.UserManagementServiceT;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -82,6 +83,13 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * @generated
 	 */
 	private EClass userManagementServiceTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemTEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -353,6 +361,15 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSystemT() {
+		return systemTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEGenerator() {
 		return eGeneratorEEnum;
 	}
@@ -438,6 +455,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		userManagementServiceTEClass = createEClass(USER_MANAGEMENT_SERVICE_T);
 		createEAttribute(userManagementServiceTEClass, USER_MANAGEMENT_SERVICE_T__GENERATOR);
 
+		systemTEClass = createEClass(SYSTEM_T);
+
 		// Create enums
 		eGeneratorEEnum = createEEnum(EGENERATOR);
 		eCommunicationMechanismEEnum = createEEnum(ECOMMUNICATION_MECHANISM);
@@ -483,6 +502,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		securityServiceTEClass.getESuperTypes().add(theAjiMLPackage.getSecurityService());
 		serviceInterfaceTEClass.getESuperTypes().add(theAjiMLPackage.getServiceInterface());
 		userManagementServiceTEClass.getESuperTypes().add(theAjiMLPackage.getUserManagementService());
+		systemTEClass.getESuperTypes().add(theAjiMLPackage.getSystem());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionalServiceTEClass, FunctionalServiceT.class, "FunctionalServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -510,6 +530,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		initEClass(userManagementServiceTEClass, UserManagementServiceT.class, "UserManagementServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserManagementServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, UserManagementServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemTEClass, SystemT.class, "SystemT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(eGeneratorEEnum, EGenerator.class, "EGenerator");

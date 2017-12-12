@@ -106,6 +106,10 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 				return createUserManagementServiceTAdapter();
 			}
 			@Override
+			public Adapter caseSystemT(SystemT object) {
+				return createSystemTAdapter();
+			}
+			@Override
 			public Adapter caseMicroservice(Microservice object) {
 				return createMicroserviceAdapter();
 			}
@@ -140,6 +144,10 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUserManagementService(UserManagementService object) {
 				return createUserManagementServiceAdapter();
+			}
+			@Override
+			public Adapter caseSystem(ajiML.System object) {
+				return createSystemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -256,6 +264,20 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUserManagementServiceTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.SystemT <em>System T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.SystemT
+	 * @generated
+	 */
+	public Adapter createSystemTAdapter() {
 		return null;
 	}
 
@@ -382,6 +404,20 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUserManagementServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.System <em>System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.System
+	 * @generated
+	 */
+	public Adapter createSystemAdapter() {
 		return null;
 	}
 

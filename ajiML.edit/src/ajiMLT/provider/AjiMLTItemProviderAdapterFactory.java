@@ -233,6 +233,29 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.SystemT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemTItemProvider systemTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.SystemT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemTAdapter() {
+		if (systemTItemProvider == null) {
+			systemTItemProvider = new SystemTItemProvider(this);
+		}
+
+		return systemTItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -338,6 +361,7 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 		if (securityServiceTItemProvider != null) securityServiceTItemProvider.dispose();
 		if (serviceInterfaceTItemProvider != null) serviceInterfaceTItemProvider.dispose();
 		if (userManagementServiceTItemProvider != null) userManagementServiceTItemProvider.dispose();
+		if (systemTItemProvider != null) systemTItemProvider.dispose();
 	}
 
 }

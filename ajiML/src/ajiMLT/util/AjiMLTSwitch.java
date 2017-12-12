@@ -136,6 +136,13 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AjiMLTPackage.SYSTEM_T: {
+				SystemT systemT = (SystemT)theEObject;
+				T result = caseSystemT(systemT);
+				if (result == null) result = caseSystem(systemT);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -242,6 +249,21 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUserManagementServiceT(UserManagementServiceT object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System T</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System T</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemT(SystemT object) {
 		return null;
 	}
 
@@ -377,6 +399,21 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUserManagementService(UserManagementService object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystem(ajiML.System object) {
 		return null;
 	}
 

@@ -64,6 +64,7 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 			case AjiMLTPackage.SECURITY_SERVICE_T: return createSecurityServiceT();
 			case AjiMLTPackage.SERVICE_INTERFACE_T: return createServiceInterfaceT();
 			case AjiMLTPackage.USER_MANAGEMENT_SERVICE_T: return createUserManagementServiceT();
+			case AjiMLTPackage.SYSTEM_T: return createSystemT();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -179,6 +180,16 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	public UserManagementServiceT createUserManagementServiceT() {
 		UserManagementServiceTImpl userManagementServiceT = new UserManagementServiceTImpl();
 		return userManagementServiceT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemT createSystemT() {
+		SystemTImpl systemT = new SystemTImpl();
+		return systemT;
 	}
 
 	/**

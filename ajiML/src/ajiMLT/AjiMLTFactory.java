@@ -85,6 +85,15 @@ public interface AjiMLTFactory extends EFactory {
 	UserManagementServiceT createUserManagementServiceT();
 
 	/**
+	 * Returns a new object of class '<em>System T</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System T</em>'.
+	 * @generated
+	 */
+	SystemT createSystemT();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
