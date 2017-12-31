@@ -10,6 +10,8 @@
  *******************************************************************************/
 package ajiML.generator.springcloud.main;
 
+import ajiMLT.AjiMLTPackage;
+import ajiMLT.SystemT;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
@@ -340,7 +343,7 @@ public class Generate extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        
+        resourceSet.getPackageRegistry().put("http://www.fh-dortmund.de/idial/ajiML/tech", AjiMLTPackage.eINSTANCE);
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
