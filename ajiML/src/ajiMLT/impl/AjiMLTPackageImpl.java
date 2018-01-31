@@ -325,6 +325,15 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSecurityServiceT_PublicKey() {
+		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getServiceInterfaceT() {
 		return serviceInterfaceTEClass;
 	}
@@ -448,6 +457,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__CERTIFICATE_PATH);
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__CERTIFICATE_PASSWORD);
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__KEY_PAIR_NAME);
+		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__PUBLIC_KEY);
 
 		serviceInterfaceTEClass = createEClass(SERVICE_INTERFACE_T);
 		createEAttribute(serviceInterfaceTEClass, SERVICE_INTERFACE_T__MECHANISM);
@@ -524,6 +534,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		initEAttribute(getSecurityServiceT_CertificatePath(), ecorePackage.getEString(), "certificatePath", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecurityServiceT_CertificatePassword(), ecorePackage.getEString(), "certificatePassword", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecurityServiceT_KeyPairName(), ecorePackage.getEString(), "KeyPairName", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSecurityServiceT_PublicKey(), ecorePackage.getEString(), "publicKey", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceInterfaceTEClass, ServiceInterfaceT.class, "ServiceInterfaceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getServiceInterfaceT_Mechanism(), this.getECommunicationMechanism(), "mechanism", "RESTfulHTTP", 1, 1, ServiceInterfaceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

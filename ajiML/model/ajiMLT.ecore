@@ -30,6 +30,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="certificatePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="certificatePassword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="KeyPairName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterfaceT" eSuperTypes="ajiML.ecore#//ServiceInterface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mechanism" lowerBound="1"
@@ -54,6 +55,5 @@
     <eLiterals name="ONE"/>
     <eLiterals name="MANY" value="1"/>
   </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SystemT" eSuperTypes="ajiML.ecore#//System">
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemT" eSuperTypes="ajiML.ecore#//System"/>
 </ecore:EPackage>

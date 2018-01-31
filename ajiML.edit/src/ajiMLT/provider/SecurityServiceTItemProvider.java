@@ -53,6 +53,7 @@ public class SecurityServiceTItemProvider extends SecurityServiceItemProvider {
 			addCertificatePathPropertyDescriptor(object);
 			addCertificatePasswordPropertyDescriptor(object);
 			addKeyPairNamePropertyDescriptor(object);
+			addPublicKeyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,6 +147,28 @@ public class SecurityServiceTItemProvider extends SecurityServiceItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Public Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPublicKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SecurityServiceT_publicKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SecurityServiceT_publicKey_feature", "_UI_SecurityServiceT_type"),
+				 AjiMLTPackage.Literals.SECURITY_SERVICE_T__PUBLIC_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns SecurityServiceT.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +210,7 @@ public class SecurityServiceTItemProvider extends SecurityServiceItemProvider {
 			case AjiMLTPackage.SECURITY_SERVICE_T__CERTIFICATE_PATH:
 			case AjiMLTPackage.SECURITY_SERVICE_T__CERTIFICATE_PASSWORD:
 			case AjiMLTPackage.SECURITY_SERVICE_T__KEY_PAIR_NAME:
+			case AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

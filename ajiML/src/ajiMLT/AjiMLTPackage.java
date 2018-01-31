@@ -650,13 +650,22 @@ public interface AjiMLTPackage extends EPackage {
 	int SECURITY_SERVICE_T__KEY_PAIR_NAME = AjiMLPackage.SECURITY_SERVICE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Public Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_SERVICE_T__PUBLIC_KEY = AjiMLPackage.SECURITY_SERVICE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Security Service T</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_SERVICE_T_FEATURE_COUNT = AjiMLPackage.SECURITY_SERVICE_FEATURE_COUNT + 4;
+	int SECURITY_SERVICE_T_FEATURE_COUNT = AjiMLPackage.SECURITY_SERVICE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Security Service T</em>' class.
@@ -1106,6 +1115,17 @@ public interface AjiMLTPackage extends EPackage {
 	EAttribute getSecurityServiceT_KeyPairName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link ajiMLT.SecurityServiceT#getPublicKey <em>Public Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Public Key</em>'.
+	 * @see ajiMLT.SecurityServiceT#getPublicKey()
+	 * @see #getSecurityServiceT()
+	 * @generated
+	 */
+	EAttribute getSecurityServiceT_PublicKey();
+
+	/**
 	 * Returns the meta object for class '{@link ajiMLT.ServiceInterfaceT <em>Service Interface T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1349,6 +1369,14 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SECURITY_SERVICE_T__KEY_PAIR_NAME = eINSTANCE.getSecurityServiceT_KeyPairName();
+
+		/**
+		 * The meta object literal for the '<em><b>Public Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SECURITY_SERVICE_T__PUBLIC_KEY = eINSTANCE.getSecurityServiceT_PublicKey();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.ServiceInterfaceTImpl <em>Service Interface T</em>}' class.

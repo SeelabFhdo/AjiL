@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link ajiMLT.impl.SecurityServiceTImpl#getCertificatePath <em>Certificate Path</em>}</li>
  *   <li>{@link ajiMLT.impl.SecurityServiceTImpl#getCertificatePassword <em>Certificate Password</em>}</li>
  *   <li>{@link ajiMLT.impl.SecurityServiceTImpl#getKeyPairName <em>Key Pair Name</em>}</li>
+ *   <li>{@link ajiMLT.impl.SecurityServiceTImpl#getPublicKey <em>Public Key</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +111,26 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 	 * @ordered
 	 */
 	protected String keyPairName = KEY_PAIR_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPublicKey() <em>Public Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPublicKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PUBLIC_KEY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPublicKey() <em>Public Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPublicKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected String publicKey = PUBLIC_KEY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -219,6 +240,27 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPublicKey() {
+		return publicKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPublicKey(String newPublicKey) {
+		String oldPublicKey = publicKey;
+		publicKey = newPublicKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY, oldPublicKey, publicKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -230,6 +272,8 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 				return getCertificatePassword();
 			case AjiMLTPackage.SECURITY_SERVICE_T__KEY_PAIR_NAME:
 				return getKeyPairName();
+			case AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY:
+				return getPublicKey();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,6 +297,9 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 				return;
 			case AjiMLTPackage.SECURITY_SERVICE_T__KEY_PAIR_NAME:
 				setKeyPairName((String)newValue);
+				return;
+			case AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY:
+				setPublicKey((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -278,6 +325,9 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 			case AjiMLTPackage.SECURITY_SERVICE_T__KEY_PAIR_NAME:
 				setKeyPairName(KEY_PAIR_NAME_EDEFAULT);
 				return;
+			case AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY:
+				setPublicKey(PUBLIC_KEY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -298,6 +348,8 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 				return CERTIFICATE_PASSWORD_EDEFAULT == null ? certificatePassword != null : !CERTIFICATE_PASSWORD_EDEFAULT.equals(certificatePassword);
 			case AjiMLTPackage.SECURITY_SERVICE_T__KEY_PAIR_NAME:
 				return KEY_PAIR_NAME_EDEFAULT == null ? keyPairName != null : !KEY_PAIR_NAME_EDEFAULT.equals(keyPairName);
+			case AjiMLTPackage.SECURITY_SERVICE_T__PUBLIC_KEY:
+				return PUBLIC_KEY_EDEFAULT == null ? publicKey != null : !PUBLIC_KEY_EDEFAULT.equals(publicKey);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -320,6 +372,8 @@ public class SecurityServiceTImpl extends SecurityServiceImpl implements Securit
 		result.append(certificatePassword);
 		result.append(", KeyPairName: ");
 		result.append(keyPairName);
+		result.append(", publicKey: ");
+		result.append(publicKey);
 		result.append(')');
 		return result.toString();
 	}
