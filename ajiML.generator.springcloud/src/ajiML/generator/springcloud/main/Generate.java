@@ -343,7 +343,7 @@ public class Generate extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        resourceSet.getPackageRegistry().put("http://www.fh-dortmund.de/idial/ajiML/tech", AjiMLTPackage.eINSTANCE);
+        
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
