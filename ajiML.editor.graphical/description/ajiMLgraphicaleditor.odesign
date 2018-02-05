@@ -3,13 +3,14 @@
   <ownedViewpoints name="MyViewpoint">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="overviewDiagram" titleExpression="feature:name+' Overview'" initialisation="true" showOnStartup="true" domainClass="ajiML::System" enablePopupBars="true">
       <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
         <nodeMappings name="functionalNode" detailDescriptions="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='create%20detailed%20Diagram']" semanticCandidatesExpression="feature:services" domainClass="ajiMLT::FunctionalServiceT">
           <borderedNodeMappings name="interface" semanticCandidatesExpression="feature:providedInterfaces" domainClass="ajiML::ServiceInterface">
-            <style xsi:type="style:SquareDescription" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </borderedNodeMappings>
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" resizeKind="NSEW" roundedCorner="true" workspacePath="/ajiML.editor.graphical/description/graphics/Normal.svg">
@@ -136,29 +137,22 @@
       <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
-        <nodeMappings name="Interface" semanticCandidatesExpression="feature:providedInterfaces" domainClass="ajiML::ServiceInterface">
-          <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="detailedService" semanticCandidatesExpression="aql:self" domainClass="ajiMLT::FunctionalServiceT">
-          <borderedNodeMappings name="domain" semanticCandidatesExpression="feature:domain" domainClass="ajiML::DataModel">
-            <style xsi:type="style:DotDescription" resizeKind="NSEW">
+        <nodeMappings name="detailedService" domainClass="ajiMLT::FunctionalServiceT">
+          <borderedNodeMappings name="domainNode" semanticCandidatesExpression="feature:domain" domainClass="ajiML::DataModel">
+            <style xsi:type="style:DotDescription" showIcon="false" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" roundedCorner="true" workspacePath="/ajiML.editor.graphical/description/graphics/Normal.svg">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" resizeKind="NSEW" roundedCorner="true" workspacePath="/ajiML.editor.graphical/description/graphics/Normal.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <containerMappings name="entityContainer" semanticCandidatesExpression="entities" domainClass="ajiML::Entity" childrenPresentation="List">
+        <containerMappings name="entityContainer" domainClass="ajiML::Entity" childrenPresentation="List">
           <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::PrimitiveDataType">
-            <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -168,42 +162,51 @@
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="interfaceContainer" domainClass="ajiML::ServiceInterface" childrenPresentation="List">
+          <subNodeMappings name="abilityNode" semanticCandidatesExpression="feature:abilities" domainClass="ajiML::Ability">
+            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
           </style>
         </containerMappings>
         <toolSections name="Entity Manipulation">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New Entity" precondition="aql:self.oclIsKindOf(ajiML::DataModel)" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@containerMappings[name='entityContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DataModel" precondition="aql:self.oclIsKindOf(ajiML::FunctionalService) and (self.domain->size() &lt; 1)" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@nodeMappings[name='detailedService']/@borderedNodeMappings[name='domainNode']">
+            <variable name="service"/>
+            <viewVariable name="serviceView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Entity" referenceName="entities"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DataModel" precondition="aql:self.oclIsKindOf(ajiML::FunctionalService)" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@nodeMappings[name='detailedService']/@borderedNodeMappings[name='domain']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::DataModel" referenceName="domain"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:service">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::DataModel" referenceName="domain" variableName="domainInstance"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Interface Manipulation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new Interface" precondition="aql:self.OclIsKindOf(ajiML::FunctionalService)" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@nodeMappings[name='Interface']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="create Interface" precondition="aql:service.oclIsKindOf(ajiML::FunctionalService)">
+            <element name="service"/>
+            <elementView name="serviceView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::ServiceInterface" referenceName="providedInterfaces"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::ServiceInterfaceT" referenceName="providedInterfaces">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:service.oclAsType(ajiML::FunctionalService).name+'Interface'+service.oclAsType(ajiML::FunctionalService).providedInterfaces->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <subSections/>
         </toolSections>
       </defaultLayer>
-      <edgeMappings name="domainEntityEdge" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@nodeMappings[name='detailedService']/@borderedNodeMappings[name='domain']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:entities">
+      <edgeMappings name="domainEntityEdge" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@nodeMappings[name='detailedService']/@borderedNodeMappings[name='domainNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='detailDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:entities">
         <style sizeComputationExpression="2">
           <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           <centerLabelStyleDescription>
