@@ -6,9 +6,7 @@ package ajiML.provider;
 import ajiML.AjiMLPackage;
 import ajiML.EMultiplicity;
 import ajiML.Multiplicity;
-
 import ajiMLT.provider.AjiMLEditPlugin;
-
 import java.util.Collection;
 import java.util.List;
 

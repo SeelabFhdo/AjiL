@@ -39,6 +39,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/certificatePath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/certificatePassword"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/KeyPairName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//SecurityServiceT/publicKey"/>
     </genClasses>
     <genClasses ecoreClass="ajiMLT.ecore#//ServiceInterfaceT">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//ServiceInterfaceT/mechanism"/>
@@ -47,15 +48,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//UserManagementServiceT/generator"/>
     </genClasses>
     <genClasses ecoreClass="ajiMLT.ecore#//SystemT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//DataModelT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//EntityT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//RelationT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//CreateT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//ReadT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//MultiReadT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//UpdateT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//DeleteT"/>
-    <genClasses ecoreClass="ajiMLT.ecore#//CustomT"/>
   </genPackages>
   <genPackages prefix="AjiML" disposableProviderFactory="true" ecorePackage="ajiML.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiML.ecore#//EMultiplicity">

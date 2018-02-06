@@ -49,7 +49,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ajiML";
+	String eNS_PREFIX = "ajiMLT";
 
 	/**
 	 * The singleton instance of the package.

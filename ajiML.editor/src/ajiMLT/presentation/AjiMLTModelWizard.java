@@ -72,8 +72,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.AjiMLTPackage;
 import ajiMLT.provider.AjiMLEditPlugin;
-
-
 import org.eclipse.core.runtime.Path;
 
 import org.eclipse.jface.viewers.ISelection;

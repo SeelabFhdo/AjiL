@@ -155,9 +155,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import ajiML.provider.AjiMLItemProviderAdapterFactory;
-
 import ajiMLT.presentation.AjiMLEditorPlugin;
-
 import ajiMLT.provider.AjiMLTItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
