@@ -6,9 +6,7 @@ package ajiML.provider;
 import ajiML.AjiMLFactory;
 import ajiML.AjiMLPackage;
 import ajiML.Entity;
-
 import ajiMLT.provider.AjiMLEditPlugin;
-
 import java.util.Collection;
 import java.util.List;
 
