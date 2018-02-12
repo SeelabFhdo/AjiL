@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Springcloud Module Runtime Plug-in
-Bundle-SymbolicName: ajiML.generator.springcloud
+Bundle-SymbolicName: ajiML.generator.java.springcloud
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: ajiML.generator.springcloud.Activator
+Bundle-Activator: ajiML.generator.java.springcloud.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime, 
  org.eclipse.emf.ecore, 
@@ -19,6 +19,6 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: ajiML.generator.springcloud.main
+Export-Package: ajiML.generator.java.springcloud.main
 Import-Package: ajiMLT
 

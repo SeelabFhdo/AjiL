@@ -98,3 +98,7 @@ hs_err_pid*
 ajiML\.generator\.springcloud/\.classpath
 
 ajiML\.generator\.springcloud/build\.properties
+
+ajiML.generator.jav
+
+ajiML.generator.java.springcloud/gen/*

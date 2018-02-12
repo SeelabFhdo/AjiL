@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ajiML:SystemT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajiML="http://www.fh-dortmund.de/idial/ajiML/tech">
-  <services xsi:type="ajiML:FunctionalServiceT">
-    <domain>
-      <entities/>
-    </domain>
-  </services>
-  <services xsi:type="ajiML:DiscoveryServiceT"/>
-</ajiML:SystemT>

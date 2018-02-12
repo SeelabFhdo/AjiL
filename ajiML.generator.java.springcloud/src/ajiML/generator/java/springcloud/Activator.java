@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package ajiML.generator.springcloud;
+package ajiML.generator.java.springcloud;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -21,7 +21,7 @@ public class Activator extends Plugin {
     /**
      * The plug-in ID.
      */
-    public static final String PLUGIN_ID = "ajiML.generator.springcloud";
+    public static final String PLUGIN_ID = "ajiML.generator.java.springcloud";
 
     /**
      * The shared instance.

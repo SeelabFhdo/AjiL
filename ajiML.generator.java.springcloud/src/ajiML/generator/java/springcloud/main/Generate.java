@@ -8,10 +8,9 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package ajiML.generator.springcloud.main;
+package ajiML.generator.java.springcloud.main;
 
 import ajiMLT.AjiMLTPackage;
-import ajiMLT.SystemT;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +23,6 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
@@ -38,7 +36,7 @@ public class Generate extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/ajiML/generator/springcloud/main/generate";
+    public static final String MODULE_FILE_NAME = "/ajiML/generator/java/springcloud/main/generate";
     
     /**
      * The name of the templates that are to be generated.
@@ -333,17 +331,10 @@ public class Generate extends AbstractAcceleoGenerator {
         return TEMPLATE_NAMES;
     }
     
-    /**
-     * This can be used to update the resource set's package registry with all needed EPackages.
-     * 
-     * @param resourceSet
-     *            The resource set which registry has to be updated.
-     * @generated
-     */
-    @Override
+
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        
+        resourceSet.getPackageRegistry().put("http://www.fh-dortmund.de/idial/ajiML/tech", AjiMLTPackage.eINSTANCE);
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation

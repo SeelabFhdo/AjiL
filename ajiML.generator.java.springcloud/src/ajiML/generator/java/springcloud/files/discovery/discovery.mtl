@@ -1,0 +1,117 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module discovery('http://www.fh-dortmund.de/idial/ajiML/tech')]
+
+
+[template public importDiscovery(aDiscoveryServiceT: ajiMLT::DiscoveryServiceT)]
+[file (aDiscoveryServiceT.name + '/pom.xml', false, 'UTF-8')]
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>master-seminar</groupId>
+  <artifactId>[aDiscoveryServiceT.name.toLower()/]</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>[aDiscoveryServiceT.name.toLower()/]</name>
+  <description>Service Discovery for Microservice Applications</description>
+
+   <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.10.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <spring-cloud.version>Edgware.SR2</spring-cloud.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+[/file]
+
+[file (aDiscoveryServiceT.name + '/src/main/java/de/fhdortmund/server/eureka/EurekaApplication.java', false, 'UTF-8')]
+package de.fhdortmund.server.eureka;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class [aDiscoveryServiceT.name.toUpperFirst()/]Application {
+
+  public static void main(String[ '[' /][ ']' /] args) {
+    SpringApplication.run([aDiscoveryServiceT.name.toUpperFirst()/]Application.class, args);
+  }
+}
+[/file]
+
+[file (aDiscoveryServiceT.name +'/src/main/resources/application.yml', false, 'UTF-8')]
+server:
+  port: [aDiscoveryServiceT.port/]
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+spring:
+  application:
+    name: [aDiscoveryServiceT.name.toUpperFirst()/]Service
+
+[/file]
+
+[/template]
+
+

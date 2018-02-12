@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajiMLT:SystemT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajiMLT="http://www.fh-dortmund.de/idial/ajiML/tech">
+  <services xsi:type="ajiMLT:DiscoveryServiceT" name="Eureka" port="8761"/>
+  <services xsi:type="ajiMLT:APIServiceT" name="GatewayService"/>
+  <services xsi:type="ajiMLT:ConfigurationServiceT" name="ConfigurationService"/>
+  <services xsi:type="ajiMLT:SecurityServiceT" name="SecurityService"/>
+  <services xsi:type="ajiMLT:UserManagementServiceT" name="UsermanagementService"/>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="CargoService"/>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="LocationService"/>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="CustomerService"/>
+</ajiMLT:SystemT>

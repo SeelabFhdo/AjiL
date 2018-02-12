@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[import ajiML::generator::java::springcloud::files::discovery::discovery]
+[import ajiML::generator::java::springcloud::files::usermanagement::usermanagement]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSystemT
+ */]
+[template public generateElement(aSystemT : SystemT)]
+[comment @main/]
+[for (aService : ajiMLT::FunctionalServiceT | aSystemT.eAllContents(ajiMLT::FunctionalServiceT))]
+([aService.name/])
+[/for]
+
+[for (aService : ajiMLT::DiscoveryServiceT | aSystemT.eAllContents(ajiMLT::DiscoveryServiceT))]
+[importDiscovery(aService)/]
+[/for]
+
+[for (aService : ajiMLT::UserManagementServiceT | aSystemT.eAllContents(ajiMLT::UserManagementServiceT))]
+[importUsermanagement(aService)/]
+[/for]
+
+
+
+
+
+[/template]
