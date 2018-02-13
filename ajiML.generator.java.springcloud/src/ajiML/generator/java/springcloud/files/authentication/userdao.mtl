@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module userdao('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importUserDao(aSecurityService : SecurityServiceT)]
+[file (aSecurityService.name + '/src/main/java/de/fhdortmund/service/authentication/dao/UserDao.java', false, 'UTF-8')]
+package de.fhdortmund.service.authentication.dao;
+
+import de.fhdortmund.service.authentication.entities.User;
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface UserDao extends CrudRepository<User, Long> {
+
+  public User findByEmail(String email);
+
+  public User findByUsername(String username);
+}
+[/file]
+[/template]

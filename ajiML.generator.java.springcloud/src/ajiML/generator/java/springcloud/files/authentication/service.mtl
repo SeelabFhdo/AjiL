@@ -1,0 +1,50 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module service('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importService(aSecurityService : SecurityServiceT)]
+[file (aSecurityService.name + '/src/main/java/de/fhdortmund/service/authentication/service/UserService.java', false, 'UTF-8')]
+package de.fhdortmund.service.authentication.service;
+
+import de.fhdortmund.service.authentication.entities.User;
+
+public interface UserService {
+
+  public User findByEmail(String email);
+
+  public User findByUsername(String username);
+}
+[/file]
+
+[file (aSecurityService.name + '/src/main/java/de/fhdortmund/service/authentication/service/impl/UserServiceImpl.java', false, 'UTF-8')]
+package de.fhdortmund.service.authentication.service.impl;
+
+import de.fhdortmund.service.authentication.dao.UserDao;
+import de.fhdortmund.service.authentication.entities.User;
+import de.fhdortmund.service.authentication.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+  private UserDao userDao;
+
+  @Autowired
+  public UserServiceImpl(UserDao userDao) {
+    this.userDao = userDao;
+  }
+
+  @Override
+  public User findByEmail(String email) {
+    return userDao.findByEmail(email);
+  }
+
+  @Override
+  public User findByUsername(String username) {
+    return userDao.findByUsername(username);
+  }
+}
+[/file]
+[/template]

@@ -35,7 +35,7 @@ public class UserManagementController {
   }
 
   /**
-   * Request mapping for creating a user
+   * Request mapping for creating a user.
    *
    * @param email email adress of the user
    * @param surName lastname of the user
@@ -67,7 +67,7 @@ public class UserManagementController {
   }
 
   /**
-   * Request mapping for deleting a user
+   * Request mapping for deleting a user.
    *
    * @param id of the useraccount
    * @return status message
@@ -84,7 +84,7 @@ public class UserManagementController {
   }
 
   /**
-   * Request mapping for getting the user id by email adress
+   * Request mapping for getting the user id by email address.
    *
    * @param email email of the user
    * @return user id
@@ -102,7 +102,7 @@ public class UserManagementController {
   }
 
   /**
-   * Request mapping for getting the user by username
+   * Request mapping for getting the user by username.
    *
    * @param username of the user
    * @return user object

@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module wro('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importWro(aSecurityService : SecurityServiceT)]
+[file (aSecurityService.name + '/src/main/wro/main.less', false, 'UTF-8')]
+@brand-primary: #de8579;
+[/file]
+
+[file (aSecurityService.name + '/src/main/wro/wro.properties', false, 'UTF-8')]
+preProcessors=lessCssImport
+postProcessors=less4j,jsMin
+[/file]
+
+[file (aSecurityService.name + '/src/main/wro/wro.xml', false, 'UTF-8')]
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="wro">
+        <css>webjar:bootstrap/3.3.7-1/less/bootstrap.less</css>
+        <css>file:@project.basedir@/src/main/wro/main.less</css>
+        <js>webjar:jquery/2.2.4/jquery.min.js</js>
+    </group>
+</groups>
+[/file]
+[/template]

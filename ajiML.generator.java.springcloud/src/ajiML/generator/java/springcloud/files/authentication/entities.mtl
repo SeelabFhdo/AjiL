@@ -3,11 +3,9 @@
  * The documentation of the module generate.
  */]
 [module entities('http://www.fh-dortmund.de/idial/ajiML/tech')]
-
-
-[template public importUser(aUserManagement: ajiMLT::UserManagementServiceT)]
-[file (aUserManagement.name + '/src/main/java/de/fhdortmund/service/usermanagement/entities/' + 'User.java', false, 'UTF-8')]
-package de.fhdortmund.service.usermanagement.entities;
+[template public importEntities(aSecurityService : SecurityServiceT)]
+[file (aSecurityService.name + '/src/main/java/de/fhdortmund/service/authentication/entities/User.java', false, 'UTF-8')]
+package de.fhdortmund.service.authentication.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,8 +36,6 @@ public class User {
 
   @NotNull
   private String password;
-
-  // Public methods
 
   public User() {
   }
