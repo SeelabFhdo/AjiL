@@ -19,8 +19,13 @@
 [importService(aFunctionalService, aServiceInterFace)/]
 [/for]
 
+[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[importEntitie(aFunctionalService, aEntitie)/]
+[/for]
+
 [importApplicaitonYml(aFunctionalService)/]
 [importMain(aFunctionalService)/]
+
 
 
 [file (aFunctionalService.name + '/pom.xml', false, 'UTF-8')]

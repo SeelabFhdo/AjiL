@@ -3,8 +3,121 @@
  * The documentation of the module generate.
  */]
 [module entitie('http://www.fh-dortmund.de/idial/ajiML/tech')]
-[template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT)]
-[file (aFunctionalService.name+ '/src/main/java/de/fh/entities/Dummy.java', false, 'UTF-8')]
-Dummy-Content
+[template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT, aEntitie : ajiMLT::EntityT)]
+[file (aFunctionalService.name + '/src/main/java/de/fh/entities/' + aEntitie.name + '.java', false, 'UTF-8')]
+package de.fh.entitie;
+
+import java.util.Objects;
+import org.springframework.data.annotation.Id;
+
+public class [aEntitie.name.toUpperFirst()/] {
+
+  @Id
+  private Integer id;
+[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+  private String [aString.name.toLowerFirst()/];
+[/for]
+[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+  private int [aInteger.name.toLowerFirst()/];
+[/for]
+[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+  private boolean [aBoolean.name.toLowerFirst()/];
+[/for]
+[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+  private String [aChar.name.toLowerFirst()/];
+[/for]
+[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+  private float [aFloat.name.toLowerFirst()/];
+[/for]
+
+  public Customer() {
+  }
+
+  public Customer(
+[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+  			String [aString.name.toLowerFirst()/],
+[/for]
+[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+   			int [aInteger.name.toLowerFirst()/],
+[/for]
+[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+   			boolean [aBoolean.name.toLowerFirst()/],
+[/for]
+[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+   			String [aChar.name.toLowerFirst()/],
+[/for]
+[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+  	 		float [aFloat.name.toLowerFirst()/],
+[/for]
+			int id) {
+[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+   	this.[aString.name.toLowerFirst()/] = [aString.name.toLowerFirst()/];
+[/for]
+[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+   	this.[aInteger.name.toLowerFirst()/] = [aInteger.name.toLowerFirst()/];
+[/for]
+[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+   	this.[aBoolean.name.toLowerFirst()/] = [aBoolean.name.toLowerFirst()/]; 
+[/for]
+[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+   	this.[aChar.name.toLowerFirst()/] = [aChar.name.toLowerFirst()/];
+[/for]
+[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+    this.[aFloat.name.toLowerFirst()/] = [aFloat.name.toLowerFirst()/]; 
+[/for]
+    this.id = id;
+  }
+
+[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+  public String get[aString.name.toUpperFirst()/]() {
+    return [aString.name.toLowerFirst()/];
+  }
+
+  public void set[aString.name.toUpperFirst()/](String [aString.name.toLowerFirst()/]) {
+    this.[aString.name.toLowerFirst()/] = [aString.name.toLowerFirst()/];
+  }
+[/for]
+
+[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+  public int get[aInteger.name.toUpperFirst()/]() {
+    return [aInteger.name.toLowerFirst()/];
+  }
+
+  public void set[aInteger.name.toUpperFirst()/](int [aInteger.name.toLowerFirst()/]) {
+    this.[aInteger.name.toLowerFirst()/] = [aInteger.name.toLowerFirst()/];
+  }
+[/for]
+
+[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+  public boolean get[aBoolean.name.toUpperFirst()/]() {
+    return [aBoolean.name.toLowerFirst()/];
+  }
+
+  public void set[aBoolean.name.toUpperFirst()/](boolean [aBoolean.name.toLowerFirst()/]) {
+    this.[aBoolean.name.toLowerFirst()/] = [aBoolean.name.toLowerFirst()/];
+  }
+[/for]
+
+[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+  public String get[aChar.name.toUpperFirst()/]() {
+    return [aChar.name.toLowerFirst()/];
+  }
+
+  public void set[aChar.name.toUpperFirst()/](String [aChar.name.toUpperFirst()/]) {
+    this.[aChar.name.toUpperFirst()/] = [aChar.name.toUpperFirst()/];
+  }
+[/for]
+
+[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+  public float get[aFloat.name.toUpperFirst()/]() {
+    return [aFloat.name.toLowerFirst()/];
+  }
+
+  public void set[aFloat.name.toUpperFirst()/](float [aFloat.name.toLowerFirst()/]) {
+    this.[aFloat.name.toLowerFirst()/] = [aFloat.name.toLowerFirst()/];
+  }
+[/for]
+}
+
 [/file]
 [/template]

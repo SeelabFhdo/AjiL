@@ -5,6 +5,15 @@
 [module dao('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importDao(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
 [file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aServiceInterface.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
-Dummy-Content
+package de.fh.dao;
+
+import de.fh.cargo.entitie.Customer;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface aServiceInterface.name.toUpperFirst()Dao extends MongoRepository<Customer, Integer> {
+
+  public Customer findById(Integer Id);
+}
+
 [/file]
 [/template]
