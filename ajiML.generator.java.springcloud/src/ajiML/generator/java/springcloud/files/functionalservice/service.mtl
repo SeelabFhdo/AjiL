@@ -5,10 +5,61 @@
 [module service('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importService(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
 [file (aFunctionalService.name+ '/src/main/java/de/fh/service/' + aServiceInterface.name.toUpperFirst() + 'Service.java', false, 'UTF-8')]
-Dummy-Content
+package de.fh.service;
+
+import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+
+public interface [aServiceInterface.name.toUpperFirst()/]Service {
+
+  public [aServiceInterface.name.toUpperFirst()/] create([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
+  public [aServiceInterface.name.toUpperFirst()/] read(int Id);
+  public [aServiceInterface.name.toUpperFirst()/] update ([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
+  public void delete([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
+}
 [/file]
 
 [file (aFunctionalService.name+ '/src/main/java/de/fh/service/impl/' + aServiceInterface.name.toUpperFirst() + 'ServiceImpl.java', false, 'UTF-8')]
-Dummy-Content
+package de.fh.service.impl;
+
+import de.fh.dao.[aServiceInterface.name.toUpperFirst()/]Dao;
+import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.service.[aServiceInterface.name.toUpperFirst()/]Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aServiceInterface.name.toUpperFirst()/]Service {
+
+  private [aServiceInterface.name.toUpperFirst()/]Dao [aServiceInterface.name.toLowerFirst()/]Dao;
+
+  @Autowired
+  public [aServiceInterface.name.toUpperFirst()/]ServiceImpl([aServiceInterface.name.toUpperFirst()/]Dao [aServiceInterface.name.toLowerFirst()/]Dao) {
+    this.[aServiceInterface.name.toLowerFirst()/]Dao = [aServiceInterface.name.toLowerFirst()/]Dao;
+  }
+
+  @Override
+  public [aServiceInterface.name.toUpperFirst()/] create([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
+    [aServiceInterface.name.toLowerFirst()/]Dao.save([aServiceInterface.name.toLowerFirst()/]);
+    return [aServiceInterface.name.toLowerFirst()/]Dao.findById([aServiceInterface.name.toLowerFirst()/].getId());
+  }
+
+  @Override
+  public [aServiceInterface.name.toUpperFirst()/] read(int Id) {
+    return [aServiceInterface.name.toLowerFirst()/]Dao.findById(Id);
+  }
+
+  @Override
+  public [aServiceInterface.name.toUpperFirst()/] update([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
+    [aServiceInterface.name.toLowerFirst()/]Dao.save([aServiceInterface.name.toLowerFirst()/]);
+    return [aServiceInterface.name.toLowerFirst()/]Dao.findById([aServiceInterface.name.toLowerFirst()/].getId());
+  }
+
+  @Override
+  public void delete([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
+    [aServiceInterface.name.toLowerFirst()/]Dao.delete([aServiceInterface.name.toLowerFirst()/]);
+  }
+
+
+}
 [/file]
 [/template]

@@ -6,7 +6,7 @@
 
 [import ajiML::generator::java::springcloud::files::functionalservice::controller]
 [import ajiML::generator::java::springcloud::files::functionalservice::dao]
-[import ajiML::generator::java::springcloud::files::functionalservice::entitie]
+[import ajiML::generator::java::springcloud::files::functionalservice::entity]
 [import ajiML::generator::java::springcloud::files::functionalservice::main]
 [import ajiML::generator::java::springcloud::files::functionalservice::service]
 [import ajiML::generator::java::springcloud::files::functionalservice::applicationYml]

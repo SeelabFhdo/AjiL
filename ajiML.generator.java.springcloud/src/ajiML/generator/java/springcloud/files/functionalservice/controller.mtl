@@ -5,6 +5,151 @@
 [module controller('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importController(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
 [file (aFunctionalService.name+ '/src/main/java/de/fh/controller/' + aServiceInterface.name.toUpperFirst() + 'RestController.java', false, 'UTF-8')]
-Dummy-Content
+package de.fh.controller;
+
+import com.google.gson.Gson;
+import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.service.[aServiceInterface.name.toUpperFirst()/]Service;
+import java.security.InvalidParameterException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/resources/[aServiceInterface.name.toLowerFirst()/]", produces = "application/json")
+public class [aServiceInterface.name.toUpperFirst()/]RestController {
+
+  private [aServiceInterface.name.toUpperFirst()/]Service [aServiceInterface.name.toLowerFirst()/]Service;
+
+  @Autowired
+  public [aServiceInterface.name.toUpperFirst()/]RestController([aServiceInterface.name.toUpperFirst()/]Service [aServiceInterface.name.toLowerFirst()/]Service) {
+    this.[aServiceInterface.name.toLowerFirst()/]Service = [aServiceInterface.name.toLowerFirst()/]Service;
+  }
+
+  @PutMapping("/")
+  public String create(
+[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[if (aEntitie.name.contains(aServiceInterface.name.toUpperFirst()))]
+		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+		  			@RequestParam String [aString.name.toLowerFirst()/],
+		[/for]
+		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		   			@RequestParam int [aInteger.name.toLowerFirst()/],
+		[/for]
+		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+		   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],
+		[/for]
+		[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+		   			@RequestParam String [aChar.name.toLowerFirst()/],
+		[/for]
+		[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+		  	 		@RequestParam float [aFloat.name.toLowerFirst()/],
+		[/for]
+   [/if]
+[/for]
+					@RequestParam String Id) {
+    [aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/] = new [aServiceInterface.name.toUpperFirst()/](
+[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[if (aEntitie.name.contains(aServiceInterface.name.toUpperFirst()))]
+		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+		  			[aString.name.toLowerFirst()/],
+		[/for]
+		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		   			[aInteger.name.toLowerFirst()/],
+		[/for]
+		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+		   			[aBoolean.name.toLowerFirst()/],
+		[/for]
+		[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+		   			[aChar.name.toLowerFirst()/],
+		[/for]
+		[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+		  	 		[aFloat.name.toLowerFirst()/],
+		[/for]
+   [/if]
+[/for]
+			Integer.parseInt(Id));
+    [aServiceInterface.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.create([aServiceInterface.name.toLowerFirst()/]);
+    Gson gson = new Gson();
+    return gson.toJson([aServiceInterface.name.toLowerFirst()/]);
+  }
+
+  @GetMapping("/{Id}")
+  public String read(@PathVariable String Id) {
+    Gson gson = new Gson();
+    [aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read(Integer.parseInt(Id));
+    if ([aServiceInterface.name.toLowerFirst()/] == null) {
+      throw new InvalidParameterException("No [aServiceInterface.name.toUpperFirst()/] with Id: " + Id);
+    }
+    return gson.toJson([aServiceInterface.name.toLowerFirst()/]);
+  }
+
+  @PostMapping("/")
+  public String update(
+[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[if (aEntitie.name.contains(aServiceInterface.name.toUpperFirst()))]
+		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+		  			@RequestParam String [aString.name.toLowerFirst()/],
+		[/for]
+		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		   			@RequestParam int [aInteger.name.toLowerFirst()/],
+		[/for]
+		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+		   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],
+		[/for]
+		[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+		   			@RequestParam String [aChar.name.toLowerFirst()/],
+		[/for]
+		[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+		  	 		@RequestParam float [aFloat.name.toLowerFirst()/],
+		[/for]
+   [/if]
+[/for]
+					@RequestParam String Id) {
+[aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/] = new [aServiceInterface.name.toUpperFirst()/](
+[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[if (aEntitie.name.contains(aServiceInterface.name.toUpperFirst()))]
+		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
+		  			[aString.name.toLowerFirst()/],
+		[/for]
+		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		   			[aInteger.name.toLowerFirst()/],
+		[/for]
+		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
+		   			[aBoolean.name.toLowerFirst()/],
+		[/for]
+		[for (aChar : ajiMLT::CharT | aFunctionalService.eAllContents(ajiMLT::CharT))]
+		   			[aChar.name.toLowerFirst()/],
+		[/for]
+		[for (aFloat : ajiMLT::FloatT | aFunctionalService.eAllContents(ajiMLT::FloatT))]
+		  	 		[aFloat.name.toLowerFirst()/],
+		[/for]
+   [/if]
+[/for]
+			Integer.parseInt(Id));
+    [aServiceInterface.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.update([aServiceInterface.name.toLowerFirst()/]);
+    Gson gson = new Gson();
+    return gson.toJson([aServiceInterface.name.toLowerFirst()/]);
+  }
+
+  @DeleteMapping("/{Id}")
+  public String delete(@PathVariable String Id) {
+    [aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read(Integer.parseInt(Id));
+    Gson gson = new Gson();
+    if ([aServiceInterface.name.toLowerFirst()/] != null) {
+      [aServiceInterface.name.toLowerFirst()/]Service.delete([aServiceInterface.name.toLowerFirst()/]);
+      return gson.toJson(Id);
+    } else
+      throw new InvalidParameterException("No [aServiceInterface.name.toUpperFirst()/] with Id: " + Id);
+  }
+
+}
+
 [/file]
 [/template]
