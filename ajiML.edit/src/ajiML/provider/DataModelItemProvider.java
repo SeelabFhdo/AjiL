@@ -6,6 +6,7 @@ package ajiML.provider;
 import ajiML.AjiMLFactory;
 import ajiML.AjiMLPackage;
 import ajiML.DataModel;
+import ajiMLT.AjiMLTFactory;
 import ajiMLT.provider.AjiMLEditPlugin;
 import java.util.Collection;
 import java.util.List;
@@ -183,6 +184,11 @@ public class DataModelItemProvider
 			(createChildParameter
 				(AjiMLPackage.Literals.DATA_MODEL__ENTITIES,
 				 AjiMLFactory.eINSTANCE.createEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.DATA_MODEL__ENTITIES,
+				 AjiMLTFactory.eINSTANCE.createEntityT()));
 	}
 
 	/**

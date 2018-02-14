@@ -65,6 +65,20 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 			case AjiMLTPackage.SERVICE_INTERFACE_T: return createServiceInterfaceT();
 			case AjiMLTPackage.USER_MANAGEMENT_SERVICE_T: return createUserManagementServiceT();
 			case AjiMLTPackage.SYSTEM_T: return createSystemT();
+			case AjiMLTPackage.DATA_MODEL_T: return createDataModelT();
+			case AjiMLTPackage.ENTITY_T: return createEntityT();
+			case AjiMLTPackage.RELATION_T: return createRelationT();
+			case AjiMLTPackage.CREATE_T: return createCreateT();
+			case AjiMLTPackage.READ_T: return createReadT();
+			case AjiMLTPackage.UPDATE_T: return createUpdateT();
+			case AjiMLTPackage.DELETE_T: return createDeleteT();
+			case AjiMLTPackage.MULTI_READ_T: return createMultiReadT();
+			case AjiMLTPackage.CUSTOM_T: return createCustomT();
+			case AjiMLTPackage.INTERGER_T: return createIntergerT();
+			case AjiMLTPackage.BOOLEAN_T: return createBooleanT();
+			case AjiMLTPackage.FLOAT_T: return createFloatT();
+			case AjiMLTPackage.STRING_T: return createStringT();
+			case AjiMLTPackage.CHAR_T: return createCharT();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -190,6 +204,146 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	public SystemT createSystemT() {
 		SystemTImpl systemT = new SystemTImpl();
 		return systemT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataModelT createDataModelT() {
+		DataModelTImpl dataModelT = new DataModelTImpl();
+		return dataModelT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EntityT createEntityT() {
+		EntityTImpl entityT = new EntityTImpl();
+		return entityT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RelationT createRelationT() {
+		RelationTImpl relationT = new RelationTImpl();
+		return relationT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CreateT createCreateT() {
+		CreateTImpl createT = new CreateTImpl();
+		return createT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReadT createReadT() {
+		ReadTImpl readT = new ReadTImpl();
+		return readT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UpdateT createUpdateT() {
+		UpdateTImpl updateT = new UpdateTImpl();
+		return updateT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeleteT createDeleteT() {
+		DeleteTImpl deleteT = new DeleteTImpl();
+		return deleteT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultiReadT createMultiReadT() {
+		MultiReadTImpl multiReadT = new MultiReadTImpl();
+		return multiReadT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CustomT createCustomT() {
+		CustomTImpl customT = new CustomTImpl();
+		return customT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntergerT createIntergerT() {
+		IntergerTImpl intergerT = new IntergerTImpl();
+		return intergerT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanT createBooleanT() {
+		BooleanTImpl booleanT = new BooleanTImpl();
+		return booleanT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FloatT createFloatT() {
+		FloatTImpl floatT = new FloatTImpl();
+		return floatT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringT createStringT() {
+		StringTImpl stringT = new StringTImpl();
+		return stringT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CharT createCharT() {
+		CharTImpl charT = new CharTImpl();
+		return charT;
 	}
 
 	/**

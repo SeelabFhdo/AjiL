@@ -9,16 +9,30 @@ import ajiML.impl.AjiMLPackageImpl;
 import ajiMLT.APIServiceT;
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.AjiMLTPackage;
+import ajiMLT.BooleanT;
+import ajiMLT.CharT;
 import ajiMLT.ConfigurationServiceT;
+import ajiMLT.CreateT;
+import ajiMLT.CustomT;
+import ajiMLT.DataModelT;
+import ajiMLT.DeleteT;
 import ajiMLT.DiscoveryServiceT;
 import ajiMLT.ECommunicationMechanism;
 import ajiMLT.EDatabase;
 import ajiMLT.EGenerator;
 import ajiMLT.EMultiplicity;
+import ajiMLT.EntityT;
+import ajiMLT.FloatT;
 import ajiMLT.FunctionalServiceT;
+import ajiMLT.IntergerT;
+import ajiMLT.MultiReadT;
+import ajiMLT.ReadT;
+import ajiMLT.RelationT;
 import ajiMLT.SecurityServiceT;
 import ajiMLT.ServiceInterfaceT;
+import ajiMLT.StringT;
 import ajiMLT.SystemT;
+import ajiMLT.UpdateT;
 import ajiMLT.UserManagementServiceT;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -90,6 +104,104 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * @generated
 	 */
 	private EClass systemTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataModelTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entityTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass relationTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass createTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass readTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiReadTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass customTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intergerTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass floatTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass charTEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -379,6 +491,132 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDataModelT() {
+		return dataModelTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntityT() {
+		return entityTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRelationT() {
+		return relationTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCreateT() {
+		return createTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReadT() {
+		return readTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUpdateT() {
+		return updateTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeleteT() {
+		return deleteTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiReadT() {
+		return multiReadTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCustomT() {
+		return customTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIntergerT() {
+		return intergerTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBooleanT() {
+		return booleanTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFloatT() {
+		return floatTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringT() {
+		return stringTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCharT() {
+		return charTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEGenerator() {
 		return eGeneratorEEnum;
 	}
@@ -467,6 +705,34 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		systemTEClass = createEClass(SYSTEM_T);
 
+		dataModelTEClass = createEClass(DATA_MODEL_T);
+
+		entityTEClass = createEClass(ENTITY_T);
+
+		relationTEClass = createEClass(RELATION_T);
+
+		createTEClass = createEClass(CREATE_T);
+
+		readTEClass = createEClass(READ_T);
+
+		updateTEClass = createEClass(UPDATE_T);
+
+		deleteTEClass = createEClass(DELETE_T);
+
+		multiReadTEClass = createEClass(MULTI_READ_T);
+
+		customTEClass = createEClass(CUSTOM_T);
+
+		intergerTEClass = createEClass(INTERGER_T);
+
+		booleanTEClass = createEClass(BOOLEAN_T);
+
+		floatTEClass = createEClass(FLOAT_T);
+
+		stringTEClass = createEClass(STRING_T);
+
+		charTEClass = createEClass(CHAR_T);
+
 		// Create enums
 		eGeneratorEEnum = createEEnum(EGENERATOR);
 		eCommunicationMechanismEEnum = createEEnum(ECOMMUNICATION_MECHANISM);
@@ -513,6 +779,20 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		serviceInterfaceTEClass.getESuperTypes().add(theAjiMLPackage.getServiceInterface());
 		userManagementServiceTEClass.getESuperTypes().add(theAjiMLPackage.getUserManagementService());
 		systemTEClass.getESuperTypes().add(theAjiMLPackage.getSystem());
+		dataModelTEClass.getESuperTypes().add(theAjiMLPackage.getDataModel());
+		entityTEClass.getESuperTypes().add(theAjiMLPackage.getEntity());
+		relationTEClass.getESuperTypes().add(theAjiMLPackage.getRelation());
+		createTEClass.getESuperTypes().add(theAjiMLPackage.getCreate());
+		readTEClass.getESuperTypes().add(theAjiMLPackage.getRead());
+		updateTEClass.getESuperTypes().add(theAjiMLPackage.getUpdate());
+		deleteTEClass.getESuperTypes().add(theAjiMLPackage.getDelete());
+		multiReadTEClass.getESuperTypes().add(theAjiMLPackage.getMultiRead());
+		customTEClass.getESuperTypes().add(theAjiMLPackage.getCustom());
+		intergerTEClass.getESuperTypes().add(theAjiMLPackage.getInteger());
+		booleanTEClass.getESuperTypes().add(theAjiMLPackage.getBoolean());
+		floatTEClass.getESuperTypes().add(theAjiMLPackage.getFloat());
+		stringTEClass.getESuperTypes().add(theAjiMLPackage.getString());
+		charTEClass.getESuperTypes().add(theAjiMLPackage.getChar());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionalServiceTEClass, FunctionalServiceT.class, "FunctionalServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -543,6 +823,34 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		initEAttribute(getUserManagementServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, UserManagementServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemTEClass, SystemT.class, "SystemT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dataModelTEClass, DataModelT.class, "DataModelT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(entityTEClass, EntityT.class, "EntityT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(relationTEClass, RelationT.class, "RelationT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(createTEClass, CreateT.class, "CreateT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(readTEClass, ReadT.class, "ReadT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateTEClass, UpdateT.class, "UpdateT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deleteTEClass, DeleteT.class, "DeleteT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(multiReadTEClass, MultiReadT.class, "MultiReadT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(customTEClass, CustomT.class, "CustomT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(intergerTEClass, IntergerT.class, "IntergerT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(booleanTEClass, BooleanT.class, "BooleanT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(floatTEClass, FloatT.class, "FloatT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringTEClass, StringT.class, "StringT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(charTEClass, CharT.class, "CharT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(eGeneratorEEnum, EGenerator.class, "EGenerator");
