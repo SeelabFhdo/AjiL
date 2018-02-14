@@ -6,6 +6,11 @@
 [import ajiML::generator::java::springcloud::files::discovery::discovery]
 [import ajiML::generator::java::springcloud::files::usermanagement::usermanagement]
 [import ajiML::generator::java::springcloud::files::authentication::security]
+[import ajiML::generator::java::springcloud::files::apigateway::apigateway]
+[import ajiML::generator::java::springcloud::files::functionalservice::functionalservice]
+
+
+
 
 
 [**
@@ -23,6 +28,7 @@
 [/for]
 
 [for (aUserManagementService : ajiMLT::UserManagementServiceT | aSystemT.eAllContents(ajiMLT::UserManagementServiceT))]
+
 [importUsermanagement(aUserManagementService)/]
 [/for]
 
@@ -30,6 +36,13 @@
 [importSecurity(aSecurityService)/]
 [/for]
 
+[for (aAPIService : ajiMLT::APIServiceT | aSystemT.eAllContents(ajiMLT::APIServiceT))]
+[importAPIService(aAPIService)/]
+[/for]
+
+[for (aFunctionalService : ajiMLT::FunctionalServiceT | aSystemT.eAllContents(ajiMLT::FunctionalServiceT))]
+[importFunctionalService(aFunctionalService)/]
+[/for]
 
 
 

@@ -3,53 +3,48 @@
  * The documentation of the module generate.
  */]
 [module applicationYml('http://www.fh-dortmund.de/idial/ajiML/tech')]
-
-
-[template public importUsermanagementApplicationYml(aUserManagement: ajiMLT::UserManagementServiceT)]
-[file (aUserManagement.name + '/src/main/resources/application.yml', false, 'UTF-8')]
+[template public importApplicaitonYml(aFunctionalService : ajiMLT::FunctionalServiceT)]
+[file (aFunctionalService.name + '/src/main/resources/application.yml', false, 'UTF-8')]
 spring:
   application:
-    name: [aUserManagement.name/]
+    name: [aFunctionalService.name.toLower()/]
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerdb
   cloud:
     config:
       enabled: false
-  datasource:
-    url: jdbc:mysql://localhost:3306/usermanagement
-    username: root
-    password: password
-    testWhileIdle: true
-    validationQuery: SELECT 1
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:[aFunctionalService.discoveredBy.eGet('port')/]/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
 
 server:
-  port: [aUserManagement.port/]
+  port: [aFunctionalService.port/]
   compression:
     enabled: true
     mime-types: application/json,application/xml,text/html,text/xml,text/plain
 
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
 security:
-  user:
-    password: none
   oauth2:
     resource:
       jwt:
         keyValue: |
           -----BEGIN PUBLIC KEY-----
-          [aUserManagement.securedBy.eGet('publicKey')/]
+          [aFunctionalService.securedBy.eGet('publicKey')/]
           -----END PUBLIC KEY-----
 [/file]
-
 [/template]

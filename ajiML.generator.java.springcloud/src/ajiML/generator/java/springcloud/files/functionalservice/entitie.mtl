@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module entitie('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT)]
+[file (aFunctionalService.name+ '/src/main/java/de/fh/entities/Dummy.java', false, 'UTF-8')]
+Dummy-Content
+[/file]
+[/template]

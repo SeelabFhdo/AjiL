@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module service('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importService(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
+[file (aFunctionalService.name+ '/src/main/java/de/fh/service/' + aServiceInterface.name.toUpperFirst() + 'Service.java', false, 'UTF-8')]
+Dummy-Content
+[/file]
+
+[file (aFunctionalService.name+ '/src/main/java/de/fh/service/impl/' + aServiceInterface.name.toUpperFirst() + 'ServiceImpl.java', false, 'UTF-8')]
+Dummy-Content
+[/file]
+[/template]
