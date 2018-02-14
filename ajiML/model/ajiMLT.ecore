@@ -56,4 +56,18 @@
     <eLiterals name="MANY" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemT" eSuperTypes="ajiML.ecore#//System"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataModelT" eSuperTypes="ajiML.ecore#//DataModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityT" eSuperTypes="ajiML.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationT" eSuperTypes="ajiML.ecore#//Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateT" eSuperTypes="ajiML.ecore#//Create"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReadT" eSuperTypes="ajiML.ecore#//Read"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateT" eSuperTypes="ajiML.ecore#//Update"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteT" eSuperTypes="ajiML.ecore#//Delete"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiReadT" eSuperTypes="ajiML.ecore#//MultiRead"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomT" eSuperTypes="ajiML.ecore#//Custom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntergerT" eSuperTypes="ajiML.ecore#//Integer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanT" eSuperTypes="ajiML.ecore#//Boolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FloatT" eSuperTypes="ajiML.ecore#//Float"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StringT" eSuperTypes="ajiML.ecore#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharT" eSuperTypes="ajiML.ecore#//Char"/>
 </ecore:EPackage>

@@ -48,6 +48,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiMLT.ecore#//UserManagementServiceT/generator"/>
     </genClasses>
     <genClasses ecoreClass="ajiMLT.ecore#//SystemT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//DataModelT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//EntityT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//RelationT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//CreateT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//ReadT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//UpdateT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//DeleteT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//MultiReadT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//CustomT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//IntergerT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//BooleanT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//FloatT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//StringT"/>
+    <genClasses ecoreClass="ajiMLT.ecore#//CharT"/>
   </genPackages>
   <genPackages prefix="AjiML" disposableProviderFactory="true" ecorePackage="ajiML.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ajiML.ecore#//EMultiplicity">

@@ -256,6 +256,328 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.DataModelT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataModelTItemProvider dataModelTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.DataModelT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataModelTAdapter() {
+		if (dataModelTItemProvider == null) {
+			dataModelTItemProvider = new DataModelTItemProvider(this);
+		}
+
+		return dataModelTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.EntityT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntityTItemProvider entityTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.EntityT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntityTAdapter() {
+		if (entityTItemProvider == null) {
+			entityTItemProvider = new EntityTItemProvider(this);
+		}
+
+		return entityTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.RelationT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelationTItemProvider relationTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.RelationT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelationTAdapter() {
+		if (relationTItemProvider == null) {
+			relationTItemProvider = new RelationTItemProvider(this);
+		}
+
+		return relationTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.CreateT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CreateTItemProvider createTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.CreateT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCreateTAdapter() {
+		if (createTItemProvider == null) {
+			createTItemProvider = new CreateTItemProvider(this);
+		}
+
+		return createTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.ReadT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReadTItemProvider readTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.ReadT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReadTAdapter() {
+		if (readTItemProvider == null) {
+			readTItemProvider = new ReadTItemProvider(this);
+		}
+
+		return readTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.UpdateT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UpdateTItemProvider updateTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.UpdateT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUpdateTAdapter() {
+		if (updateTItemProvider == null) {
+			updateTItemProvider = new UpdateTItemProvider(this);
+		}
+
+		return updateTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.DeleteT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeleteTItemProvider deleteTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.DeleteT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeleteTAdapter() {
+		if (deleteTItemProvider == null) {
+			deleteTItemProvider = new DeleteTItemProvider(this);
+		}
+
+		return deleteTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.MultiReadT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MultiReadTItemProvider multiReadTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.MultiReadT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMultiReadTAdapter() {
+		if (multiReadTItemProvider == null) {
+			multiReadTItemProvider = new MultiReadTItemProvider(this);
+		}
+
+		return multiReadTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.CustomT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CustomTItemProvider customTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.CustomT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCustomTAdapter() {
+		if (customTItemProvider == null) {
+			customTItemProvider = new CustomTItemProvider(this);
+		}
+
+		return customTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.IntergerT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntergerTItemProvider intergerTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.IntergerT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntergerTAdapter() {
+		if (intergerTItemProvider == null) {
+			intergerTItemProvider = new IntergerTItemProvider(this);
+		}
+
+		return intergerTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.BooleanT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanTItemProvider booleanTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.BooleanT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanTAdapter() {
+		if (booleanTItemProvider == null) {
+			booleanTItemProvider = new BooleanTItemProvider(this);
+		}
+
+		return booleanTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.FloatT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FloatTItemProvider floatTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.FloatT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFloatTAdapter() {
+		if (floatTItemProvider == null) {
+			floatTItemProvider = new FloatTItemProvider(this);
+		}
+
+		return floatTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.StringT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringTItemProvider stringTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.StringT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringTAdapter() {
+		if (stringTItemProvider == null) {
+			stringTItemProvider = new StringTItemProvider(this);
+		}
+
+		return stringTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.CharT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CharTItemProvider charTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.CharT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCharTAdapter() {
+		if (charTItemProvider == null) {
+			charTItemProvider = new CharTItemProvider(this);
+		}
+
+		return charTItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +684,20 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 		if (serviceInterfaceTItemProvider != null) serviceInterfaceTItemProvider.dispose();
 		if (userManagementServiceTItemProvider != null) userManagementServiceTItemProvider.dispose();
 		if (systemTItemProvider != null) systemTItemProvider.dispose();
+		if (dataModelTItemProvider != null) dataModelTItemProvider.dispose();
+		if (entityTItemProvider != null) entityTItemProvider.dispose();
+		if (relationTItemProvider != null) relationTItemProvider.dispose();
+		if (createTItemProvider != null) createTItemProvider.dispose();
+		if (readTItemProvider != null) readTItemProvider.dispose();
+		if (updateTItemProvider != null) updateTItemProvider.dispose();
+		if (deleteTItemProvider != null) deleteTItemProvider.dispose();
+		if (multiReadTItemProvider != null) multiReadTItemProvider.dispose();
+		if (customTItemProvider != null) customTItemProvider.dispose();
+		if (intergerTItemProvider != null) intergerTItemProvider.dispose();
+		if (booleanTItemProvider != null) booleanTItemProvider.dispose();
+		if (floatTItemProvider != null) floatTItemProvider.dispose();
+		if (stringTItemProvider != null) stringTItemProvider.dispose();
+		if (charTItemProvider != null) charTItemProvider.dispose();
 	}
 
 }

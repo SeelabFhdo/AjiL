@@ -3,13 +3,26 @@
 package ajiMLT.util;
 
 import ajiML.APIService;
+import ajiML.Ability;
+import ajiML.Char;
 import ajiML.ConfigurationService;
+import ajiML.Create;
+import ajiML.Custom;
+import ajiML.DataModel;
+import ajiML.Delete;
 import ajiML.DiscoveryService;
+import ajiML.Entity;
 import ajiML.FunctionalService;
 import ajiML.InfrastructureService;
 import ajiML.Microservice;
+import ajiML.MultiRead;
+import ajiML.Multiplicity;
+import ajiML.PrimitiveDataType;
+import ajiML.Read;
+import ajiML.Relation;
 import ajiML.SecurityService;
 import ajiML.ServiceInterface;
+import ajiML.Update;
 import ajiML.UserManagementService;
 
 import ajiMLT.*;
@@ -110,6 +123,62 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 				return createSystemTAdapter();
 			}
 			@Override
+			public Adapter caseDataModelT(DataModelT object) {
+				return createDataModelTAdapter();
+			}
+			@Override
+			public Adapter caseEntityT(EntityT object) {
+				return createEntityTAdapter();
+			}
+			@Override
+			public Adapter caseRelationT(RelationT object) {
+				return createRelationTAdapter();
+			}
+			@Override
+			public Adapter caseCreateT(CreateT object) {
+				return createCreateTAdapter();
+			}
+			@Override
+			public Adapter caseReadT(ReadT object) {
+				return createReadTAdapter();
+			}
+			@Override
+			public Adapter caseUpdateT(UpdateT object) {
+				return createUpdateTAdapter();
+			}
+			@Override
+			public Adapter caseDeleteT(DeleteT object) {
+				return createDeleteTAdapter();
+			}
+			@Override
+			public Adapter caseMultiReadT(MultiReadT object) {
+				return createMultiReadTAdapter();
+			}
+			@Override
+			public Adapter caseCustomT(CustomT object) {
+				return createCustomTAdapter();
+			}
+			@Override
+			public Adapter caseIntergerT(IntergerT object) {
+				return createIntergerTAdapter();
+			}
+			@Override
+			public Adapter caseBooleanT(BooleanT object) {
+				return createBooleanTAdapter();
+			}
+			@Override
+			public Adapter caseFloatT(FloatT object) {
+				return createFloatTAdapter();
+			}
+			@Override
+			public Adapter caseStringT(StringT object) {
+				return createStringTAdapter();
+			}
+			@Override
+			public Adapter caseCharT(CharT object) {
+				return createCharTAdapter();
+			}
+			@Override
 			public Adapter caseMicroservice(Microservice object) {
 				return createMicroserviceAdapter();
 			}
@@ -148,6 +217,74 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSystem(ajiML.System object) {
 				return createSystemAdapter();
+			}
+			@Override
+			public Adapter caseDataModel(DataModel object) {
+				return createDataModelAdapter();
+			}
+			@Override
+			public Adapter caseEntity(Entity object) {
+				return createEntityAdapter();
+			}
+			@Override
+			public Adapter caseMultiplicity(Multiplicity object) {
+				return createMultiplicityAdapter();
+			}
+			@Override
+			public Adapter caseRelation(Relation object) {
+				return createRelationAdapter();
+			}
+			@Override
+			public Adapter caseAbility(Ability object) {
+				return createAbilityAdapter();
+			}
+			@Override
+			public Adapter caseCreate(Create object) {
+				return createCreateAdapter();
+			}
+			@Override
+			public Adapter caseRead(Read object) {
+				return createReadAdapter();
+			}
+			@Override
+			public Adapter caseUpdate(Update object) {
+				return createUpdateAdapter();
+			}
+			@Override
+			public Adapter caseDelete(Delete object) {
+				return createDeleteAdapter();
+			}
+			@Override
+			public Adapter caseMultiRead(MultiRead object) {
+				return createMultiReadAdapter();
+			}
+			@Override
+			public Adapter caseCustom(Custom object) {
+				return createCustomAdapter();
+			}
+			@Override
+			public Adapter casePrimitiveDataType(PrimitiveDataType object) {
+				return createPrimitiveDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseInteger(ajiML.Integer object) {
+				return createIntegerAdapter();
+			}
+			@Override
+			public Adapter caseBoolean(ajiML.Boolean object) {
+				return createBooleanAdapter();
+			}
+			@Override
+			public Adapter caseFloat(ajiML.Float object) {
+				return createFloatAdapter();
+			}
+			@Override
+			public Adapter caseString(ajiML.String object) {
+				return createStringAdapter();
+			}
+			@Override
+			public Adapter caseChar(Char object) {
+				return createCharAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -278,6 +415,202 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSystemTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.DataModelT <em>Data Model T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.DataModelT
+	 * @generated
+	 */
+	public Adapter createDataModelTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.EntityT <em>Entity T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.EntityT
+	 * @generated
+	 */
+	public Adapter createEntityTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.RelationT <em>Relation T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.RelationT
+	 * @generated
+	 */
+	public Adapter createRelationTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.CreateT <em>Create T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.CreateT
+	 * @generated
+	 */
+	public Adapter createCreateTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.ReadT <em>Read T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.ReadT
+	 * @generated
+	 */
+	public Adapter createReadTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.UpdateT <em>Update T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.UpdateT
+	 * @generated
+	 */
+	public Adapter createUpdateTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.DeleteT <em>Delete T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.DeleteT
+	 * @generated
+	 */
+	public Adapter createDeleteTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.MultiReadT <em>Multi Read T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.MultiReadT
+	 * @generated
+	 */
+	public Adapter createMultiReadTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.CustomT <em>Custom T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.CustomT
+	 * @generated
+	 */
+	public Adapter createCustomTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.IntergerT <em>Interger T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.IntergerT
+	 * @generated
+	 */
+	public Adapter createIntergerTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.BooleanT <em>Boolean T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.BooleanT
+	 * @generated
+	 */
+	public Adapter createBooleanTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.FloatT <em>Float T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.FloatT
+	 * @generated
+	 */
+	public Adapter createFloatTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.StringT <em>String T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.StringT
+	 * @generated
+	 */
+	public Adapter createStringTAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiMLT.CharT <em>Char T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiMLT.CharT
+	 * @generated
+	 */
+	public Adapter createCharTAdapter() {
 		return null;
 	}
 
@@ -418,6 +751,244 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.DataModel <em>Data Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.DataModel
+	 * @generated
+	 */
+	public Adapter createDataModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Entity
+	 * @generated
+	 */
+	public Adapter createEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Multiplicity <em>Multiplicity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Multiplicity
+	 * @generated
+	 */
+	public Adapter createMultiplicityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Relation
+	 * @generated
+	 */
+	public Adapter createRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Ability <em>Ability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Ability
+	 * @generated
+	 */
+	public Adapter createAbilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Create <em>Create</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Create
+	 * @generated
+	 */
+	public Adapter createCreateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Read <em>Read</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Read
+	 * @generated
+	 */
+	public Adapter createReadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Update <em>Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Update
+	 * @generated
+	 */
+	public Adapter createUpdateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Delete
+	 * @generated
+	 */
+	public Adapter createDeleteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.MultiRead <em>Multi Read</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.MultiRead
+	 * @generated
+	 */
+	public Adapter createMultiReadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Custom <em>Custom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Custom
+	 * @generated
+	 */
+	public Adapter createCustomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.PrimitiveDataType <em>Primitive Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.PrimitiveDataType
+	 * @generated
+	 */
+	public Adapter createPrimitiveDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Integer <em>Integer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Integer
+	 * @generated
+	 */
+	public Adapter createIntegerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Boolean <em>Boolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Boolean
+	 * @generated
+	 */
+	public Adapter createBooleanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Float <em>Float</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Float
+	 * @generated
+	 */
+	public Adapter createFloatAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.String <em>String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.String
+	 * @generated
+	 */
+	public Adapter createStringAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Char <em>Char</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Char
+	 * @generated
+	 */
+	public Adapter createCharAdapter() {
 		return null;
 	}
 

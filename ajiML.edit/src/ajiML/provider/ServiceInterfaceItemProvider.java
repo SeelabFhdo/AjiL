@@ -6,6 +6,7 @@ package ajiML.provider;
 import ajiML.AjiMLFactory;
 import ajiML.AjiMLPackage;
 import ajiML.ServiceInterface;
+import ajiMLT.AjiMLTFactory;
 import ajiMLT.provider.AjiMLEditPlugin;
 import java.util.Collection;
 import java.util.List;
@@ -255,6 +256,36 @@ public class ServiceInterfaceItemProvider
 			(createChildParameter
 				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
 				 AjiMLFactory.eINSTANCE.createCustom()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createCreateT()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createReadT()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createUpdateT()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createDeleteT()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createMultiReadT()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AjiMLPackage.Literals.SERVICE_INTERFACE__ABILITIES,
+				 AjiMLTFactory.eINSTANCE.createCustomT()));
 	}
 
 	/**

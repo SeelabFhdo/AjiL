@@ -3,10 +3,8 @@
 package ajiMLT.tests;
 
 import ajiML.tests.SystemTest;
-
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.SystemT;
-
 import junit.textui.TestRunner;
 
 /**

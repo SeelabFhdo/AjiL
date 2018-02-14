@@ -171,6 +171,11 @@ public class FunctionalServiceItemProvider extends MicroserviceItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(AjiMLPackage.Literals.FUNCTIONAL_SERVICE__DOMAIN,
+				 AjiMLTFactory.eINSTANCE.createDataModelT()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(AjiMLPackage.Literals.FUNCTIONAL_SERVICE__PROVIDED_INTERFACES,
 				 AjiMLFactory.eINSTANCE.createServiceInterface()));
 

@@ -914,6 +914,749 @@ public interface AjiMLTPackage extends EPackage {
 	int SYSTEM_T_OPERATION_COUNT = AjiMLPackage.SYSTEM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ajiMLT.impl.DataModelTImpl <em>Data Model T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.DataModelTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDataModelT()
+	 * @generated
+	 */
+	int DATA_MODEL_T = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_MODEL_T__NAME = AjiMLPackage.DATA_MODEL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_MODEL_T__ENTITIES = AjiMLPackage.DATA_MODEL__ENTITIES;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_MODEL_T__OWNER = AjiMLPackage.DATA_MODEL__OWNER;
+
+	/**
+	 * The number of structural features of the '<em>Data Model T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_MODEL_T_FEATURE_COUNT = AjiMLPackage.DATA_MODEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data Model T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_MODEL_T_OPERATION_COUNT = AjiMLPackage.DATA_MODEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.EntityTImpl <em>Entity T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.EntityTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEntityT()
+	 * @generated
+	 */
+	int ENTITY_T = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__NAME = AjiMLPackage.ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__PARENT = AjiMLPackage.ENTITY__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__ATTRIBUTES = AjiMLPackage.ENTITY__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__RELATIONS = AjiMLPackage.ENTITY__RELATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__DOMAIN_MODEL = AjiMLPackage.ENTITY__DOMAIN_MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Entity T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T_FEATURE_COUNT = AjiMLPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Entity T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T_OPERATION_COUNT = AjiMLPackage.ENTITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.RelationTImpl <em>Relation T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.RelationTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getRelationT()
+	 * @generated
+	 */
+	int RELATION_T = 10;
+
+	/**
+	 * The feature id for the '<em><b>Multiplicity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T__MULTIPLICITY = AjiMLPackage.RELATION__MULTIPLICITY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T__NAME = AjiMLPackage.RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T__SOURCE = AjiMLPackage.RELATION__SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T__TARGET = AjiMLPackage.RELATION__TARGET;
+
+	/**
+	 * The number of structural features of the '<em>Relation T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T_FEATURE_COUNT = AjiMLPackage.RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Relation T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_T_OPERATION_COUNT = AjiMLPackage.RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.CreateTImpl <em>Create T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.CreateTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCreateT()
+	 * @generated
+	 */
+	int CREATE_T = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_T__NAME = AjiMLPackage.CREATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_T__OWNER = AjiMLPackage.CREATE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_T__SUBJECT = AjiMLPackage.CREATE__SUBJECT;
+
+	/**
+	 * The number of structural features of the '<em>Create T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_T_FEATURE_COUNT = AjiMLPackage.CREATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Create T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_T_OPERATION_COUNT = AjiMLPackage.CREATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.ReadTImpl <em>Read T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.ReadTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getReadT()
+	 * @generated
+	 */
+	int READ_T = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_T__NAME = AjiMLPackage.READ__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_T__OWNER = AjiMLPackage.READ__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_T__SUBJECT = AjiMLPackage.READ__SUBJECT;
+
+	/**
+	 * The number of structural features of the '<em>Read T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_T_FEATURE_COUNT = AjiMLPackage.READ_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Read T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_T_OPERATION_COUNT = AjiMLPackage.READ_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.UpdateTImpl <em>Update T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.UpdateTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getUpdateT()
+	 * @generated
+	 */
+	int UPDATE_T = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_T__NAME = AjiMLPackage.UPDATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_T__OWNER = AjiMLPackage.UPDATE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_T__SUBJECT = AjiMLPackage.UPDATE__SUBJECT;
+
+	/**
+	 * The number of structural features of the '<em>Update T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_T_FEATURE_COUNT = AjiMLPackage.UPDATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Update T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_T_OPERATION_COUNT = AjiMLPackage.UPDATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.DeleteTImpl <em>Delete T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.DeleteTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDeleteT()
+	 * @generated
+	 */
+	int DELETE_T = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_T__NAME = AjiMLPackage.DELETE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_T__OWNER = AjiMLPackage.DELETE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_T__SUBJECT = AjiMLPackage.DELETE__SUBJECT;
+
+	/**
+	 * The number of structural features of the '<em>Delete T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_T_FEATURE_COUNT = AjiMLPackage.DELETE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Delete T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_T_OPERATION_COUNT = AjiMLPackage.DELETE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.MultiReadTImpl <em>Multi Read T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.MultiReadTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getMultiReadT()
+	 * @generated
+	 */
+	int MULTI_READ_T = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_READ_T__NAME = AjiMLPackage.MULTI_READ__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_READ_T__OWNER = AjiMLPackage.MULTI_READ__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_READ_T__SUBJECT = AjiMLPackage.MULTI_READ__SUBJECT;
+
+	/**
+	 * The number of structural features of the '<em>Multi Read T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_READ_T_FEATURE_COUNT = AjiMLPackage.MULTI_READ_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Multi Read T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTI_READ_T_OPERATION_COUNT = AjiMLPackage.MULTI_READ_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.CustomTImpl <em>Custom T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.CustomTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCustomT()
+	 * @generated
+	 */
+	int CUSTOM_T = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_T__NAME = AjiMLPackage.CUSTOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_T__OWNER = AjiMLPackage.CUSTOM__OWNER;
+
+	/**
+	 * The number of structural features of the '<em>Custom T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_T_FEATURE_COUNT = AjiMLPackage.CUSTOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Custom T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_T_OPERATION_COUNT = AjiMLPackage.CUSTOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.IntergerTImpl <em>Interger T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.IntergerTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntergerT()
+	 * @generated
+	 */
+	int INTERGER_T = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERGER_T__NAME = AjiMLPackage.INTEGER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERGER_T__TYPE = AjiMLPackage.INTEGER__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Interger T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERGER_T_FEATURE_COUNT = AjiMLPackage.INTEGER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Interger T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERGER_T_OPERATION_COUNT = AjiMLPackage.INTEGER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.BooleanTImpl <em>Boolean T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.BooleanTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getBooleanT()
+	 * @generated
+	 */
+	int BOOLEAN_T = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_T__NAME = AjiMLPackage.BOOLEAN__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_T__TYPE = AjiMLPackage.BOOLEAN__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Boolean T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_T_FEATURE_COUNT = AjiMLPackage.BOOLEAN_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Boolean T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_T_OPERATION_COUNT = AjiMLPackage.BOOLEAN_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.FloatTImpl <em>Float T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.FloatTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getFloatT()
+	 * @generated
+	 */
+	int FLOAT_T = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_T__NAME = AjiMLPackage.FLOAT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_T__TYPE = AjiMLPackage.FLOAT__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Float T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_T_FEATURE_COUNT = AjiMLPackage.FLOAT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Float T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT_T_OPERATION_COUNT = AjiMLPackage.FLOAT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.StringTImpl <em>String T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.StringTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getStringT()
+	 * @generated
+	 */
+	int STRING_T = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_T__NAME = AjiMLPackage.STRING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_T__TYPE = AjiMLPackage.STRING__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>String T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_T_FEATURE_COUNT = AjiMLPackage.STRING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>String T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_T_OPERATION_COUNT = AjiMLPackage.STRING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.CharTImpl <em>Char T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.CharTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCharT()
+	 * @generated
+	 */
+	int CHAR_T = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAR_T__NAME = AjiMLPackage.CHAR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAR_T__TYPE = AjiMLPackage.CHAR__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Char T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAR_T_FEATURE_COUNT = AjiMLPackage.CHAR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Char T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAR_T_OPERATION_COUNT = AjiMLPackage.CHAR_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -921,7 +1664,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEGenerator()
 	 * @generated
 	 */
-	int EGENERATOR = 8;
+	int EGENERATOR = 22;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.ECommunicationMechanism <em>ECommunication Mechanism</em>}' enum.
@@ -931,7 +1674,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getECommunicationMechanism()
 	 * @generated
 	 */
-	int ECOMMUNICATION_MECHANISM = 9;
+	int ECOMMUNICATION_MECHANISM = 23;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EDatabase <em>EDatabase</em>}' enum.
@@ -941,7 +1684,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEDatabase()
 	 * @generated
 	 */
-	int EDATABASE = 10;
+	int EDATABASE = 24;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EMultiplicity <em>EMultiplicity</em>}' enum.
@@ -951,7 +1694,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEMultiplicity()
 	 * @generated
 	 */
-	int EMULTIPLICITY = 11;
+	int EMULTIPLICITY = 25;
 
 
 	/**
@@ -1176,6 +1919,146 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSystemT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.DataModelT <em>Data Model T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Model T</em>'.
+	 * @see ajiMLT.DataModelT
+	 * @generated
+	 */
+	EClass getDataModelT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.EntityT <em>Entity T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entity T</em>'.
+	 * @see ajiMLT.EntityT
+	 * @generated
+	 */
+	EClass getEntityT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.RelationT <em>Relation T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relation T</em>'.
+	 * @see ajiMLT.RelationT
+	 * @generated
+	 */
+	EClass getRelationT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.CreateT <em>Create T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Create T</em>'.
+	 * @see ajiMLT.CreateT
+	 * @generated
+	 */
+	EClass getCreateT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.ReadT <em>Read T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Read T</em>'.
+	 * @see ajiMLT.ReadT
+	 * @generated
+	 */
+	EClass getReadT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.UpdateT <em>Update T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update T</em>'.
+	 * @see ajiMLT.UpdateT
+	 * @generated
+	 */
+	EClass getUpdateT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.DeleteT <em>Delete T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete T</em>'.
+	 * @see ajiMLT.DeleteT
+	 * @generated
+	 */
+	EClass getDeleteT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.MultiReadT <em>Multi Read T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multi Read T</em>'.
+	 * @see ajiMLT.MultiReadT
+	 * @generated
+	 */
+	EClass getMultiReadT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.CustomT <em>Custom T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Custom T</em>'.
+	 * @see ajiMLT.CustomT
+	 * @generated
+	 */
+	EClass getCustomT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.IntergerT <em>Interger T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interger T</em>'.
+	 * @see ajiMLT.IntergerT
+	 * @generated
+	 */
+	EClass getIntergerT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.BooleanT <em>Boolean T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean T</em>'.
+	 * @see ajiMLT.BooleanT
+	 * @generated
+	 */
+	EClass getBooleanT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.FloatT <em>Float T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Float T</em>'.
+	 * @see ajiMLT.FloatT
+	 * @generated
+	 */
+	EClass getFloatT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.StringT <em>String T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String T</em>'.
+	 * @see ajiMLT.StringT
+	 * @generated
+	 */
+	EClass getStringT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.CharT <em>Char T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Char T</em>'.
+	 * @see ajiMLT.CharT
+	 * @generated
+	 */
+	EClass getCharT();
 
 	/**
 	 * Returns the meta object for enum '{@link ajiMLT.EGenerator <em>EGenerator</em>}'.
@@ -1423,6 +2306,146 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SYSTEM_T = eINSTANCE.getSystemT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.DataModelTImpl <em>Data Model T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.DataModelTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getDataModelT()
+		 * @generated
+		 */
+		EClass DATA_MODEL_T = eINSTANCE.getDataModelT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.EntityTImpl <em>Entity T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.EntityTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getEntityT()
+		 * @generated
+		 */
+		EClass ENTITY_T = eINSTANCE.getEntityT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.RelationTImpl <em>Relation T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.RelationTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getRelationT()
+		 * @generated
+		 */
+		EClass RELATION_T = eINSTANCE.getRelationT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.CreateTImpl <em>Create T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.CreateTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getCreateT()
+		 * @generated
+		 */
+		EClass CREATE_T = eINSTANCE.getCreateT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.ReadTImpl <em>Read T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.ReadTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getReadT()
+		 * @generated
+		 */
+		EClass READ_T = eINSTANCE.getReadT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.UpdateTImpl <em>Update T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.UpdateTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getUpdateT()
+		 * @generated
+		 */
+		EClass UPDATE_T = eINSTANCE.getUpdateT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.DeleteTImpl <em>Delete T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.DeleteTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getDeleteT()
+		 * @generated
+		 */
+		EClass DELETE_T = eINSTANCE.getDeleteT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.MultiReadTImpl <em>Multi Read T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.MultiReadTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getMultiReadT()
+		 * @generated
+		 */
+		EClass MULTI_READ_T = eINSTANCE.getMultiReadT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.CustomTImpl <em>Custom T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.CustomTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getCustomT()
+		 * @generated
+		 */
+		EClass CUSTOM_T = eINSTANCE.getCustomT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.IntergerTImpl <em>Interger T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.IntergerTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntergerT()
+		 * @generated
+		 */
+		EClass INTERGER_T = eINSTANCE.getIntergerT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.BooleanTImpl <em>Boolean T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.BooleanTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getBooleanT()
+		 * @generated
+		 */
+		EClass BOOLEAN_T = eINSTANCE.getBooleanT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.FloatTImpl <em>Float T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.FloatTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getFloatT()
+		 * @generated
+		 */
+		EClass FLOAT_T = eINSTANCE.getFloatT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.StringTImpl <em>String T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.StringTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getStringT()
+		 * @generated
+		 */
+		EClass STRING_T = eINSTANCE.getStringT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.CharTImpl <em>Char T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.CharTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getCharT()
+		 * @generated
+		 */
+		EClass CHAR_T = eINSTANCE.getCharT();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.
