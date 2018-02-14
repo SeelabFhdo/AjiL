@@ -75,7 +75,7 @@
 </project>
 [/file]
 
-[file (aDiscoveryServiceT.name + '/src/main/java/de/fhdortmund/server/eureka/EurekaApplication.java', false, 'UTF-8')]
+[file (aDiscoveryServiceT.name + '/src/main/java/de/fhdortmund/server/eureka/' + aDiscoveryServiceT.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
 package de.fhdortmund.server.eureka;
 
 import org.springframework.boot.SpringApplication;

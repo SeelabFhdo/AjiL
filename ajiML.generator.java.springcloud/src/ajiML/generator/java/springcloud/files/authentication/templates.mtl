@@ -39,12 +39,6 @@
     <link rel="stylesheet" href="css/wro.css"/>
 </head>
 <body>
-    <#if RequestParameters[ '[' /]'error'[ ']' /]]??>
-        <div class="alert alert-danger">
-            Benutzername oder Passwort falsch, bitte versuchen sie es erneut.
-        </div>
-    </#if>
-
     <div class="container">
         <form role="form" action="login" method="post">
             <div class="form-group">

@@ -2,7 +2,7 @@
 [**
  * The documentation of the module generate.
  */]
-[module entitie('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[module entity('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT, aEntitie : ajiMLT::EntityT)]
 [file (aFunctionalService.name + '/src/main/java/de/fh/entities/' + aEntitie.name + '.java', false, 'UTF-8')]
 package de.fh.entitie;
@@ -117,6 +117,13 @@ public class [aEntitie.name.toUpperFirst()/] {
     this.[aFloat.name.toLowerFirst()/] = [aFloat.name.toLowerFirst()/];
   }
 [/for]
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
 }
 
 [/file]

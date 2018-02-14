@@ -7,12 +7,12 @@
 [file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aServiceInterface.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
 package de.fh.dao;
 
-import de.fh.cargo.entitie.Customer;
+import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface aServiceInterface.name.toUpperFirst()Dao extends MongoRepository<Customer, Integer> {
+public interface [aServiceInterface.name.toUpperFirst()/]Dao extends MongoRepository<[aServiceInterface.name.toUpperFirst()/], Integer> {
 
-  public Customer findById(Integer Id);
+  public [aServiceInterface.name.toUpperFirst()/] findById(Integer Id);
 }
 
 [/file]
