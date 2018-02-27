@@ -24,7 +24,7 @@ import ajiMLT.EMultiplicity;
 import ajiMLT.EntityT;
 import ajiMLT.FloatT;
 import ajiMLT.FunctionalServiceT;
-import ajiMLT.IntergerT;
+import ajiMLT.IntegerT;
 import ajiMLT.MultiReadT;
 import ajiMLT.ReadT;
 import ajiMLT.RelationT;
@@ -173,7 +173,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass intergerTEClass = null;
+	private EClass integerTEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -572,8 +572,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntergerT() {
-		return intergerTEClass;
+	public EClass getIntegerT() {
+		return integerTEClass;
 	}
 
 	/**
@@ -723,7 +723,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		customTEClass = createEClass(CUSTOM_T);
 
-		intergerTEClass = createEClass(INTERGER_T);
+		integerTEClass = createEClass(INTEGER_T);
 
 		booleanTEClass = createEClass(BOOLEAN_T);
 
@@ -788,7 +788,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		deleteTEClass.getESuperTypes().add(theAjiMLPackage.getDelete());
 		multiReadTEClass.getESuperTypes().add(theAjiMLPackage.getMultiRead());
 		customTEClass.getESuperTypes().add(theAjiMLPackage.getCustom());
-		intergerTEClass.getESuperTypes().add(theAjiMLPackage.getInteger());
+		integerTEClass.getESuperTypes().add(theAjiMLPackage.getInteger());
 		booleanTEClass.getESuperTypes().add(theAjiMLPackage.getBoolean());
 		floatTEClass.getESuperTypes().add(theAjiMLPackage.getFloat());
 		stringTEClass.getESuperTypes().add(theAjiMLPackage.getString());
@@ -842,7 +842,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		initEClass(customTEClass, CustomT.class, "CustomT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(intergerTEClass, IntergerT.class, "IntergerT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(integerTEClass, IntegerT.class, "IntegerT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(booleanTEClass, BooleanT.class, "BooleanT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

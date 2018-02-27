@@ -3,8 +3,10 @@
 package ajiMLT.tests;
 
 import ajiML.tests.ServiceInterfaceTest;
+
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.ServiceInterfaceT;
+
 import junit.textui.TestRunner;
 
 /**

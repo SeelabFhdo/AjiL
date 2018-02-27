@@ -60,7 +60,7 @@
         </edgeMappings>
         <edgeMappings name="configuredBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='securityNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='usermanagementNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='discoveryNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='configurationNode']" targetFinderExpression="feature:configuredBy">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:'configured by'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -68,7 +68,7 @@
         </edgeMappings>
         <edgeMappings name="securedBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='discoveryNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='configurationNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='usermanagementNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='securityNode']" targetFinderExpression="feature:securedBy">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:'secured by'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -168,7 +168,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="new Diagrams">
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="create detailed Diagram" titleExpression="aql:self.name+'Diagram'" browseExpression="aql:self" diagramDescription="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="create detailed Diagram" titleExpression="aql:self.name+'Diagram'" browseExpression="aql:self">
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagramName"/>
             </initialOperation>
@@ -178,165 +178,9 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="TempDiagram" domainClass="ajiMLT::FunctionalServiceT" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="detailedDiagram" titleExpression="aql:self.name+'Diagram'" domainClass="ajiMLT::FunctionalServiceT" enablePopupBars="true">
       <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
-      <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
-      <defaultLayer name="Default">
-        <nodeMappings name="domainNode" semanticCandidatesExpression="feature:domain" domainClass="ajiMLT::DataModelT">
-          <style xsi:type="style:DotDescription" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <edgeMappings name="entityRelationEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="ajiMLT::RelationT" useDomainElement="true">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="entityInheritanceEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:parent">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <containerMappings name="entityContainer" domainClass="ajiMLT::EntityT" childrenPresentation="List">
-          <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::PrimitiveDataType">
-            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-          </style>
-        </containerMappings>
-        <containerMappings name="interfaceContainer" semanticCandidatesExpression="feature:providedInterfaces" domainClass="ajiMLT::ServiceInterfaceT" childrenPresentation="List">
-          <subNodeMappings name="abilityNode" semanticCandidatesExpression="feature:abilities" domainClass="ajiML::Ability">
-            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
-          </style>
-        </containerMappings>
-        <toolSections/>
-        <toolSections name="Entity Manipulation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="new DataModel" precondition="aql:self.oclIsKindOf(ajiMLT::FunctionalServiceT) and (self.domain->size() &lt; 1)" nodeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@nodeMappings[name='domainNode']">
-            <variable name="container"/>
-            <viewVariable name="serviceView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::DataModelT" referenceName="domain"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="Interface Manipulation">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="new Interface" precondition="aql:self.oclIsKindOf(ajiMLT::FunctionalServiceT) " containerMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='TempDiagram']/@defaultLayer/@containerMappings[name='interfaceContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation/>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="new Interface" precondition="aql:service.oclIsKindOf(ajiMLT::FunctionalServiceT)">
-            <element name="service"/>
-            <elementView name="serviceView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::ServiceInterfaceT" referenceName="providedInterfaces">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:service.oclAsType(ajiML::FunctionalService).name+'Interface'+service.oclAsType(ajiML::FunctionalService).providedInterfaces->size()"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <subSections name="new Ability">
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new Create" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Create" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new Read" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Read" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new MultiRead" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::MultiRead" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new Update" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Update" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new Delete" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Delete" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:ToolDescription" name="new Custom" precondition="aql:service.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
-              <element name="ability"/>
-              <elementView name="abilityView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiML::Custom" referenceName="abilities">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:ability.eClass().getName()+'Method'"/>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-          </subSections>
-        </toolSections>
-      </defaultLayer>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="detailedDiagram" titleExpression="aql:self+'Diagram'" domainClass="ajiMLT::FunctionalServiceT" enablePopupBars="true">
-      <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
+      <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="feature:abilities" nodeMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='interfaceContainer']"/>
       <defaultLayer name="Default">
         <nodeMappings name="domainNode" semanticCandidatesExpression="feature:domain" domainClass="ajiMLT::DataModelT">
           <style xsi:type="style:DotDescription" showIcon="false" resizeKind="NSEW">
@@ -346,16 +190,55 @@
           </style>
         </nodeMappings>
         <edgeMappings name="entityEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@nodeMappings[name='domainNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:entities">
-          <style sizeComputationExpression="2">
+          <style sizeComputationExpression="2" routingStyle="tree">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="subjectEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='interfaceContainer']/@subNodeMappings[name='abilityNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:subject">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="inheritanceEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:parent">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="6" labelExpression="extends">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="entityRelationEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="ajiMLT::RelationT" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="6" showIcon="false" labelExpression="aql:if (self.multiplicity.toString() = 'ONE') then 'has one' else 'has many' endif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="interfaceContainer" semanticCandidatesExpression="feature:providedInterfaces" domainClass="ajiMLT::ServiceInterfaceT">
+          <subNodeMappings name="abilityNode" semanticCandidatesExpression="feature:abilities" domainClass="ajiML::Ability">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.type.first(1).toUpper()+' '+self.name" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
         <containerMappings name="entityContainer" domainClass="ajiMLT::EntityT" childrenPresentation="List">
           <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::PrimitiveDataType">
-            <style xsi:type="style:SquareDescription" showIcon="false" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name + ' : '+self.type" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -368,7 +251,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </containerMappings>
-        <toolSections name="Data">
+        <toolSections name="Entity Tools">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="new DataModel" precondition="aql:self.oclIsKindOf(ajiMLT::FunctionalServiceT) and (self.domain->size() &lt; 1)" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@nodeMappings[name='domainNode']">
             <variable name="service"/>
             <viewVariable name="serviceView"/>
@@ -384,6 +267,167 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:domain">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::EntityT" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="add Attributes">
+            <tools xsi:type="tool_1:ToolDescription" name="new String" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::StringT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Integer" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::IntegerT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Boolean" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::BooleanT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Float" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::FloatT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Char" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::CharT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Inheritance" precondition="aql:preTarget.differs(preSource) and preSource.oclIsKindOf(ajiMLT::EntityT) and preTarget.oclIsKindOf(ajiMLT::EntityT)" edgeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@edgeMappings[name='inheritanceEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Relation" precondition="aql:preTarget.differs(preSource) and preSource.oclIsKindOf(ajiMLT::EntityT) and preTarget.oclIsKindOf(ajiMLT::EntityT)" edgeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@edgeMappings[name='entityRelationEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::RelationT" referenceName="relations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="aql:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Interface Tools">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="new Interface" precondition="aql:self.oclIsKindOf(ajiMLT::FunctionalServiceT)">
+            <element name="interface"/>
+            <elementView name="interfaceView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:interface">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::ServiceInterfaceT" referenceName="providedInterfaces"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="add Abilities">
+            <tools xsi:type="tool_1:ToolDescription" name="new Create" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::CreateT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'createAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Read" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::ReadT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'readAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new MultiRead" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::MultiReadT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'multiReadAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Update" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::UpdateT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'updateAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Delete" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::DeleteT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'deleteAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Custom" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+              <element name="ability"/>
+              <elementView name="abilityView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="ability">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::CustomT" referenceName="abilities">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'customAbility'"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="new Subject" precondition="aql:preTarget.differs(preSource) and preSource.oclIsKindOf(ajiML::Ability) and preTarget.oclIsKindOf(ajiMLT::EntityT)" edgeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@edgeMappings[name='subjectEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="subject" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

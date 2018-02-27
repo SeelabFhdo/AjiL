@@ -72,6 +72,8 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.AjiMLTPackage;
 import ajiMLT.provider.AjiMLEditPlugin;
+
+
 import org.eclipse.core.runtime.Path;
 
 import org.eclipse.jface.viewers.ISelection;
@@ -393,7 +395,8 @@ public class AjiMLTModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE); {
+			Composite composite = new Composite(parent, SWT.NONE);
+			{
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;

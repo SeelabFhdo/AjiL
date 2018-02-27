@@ -226,11 +226,11 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AjiMLTPackage.INTERGER_T: {
-				IntergerT intergerT = (IntergerT)theEObject;
-				T result = caseIntergerT(intergerT);
-				if (result == null) result = caseInteger(intergerT);
-				if (result == null) result = casePrimitiveDataType(intergerT);
+			case AjiMLTPackage.INTEGER_T: {
+				IntegerT integerT = (IntegerT)theEObject;
+				T result = caseIntegerT(integerT);
+				if (result == null) result = caseInteger(integerT);
+				if (result == null) result = casePrimitiveDataType(integerT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -526,17 +526,17 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interger T</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Integer T</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interger T</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Integer T</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntergerT(IntergerT object) {
+	public T caseIntegerT(IntegerT object) {
 		return null;
 	}
 

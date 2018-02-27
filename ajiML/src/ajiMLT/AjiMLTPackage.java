@@ -1427,14 +1427,14 @@ public interface AjiMLTPackage extends EPackage {
 	int CUSTOM_T_OPERATION_COUNT = AjiMLPackage.CUSTOM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ajiMLT.impl.IntergerTImpl <em>Interger T</em>}' class.
+	 * The meta object id for the '{@link ajiMLT.impl.IntegerTImpl <em>Integer T</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ajiMLT.impl.IntergerTImpl
-	 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntergerT()
+	 * @see ajiMLT.impl.IntegerTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntegerT()
 	 * @generated
 	 */
-	int INTERGER_T = 17;
+	int INTEGER_T = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1443,7 +1443,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_T__NAME = AjiMLPackage.INTEGER__NAME;
+	int INTEGER_T__NAME = AjiMLPackage.INTEGER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1452,25 +1452,25 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_T__TYPE = AjiMLPackage.INTEGER__TYPE;
+	int INTEGER_T__TYPE = AjiMLPackage.INTEGER__TYPE;
 
 	/**
-	 * The number of structural features of the '<em>Interger T</em>' class.
+	 * The number of structural features of the '<em>Integer T</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_T_FEATURE_COUNT = AjiMLPackage.INTEGER_FEATURE_COUNT + 0;
+	int INTEGER_T_FEATURE_COUNT = AjiMLPackage.INTEGER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Interger T</em>' class.
+	 * The number of operations of the '<em>Integer T</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_T_OPERATION_COUNT = AjiMLPackage.INTEGER_OPERATION_COUNT + 0;
+	int INTEGER_T_OPERATION_COUNT = AjiMLPackage.INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.impl.BooleanTImpl <em>Boolean T</em>}' class.
@@ -2011,14 +2011,14 @@ public interface AjiMLTPackage extends EPackage {
 	EClass getCustomT();
 
 	/**
-	 * Returns the meta object for class '{@link ajiMLT.IntergerT <em>Interger T</em>}'.
+	 * Returns the meta object for class '{@link ajiMLT.IntegerT <em>Integer T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Interger T</em>'.
-	 * @see ajiMLT.IntergerT
+	 * @return the meta object for class '<em>Integer T</em>'.
+	 * @see ajiMLT.IntegerT
 	 * @generated
 	 */
-	EClass getIntergerT();
+	EClass getIntegerT();
 
 	/**
 	 * Returns the meta object for class '{@link ajiMLT.BooleanT <em>Boolean T</em>}'.
@@ -2398,14 +2398,14 @@ public interface AjiMLTPackage extends EPackage {
 		EClass CUSTOM_T = eINSTANCE.getCustomT();
 
 		/**
-		 * The meta object literal for the '{@link ajiMLT.impl.IntergerTImpl <em>Interger T</em>}' class.
+		 * The meta object literal for the '{@link ajiMLT.impl.IntegerTImpl <em>Integer T</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ajiMLT.impl.IntergerTImpl
-		 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntergerT()
+		 * @see ajiMLT.impl.IntegerTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntegerT()
 		 * @generated
 		 */
-		EClass INTERGER_T = eINSTANCE.getIntergerT();
+		EClass INTEGER_T = eINSTANCE.getIntegerT();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.BooleanTImpl <em>Boolean T</em>}' class.

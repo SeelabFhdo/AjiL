@@ -5,7 +5,7 @@ package ajiMLT.provider;
 
 import ajiML.provider.IntegerItemProvider;
 
-import ajiMLT.IntergerT;
+import ajiMLT.IntegerT;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,19 +18,19 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link ajiMLT.IntergerT} object.
+ * This is the item provider adapter for a {@link ajiMLT.IntegerT} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntergerTItemProvider extends IntegerItemProvider {
+public class IntegerTItemProvider extends IntegerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerTItemProvider(AdapterFactory adapterFactory) {
+	public IntegerTItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -50,14 +50,14 @@ public class IntergerTItemProvider extends IntegerItemProvider {
 	}
 
 	/**
-	 * This returns IntergerT.gif.
+	 * This returns IntegerT.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntergerT"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntegerT"));
 	}
 
 	/**
@@ -68,10 +68,10 @@ public class IntergerTItemProvider extends IntegerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((IntergerT)object).getName();
+		String label = ((IntegerT)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_IntergerT_type") :
-			getString("_UI_IntergerT_type") + " " + label;
+			getString("_UI_IntegerT_type") :
+			getString("_UI_IntegerT_type") + " " + label;
 	}
 	
 

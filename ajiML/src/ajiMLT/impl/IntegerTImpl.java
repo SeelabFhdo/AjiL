@@ -5,24 +5,24 @@ package ajiMLT.impl;
 import ajiML.impl.IntegerImpl;
 
 import ajiMLT.AjiMLTPackage;
-import ajiMLT.IntergerT;
+import ajiMLT.IntegerT;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Interger T</b></em>'.
+ * An implementation of the model object '<em><b>Integer T</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class IntergerTImpl extends IntegerImpl implements IntergerT {
+public class IntegerTImpl extends IntegerImpl implements IntegerT {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntergerTImpl() {
+	protected IntegerTImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class IntergerTImpl extends IntegerImpl implements IntergerT {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AjiMLTPackage.Literals.INTERGER_T;
+		return AjiMLTPackage.Literals.INTEGER_T;
 	}
 
-} //IntergerTImpl
+} //IntegerTImpl
