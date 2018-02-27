@@ -9,11 +9,11 @@ Currently we work on improving AjiL in several apspects. The following list cont
 * Adjust the modeling editor to adjust a more reduced system overview and, in addition, another more detailed view for each service and its inner workings. 
 
 Because the intended changes demand a complete refactoring of the code, the current master branch currently contains the last complete working version from august 2017. In the dev branch, which is set as default, you can find our latest runnable developement where we already splitted the metamodel into two different models. However, the graphical editor and newly implemented generator are right now not fully completed.
-
 # Documentation
 
 As an easy starting point we recommend the AjiL tutorial video series which is available on the SEELAB YouTube channel: https://www.youtube.com/channel/UCXrwySsGstqOxUOhNstmkng 
 
+# Documentation
 ## The Modeling Language
 ### /Note: The following description is outdated as of Jan 2018 because we have splitted the original metamodel into two metamodels. Basically the new AjiMLT metamodel extends the existing AjiML metamodel and enriches its' concepts with technical attributes (hence the 'T'), e.g. attributes for messaging mechanism or containerization, for the sourcecode generator. However, although some new concepts and the explanation of AjiMLT are missing, the original AjiML metamodel still gives a good overview of the general idea. Threrefore we included the original depiction in the following explanation./
 
