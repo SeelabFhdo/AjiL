@@ -17,7 +17,7 @@ public class [aEntitie.name.toUpperFirst()/] {
 [for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
   private String [aString.name.toLowerFirst()/];
 [/for]
-[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
   private int [aInteger.name.toLowerFirst()/];
 [/for]
 [for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -37,7 +37,7 @@ public class [aEntitie.name.toUpperFirst()/] {
 [for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
   			String [aString.name.toLowerFirst()/],
 [/for]
-[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
    			int [aInteger.name.toLowerFirst()/],
 [/for]
 [for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -53,7 +53,7 @@ public class [aEntitie.name.toUpperFirst()/] {
 [for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
    	this.[aString.name.toLowerFirst()/] = [aString.name.toLowerFirst()/];
 [/for]
-[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
    	this.[aInteger.name.toLowerFirst()/] = [aInteger.name.toLowerFirst()/];
 [/for]
 [for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -78,7 +78,7 @@ public class [aEntitie.name.toUpperFirst()/] {
   }
 [/for]
 
-[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
   public int get[aInteger.name.toUpperFirst()/]() {
     return [aInteger.name.toLowerFirst()/];
   }

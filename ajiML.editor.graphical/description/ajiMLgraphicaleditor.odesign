@@ -41,7 +41,12 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="usermanagementNode" semanticCandidatesExpression="feature:services" domainClass="ajiMLT::UserManagementServiceT"/>
+        <nodeMappings name="usermanagementNode" semanticCandidatesExpression="feature:services" domainClass="ajiMLT::UserManagementServiceT">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/ajiML.editor.graphical/description/graphics/User.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
         <edgeMappings name="serviceDependency" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode']/@borderedNodeMappings[name='interface']" targetFinderExpression="feature:serviceDependencies">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

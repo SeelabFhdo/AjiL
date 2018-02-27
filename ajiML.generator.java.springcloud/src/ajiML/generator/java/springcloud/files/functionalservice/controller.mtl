@@ -39,7 +39,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
 		[/for]
-		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
 		   			@RequestParam int [aInteger.name.toLowerFirst()/],
 		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -60,7 +60,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
 		  			[aString.name.toLowerFirst()/],
 		[/for]
-		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
 		   			[aInteger.name.toLowerFirst()/],
 		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -97,7 +97,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
 		[/for]
-		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
 		   			@RequestParam int [aInteger.name.toLowerFirst()/],
 		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]
@@ -118,7 +118,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
 		  			[aString.name.toLowerFirst()/],
 		[/for]
-		[for (aInteger : ajiMLT::IntergerT | aFunctionalService.eAllContents(ajiMLT::IntergerT))]
+		[for (aInteger : ajiMLT::IntegerT | aFunctionalService.eAllContents(ajiMLT::IntegerT))]
 		   			[aInteger.name.toLowerFirst()/],
 		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aFunctionalService.eAllContents(ajiMLT::BooleanT))]

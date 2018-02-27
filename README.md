@@ -15,7 +15,7 @@ As an easy starting point we recommend the AjiL tutorial video series which is a
 
 # Documentation
 ## The Modeling Language
-### /Note: The following description is outdated as of Jan 2018 because we have splitted the original metamodel into two metamodels. Basically the new AjiMLT metamodel extends the existing AjiML metamodel and enriches its' concepts with technical attributes (hence the 'T'), e.g. attributes for messaging mechanism or containerization, for the sourcecode generator. However, although some new concepts and the explanation of AjiMLT are missing, the original AjiML metamodel still gives a good overview of the general idea. Threrefore we included the original depiction in the following explanation./
+/Note: The following description is outdated as of Jan 2018 because we have splitted the original metamodel into two metamodels. Basically the new AjiMLT metamodel extends the existing AjiML metamodel and enriches its' concepts with technical attributes (hence the 'T'), e.g. attributes for messaging mechanism or containerization, for the sourcecode generator. However, although some new concepts and the explanation of AjiMLT are missing, the original AjiML metamodel still gives a good overview of the general idea. Threrefore we included the original depiction in the following explanation./
 
 As a modeling language, AjiML comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following sections. Although we eagerly work on improving the language itself as well as its documentation, we are still in an early developement stage. Please feel free to help improve AjiL.
 

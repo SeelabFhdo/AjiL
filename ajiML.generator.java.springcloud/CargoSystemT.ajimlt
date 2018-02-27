@@ -6,7 +6,7 @@
     <domain xsi:type="ajiMLT:DataModelT" name="CustomerDomain">
       <entities xsi:type="ajiMLT:EntityT" name="Customer">
         <attributes xsi:type="ajiMLT:StringT" name="name"/>
-        <attributes xsi:type="ajiMLT:IntergerT" name="PostCode"/>
+        <attributes xsi:type="ajiMLT:IntegerT" name="PostCode"/>
         <attributes xsi:type="ajiMLT:BooleanT" name="TrustFull"/>
         <attributes xsi:type="ajiMLT:FloatT" name="Money"/>
       </entities>
