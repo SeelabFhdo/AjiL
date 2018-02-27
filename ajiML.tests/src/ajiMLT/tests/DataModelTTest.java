@@ -3,8 +3,10 @@
 package ajiMLT.tests;
 
 import ajiML.tests.DataModelTest;
+
 import ajiMLT.AjiMLTFactory;
 import ajiMLT.DataModelT;
+
 import junit.textui.TestRunner;
 
 /**

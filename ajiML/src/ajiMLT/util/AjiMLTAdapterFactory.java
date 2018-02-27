@@ -159,8 +159,8 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 				return createCustomTAdapter();
 			}
 			@Override
-			public Adapter caseIntergerT(IntergerT object) {
-				return createIntergerTAdapter();
+			public Adapter caseIntegerT(IntegerT object) {
+				return createIntegerTAdapter();
 			}
 			@Override
 			public Adapter caseBooleanT(BooleanT object) {
@@ -545,16 +545,16 @@ public class AjiMLTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ajiMLT.IntergerT <em>Interger T</em>}'.
+	 * Creates a new adapter for an object of class '{@link ajiMLT.IntegerT <em>Integer T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ajiMLT.IntergerT
+	 * @see ajiMLT.IntegerT
 	 * @generated
 	 */
-	public Adapter createIntergerTAdapter() {
+	public Adapter createIntegerTAdapter() {
 		return null;
 	}
 

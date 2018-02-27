@@ -463,26 +463,26 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ajiMLT.IntergerT} instances.
+	 * This keeps track of the one adapter used for all {@link ajiMLT.IntegerT} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntergerTItemProvider intergerTItemProvider;
+	protected IntegerTItemProvider integerTItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ajiMLT.IntergerT}.
+	 * This creates an adapter for a {@link ajiMLT.IntegerT}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIntergerTAdapter() {
-		if (intergerTItemProvider == null) {
-			intergerTItemProvider = new IntergerTItemProvider(this);
+	public Adapter createIntegerTAdapter() {
+		if (integerTItemProvider == null) {
+			integerTItemProvider = new IntegerTItemProvider(this);
 		}
 
-		return intergerTItemProvider;
+		return integerTItemProvider;
 	}
 
 	/**
@@ -693,7 +693,7 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 		if (deleteTItemProvider != null) deleteTItemProvider.dispose();
 		if (multiReadTItemProvider != null) multiReadTItemProvider.dispose();
 		if (customTItemProvider != null) customTItemProvider.dispose();
-		if (intergerTItemProvider != null) intergerTItemProvider.dispose();
+		if (integerTItemProvider != null) integerTItemProvider.dispose();
 		if (booleanTItemProvider != null) booleanTItemProvider.dispose();
 		if (floatTItemProvider != null) floatTItemProvider.dispose();
 		if (stringTItemProvider != null) stringTItemProvider.dispose();

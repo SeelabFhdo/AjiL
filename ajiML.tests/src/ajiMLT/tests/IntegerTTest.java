@@ -5,17 +5,17 @@ package ajiMLT.tests;
 import ajiML.tests.IntegerTest;
 
 import ajiMLT.AjiMLTFactory;
-import ajiMLT.IntergerT;
+import ajiMLT.IntegerT;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Interger T</b></em>'.
+ * A test case for the model object '<em><b>Integer T</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntergerTTest extends IntegerTest {
+public class IntegerTTest extends IntegerTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -23,28 +23,28 @@ public class IntergerTTest extends IntegerTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(IntergerTTest.class);
+		TestRunner.run(IntegerTTest.class);
 	}
 
 	/**
-	 * Constructs a new Interger T test case with the given name.
+	 * Constructs a new Integer T test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerTTest(String name) {
+	public IntegerTTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Interger T test case.
+	 * Returns the fixture for this Integer T test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected IntergerT getFixture() {
-		return (IntergerT)fixture;
+	protected IntegerT getFixture() {
+		return (IntegerT)fixture;
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class IntergerTTest extends IntegerTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(AjiMLTFactory.eINSTANCE.createIntergerT());
+		setFixture(AjiMLTFactory.eINSTANCE.createIntegerT());
 	}
 
 	/**
@@ -69,4 +69,4 @@ public class IntergerTTest extends IntegerTest {
 		setFixture(null);
 	}
 
-} //IntergerTTest
+} //IntegerTTest

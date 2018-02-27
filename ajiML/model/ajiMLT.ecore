@@ -65,7 +65,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="DeleteT" eSuperTypes="ajiML.ecore#//Delete"/>
   <eClassifiers xsi:type="ecore:EClass" name="MultiReadT" eSuperTypes="ajiML.ecore#//MultiRead"/>
   <eClassifiers xsi:type="ecore:EClass" name="CustomT" eSuperTypes="ajiML.ecore#//Custom"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IntergerT" eSuperTypes="ajiML.ecore#//Integer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerT" eSuperTypes="ajiML.ecore#//Integer"/>
   <eClassifiers xsi:type="ecore:EClass" name="BooleanT" eSuperTypes="ajiML.ecore#//Boolean"/>
   <eClassifiers xsi:type="ecore:EClass" name="FloatT" eSuperTypes="ajiML.ecore#//Float"/>
   <eClassifiers xsi:type="ecore:EClass" name="StringT" eSuperTypes="ajiML.ecore#//String"/>

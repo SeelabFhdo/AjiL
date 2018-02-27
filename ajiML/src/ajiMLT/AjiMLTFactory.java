@@ -175,13 +175,13 @@ public interface AjiMLTFactory extends EFactory {
 	CustomT createCustomT();
 
 	/**
-	 * Returns a new object of class '<em>Interger T</em>'.
+	 * Returns a new object of class '<em>Integer T</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interger T</em>'.
+	 * @return a new object of class '<em>Integer T</em>'.
 	 * @generated
 	 */
-	IntergerT createIntergerT();
+	IntegerT createIntegerT();
 
 	/**
 	 * Returns a new object of class '<em>Boolean T</em>'.

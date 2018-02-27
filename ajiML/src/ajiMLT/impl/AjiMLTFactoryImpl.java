@@ -74,7 +74,7 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 			case AjiMLTPackage.DELETE_T: return createDeleteT();
 			case AjiMLTPackage.MULTI_READ_T: return createMultiReadT();
 			case AjiMLTPackage.CUSTOM_T: return createCustomT();
-			case AjiMLTPackage.INTERGER_T: return createIntergerT();
+			case AjiMLTPackage.INTEGER_T: return createIntegerT();
 			case AjiMLTPackage.BOOLEAN_T: return createBooleanT();
 			case AjiMLTPackage.FLOAT_T: return createFloatT();
 			case AjiMLTPackage.STRING_T: return createStringT();
@@ -301,9 +301,9 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerT createIntergerT() {
-		IntergerTImpl intergerT = new IntergerTImpl();
-		return intergerT;
+	public IntegerT createIntegerT() {
+		IntegerTImpl integerT = new IntegerTImpl();
+		return integerT;
 	}
 
 	/**

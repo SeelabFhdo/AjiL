@@ -6,8 +6,11 @@ package ajiML.provider;
 import ajiML.AjiMLFactory;
 import ajiML.AjiMLPackage;
 import ajiML.Entity;
+
 import ajiMLT.AjiMLTFactory;
+
 import ajiMLT.provider.AjiMLEditPlugin;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -233,7 +236,7 @@ public class EntityItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AjiMLPackage.Literals.ENTITY__ATTRIBUTES,
-				 AjiMLTFactory.eINSTANCE.createIntergerT()));
+				 AjiMLTFactory.eINSTANCE.createIntegerT()));
 
 		newChildDescriptors.add
 			(createChildParameter
