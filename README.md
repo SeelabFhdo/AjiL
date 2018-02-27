@@ -51,7 +51,8 @@ https://youtu.be/KmdQIWatut4
 
 ### Generator
 
-needs to be documented
+The generator is based on the Acceleo framework and creates a MSA leveraging the Spring Cloud framework. Although a detailed explanation is currently missing, you can use this tutorial video as a guideline of how to use it (approx. 8 minutes): 
+https://youtu.be/4Ry60HSKrIQ
 
 ## Installation and Usage
 
