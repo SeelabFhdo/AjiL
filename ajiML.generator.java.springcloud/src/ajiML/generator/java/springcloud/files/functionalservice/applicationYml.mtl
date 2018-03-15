@@ -1,0 +1,50 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module applicationYml('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importApplicaitonYml(aFunctionalService : ajiMLT::FunctionalServiceT)]
+[file (aFunctionalService.name + '/src/main/resources/application.yml', false, 'UTF-8')]
+spring:
+  application:
+    name: [aFunctionalService.name.toLower()/]
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerdb
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:[aFunctionalService.discoveredBy.eGet('port')/]/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+
+server:
+  port: [aFunctionalService.port/]
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          [aFunctionalService.securedBy.eGet('publicKey')/]
+          -----END PUBLIC KEY-----
+[/file]
+[/template]

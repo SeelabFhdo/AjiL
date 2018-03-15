@@ -1,0 +1,48 @@
+[**
+ * The documentation of the module generate.
+ */]
+[module applicationYml('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importApplicationYml(aSecurityService : SecurityServiceT)]
+[file (aSecurityService.name + '/src/main/resources/application.yml', false, 'UTF-8')]
+spring:
+  application:
+    name: [aSecurityService.name/]
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:[aSecurityService.discoveredBy.eGet('port')/]/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+
+server:
+  port: [aSecurityService.port/]
+  contextPath: /uaa
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+security:
+  user:
+    password: password
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+[/file]
+[/template]

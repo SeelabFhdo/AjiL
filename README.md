@@ -1,13 +1,26 @@
 # AjiL
-This repository is home of the Aji Modeling Language (AjiL). AjiL is a modeling language with associated tools to support the developement of Microservice Architecture (MSA). The language is mainly developed by the SEELAB research group of Dortmund's University of Applied Sciences and Arts. If you want to know more about Model-Driven Engineering (MDE) we recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al.
+This repository is home of the AjiL tool suite. It comprises the Aji Modeling Language (AjiML), a graphical editor for creating AjiML diagrams, and, currently, one code generator to support the developement of Microservice Architecture (MSA). The tool is mainly developed by the SEELAB research group of Dortmund's University of Applied Sciences and Arts. If you want to know more about Model-Driven Engineering (MDE) we recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al. If you are new to the microservice architecture style the following article by Martin Fowler is a good starting point: https://martinfowler.com/articles/microservices.html
+
+## Changelog Feb 2018
+Currently we work on improving AjiL in several apspects. The following list contains a short summary of our planed changes we are working on in the dev branch. 
+* Ease installation with a simpler routine
+* Improve documentation regarding the usage of AjiL, possibly with a short series of videos
+* Split the underlying metamodel in two different models. One representing the non-technical concepts, the other model the more technical and non-semantic information, e.g. which generator should be used for a certain service.
+* Adjust the modeling editor to adjust a more reduced system overview and, in addition, another more detailed view for each service and its inner workings. 
+
+Because the intended changes demand a complete refactoring of the code, the current master branch currently contains the last complete working version from august 2017. In the dev branch, which is set as default, you can find our latest runnable developement where we already splitted the metamodel into two different models. However, the graphical editor and newly implemented generator are right now not fully completed.
+# Documentation
+
+As an easy starting point we recommend the AjiL tutorial video series which is available on the SEELAB YouTube channel: https://www.youtube.com/channel/UCXrwySsGstqOxUOhNstmkng 
 
 ## The Modeling Language
+*Note: The following description is outdated as of Jan 2018 because we have splitted the original metamodel into two metamodels. Basically the new AjiMLT metamodel extends the existing AjiML metamodel and enriches its' concepts with technical attributes (hence the 'T'), e.g. attributes for messaging mechanism or containerization, for the sourcecode generator. However, although some new concepts and the explanation of AjiMLT are missing, the original AjiML metamodel still gives a good overview of the general idea. Threrefore we included the original depiction in the following explanation.*
 
-As a modeling language, AjiL comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following sections. Although we eagerly work on improving the language itself as well as its documentation, we are still in an early developement stage. Please feel free to help improve AjiL.
+As a modeling language, AjiML comprises three components: (i) Abstract syntax, (ii) Concrete syntax, and (iii) Semantics. Each component is described in the following sections. Although we eagerly work on improving the language itself as well as its documentation, we are still in an early developement stage. Please feel free to help improve AjiL.
 
 ### Abstract Syntax/Metamodel
 
-![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiL Metamodel")
+![AjiL Metamodel](pictures/metamodel.png "Figure 1: AjiML Metamodel")
 
 *Figure 1: AjiL Metamodel*
 
@@ -25,11 +38,7 @@ Constraint Language (OCL). The constraints are detailed as follows.
 
 ### Concrete Syntax
 
-![AjiL Notation](pictures/examplemodel.png "Figure 2: Notation Example")
-
-*Figure 2: Notation Example*
-
-AjiL's concrete syntax, exemplified in figure 2, can be characterized as a Box-and-Line diagram type. It uses uses shapes and colors to distinguish between the different language elements. 
+needs to be documented
 
 ## Associated Tools
 
@@ -37,21 +46,20 @@ To create and work with AjiL models to support MSA developement, the modeling la
 
 ### Editor
 For creating AjiL diagrams, AjiL comes with an editor which is realized using the [Eclipse Sirius
-Framework](https://projects.eclipse.org/projects/modeling.sirius).
+Framework](https://projects.eclipse.org/projects/modeling.sirius). In this short video tutorial (approx. 14 minutes) we introduce you to the graphical representation of AjiMLT models and the corresponding editor. 
+https://youtu.be/KmdQIWatut4 
 
 ### Generator
-At last, AjiL as a tool comprises a template-based generator realized with the [Epsilon
-Generation Language (EGL)](https://eclipse.org/epsilon/). The generator is able to convert *.ajil model files to runnable microservices which rely on Spring Boot.
+
+The generator is based on the Acceleo framework and creates a MSA leveraging the Spring Cloud framework. Although a detailed explanation is currently missing, you can use this tutorial video as a guideline of how to use it (approx. 8 minutes): 
+https://youtu.be/4Ry60HSKrIQ
+
+/Please note that you currently need to model a seperate interface for each entity and name both equally. This is a known issue and will hopefully fixed in the next release./
 
 ## Installation and Usage
-We are currently working to provide a more convinient way to use AjiL, until then you need to run the editor and generator from your IDE. Therefore, to use AjiL you need *Eclipse Modeling Editon* as IDE which directly includes the Epsilon and Sirius frameworks. AjiL was developed with *Neon.1* but should also work with *Oxygen*. 
 
-To use the tools you need to import the sources as individual eclipse modeling projects and generate the necessary EMF projects with the genmodel mechanism in the *ajil* project. Here you are also able to change the metamodel (ecore file) with the included emf notation (*ajil.emf*). 
-
-To run the editor you need to execute the *ajilGraphicalEditor.design* project (Sirius Framework).
-
-The generator is solely useable because the corresponding Aji ecore model is redundantly included. Therefore, if you change the metamodel, you need to change the ecore file in the generator project. The generator is currently hardcoded and therefore certain changes are needed to customize it to your needs.
-These changes can be done in *AjilEglGenerator.java* where the paths to the model and metamodel file need to be altered. Additionally, you need to change the target path in the *main.egx* file.
+For setting up your Eclipse IDE and getting to know the project structure, we have provided a short video tutorial on Youtube (approx. 10 minutes):
+https://youtu.be/_7jhKK5LLSM 
 
 ## Contact and Acknowledgement
 

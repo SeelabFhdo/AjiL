@@ -1,0 +1,58 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module applicationYml('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importApplicationYml(aAPIService : ajiMLT::APIServiceT)]
+[file (aAPIService.name + '/src/main/resources/application.yml', false, 'UTF-8')]
+debug: true
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  aop:
+    proxy-target-class: true
+  application:
+    name: [aAPIService.name/]
+  cloud:
+    config:
+      enabled: false
+
+security:
+  user:
+    password: none
+  oauth2:
+    resource:
+      jwt:
+        key-value: |
+         -----BEGIN PUBLIC KEY-----
+         [aAPIService.securedBy.eGet('publicKey')/]
+         -----END PUBLIC KEY-----
+    client:
+      accessTokenUri: http://localhost:[aAPIService.securedBy.eGet('port')/]/uaa/oauth/token
+      userAuthorizationUri: http://localhost:[aAPIService.securedBy.eGet('port')/]/uaa/oauth/authorize
+      clientId: client
+      clientSecret: password
+
+zuul:
+  routes:
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:[aAPIService.discoveredBy.eGet('port')/]/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+[/file]
+[/template]

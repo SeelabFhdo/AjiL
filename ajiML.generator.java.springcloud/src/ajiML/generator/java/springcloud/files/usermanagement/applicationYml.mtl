@@ -1,0 +1,55 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module applicationYml('http://www.fh-dortmund.de/idial/ajiML/tech')]
+
+
+[template public importUsermanagementApplicationYml(aUserManagement: ajiMLT::UserManagementServiceT)]
+[file (aUserManagement.name + '/src/main/resources/application.yml', false, 'UTF-8')]
+spring:
+  application:
+    name: [aUserManagement.name/]
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:[aUserManagement.discoveredBy.eGet('port')/]/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+
+server:
+  port: [aUserManagement.port/]
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+security:
+  user:
+    password: none
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          [aUserManagement.securedBy.eGet('publicKey')/]
+          -----END PUBLIC KEY-----
+[/file]
+
+[/template]

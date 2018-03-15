@@ -1,0 +1,51 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[import ajiML::generator::java::springcloud::files::discovery::discovery]
+[import ajiML::generator::java::springcloud::files::usermanagement::usermanagement]
+[import ajiML::generator::java::springcloud::files::authentication::security]
+[import ajiML::generator::java::springcloud::files::apigateway::apigateway]
+[import ajiML::generator::java::springcloud::files::functionalservice::functionalservice]
+
+
+
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSystemT
+ */]
+[template public generateElement(aSystemT : SystemT)]
+[comment @main/]
+[for (aService : ajiMLT::FunctionalServiceT | aSystemT.eAllContents(ajiMLT::FunctionalServiceT))]
+([aService.name/])
+[/for]
+
+[for (aDiscoveryService : ajiMLT::DiscoveryServiceT | aSystemT.eAllContents(ajiMLT::DiscoveryServiceT))]
+[importDiscovery(aDiscoveryService)/]
+[/for]
+
+[for (aUserManagementService : ajiMLT::UserManagementServiceT | aSystemT.eAllContents(ajiMLT::UserManagementServiceT))]
+
+[importUsermanagement(aUserManagementService)/]
+[/for]
+
+[for (aSecurityService : ajiMLT::SecurityServiceT | aSystemT.eAllContents(ajiMLT::SecurityServiceT))]
+[importSecurity(aSecurityService)/]
+[/for]
+
+[for (aAPIService : ajiMLT::APIServiceT | aSystemT.eAllContents(ajiMLT::APIServiceT))]
+[importAPIService(aAPIService)/]
+[/for]
+
+[for (aFunctionalService : ajiMLT::FunctionalServiceT | aSystemT.eAllContents(ajiMLT::FunctionalServiceT))]
+[importFunctionalService(aFunctionalService)/]
+[/for]
+
+
+
+
+
+[/template]
