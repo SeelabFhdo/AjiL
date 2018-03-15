@@ -2,7 +2,7 @@
 This repository is home of the AjiL tool suite. It comprises the Aji Modeling Language (AjiML), a graphical editor for creating AjiML diagrams, and, currently, one code generator to support the developement of Microservice Architecture (MSA). The tool is mainly developed by the SEELAB research group of Dortmund's University of Applied Sciences and Arts. If you want to know more about Model-Driven Engineering (MDE) we recommend the book *Engineering Modeling Languages: Turning Domain Knowledge into Tools* by Combemale et al. If you are new to the microservice architecture style the following article by Martin Fowler is a good starting point: https://martinfowler.com/articles/microservices.html
 
 ## Changelog Feb 2018
-Currently we work on improving AjiL in several apspects. The following list contains a short summary of our planed changes we are working on the dev branch. 
+Currently we work on improving AjiL in several apspects. The following list contains a short summary of our planed changes we are working on in the dev branch. 
 * Ease installation with a simpler routine
 * Improve documentation regarding the usage of AjiL, possibly with a short series of videos
 * Split the underlying metamodel in two different models. One representing the non-technical concepts, the other model the more technical and non-semantic information, e.g. which generator should be used for a certain service.
@@ -53,6 +53,8 @@ https://youtu.be/KmdQIWatut4
 
 The generator is based on the Acceleo framework and creates a MSA leveraging the Spring Cloud framework. Although a detailed explanation is currently missing, you can use this tutorial video as a guideline of how to use it (approx. 8 minutes): 
 https://youtu.be/4Ry60HSKrIQ
+
+/Please note that you currently need to model a seperate interface for each entity and name both equally. This is a known issue and will hopefully fixed in the next release./
 
 ## Installation and Usage
 
