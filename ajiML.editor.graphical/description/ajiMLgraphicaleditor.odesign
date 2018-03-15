@@ -241,7 +241,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </containerMappings>
-        <containerMappings name="entityContainer" domainClass="ajiMLT::EntityT" childrenPresentation="List">
+        <containerMappings name="entityContainer" semanticCandidatesExpression="aql:self.oclAsType(ajiMLT::FunctionalServiceT).domain.oclAsType(ajiMLT::DataModelT).entities" domainClass="ajiMLT::EntityT" childrenPresentation="List">
           <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::PrimitiveDataType">
             <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name + ' : '+self.type" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
