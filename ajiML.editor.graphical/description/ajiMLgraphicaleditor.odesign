@@ -168,6 +168,12 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="serviceDependencies" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.domain->isEmpty()">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::DataModelT" referenceName="domain"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:domain">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entities" valueExpression="[self.addInterfaceSubjects(target) /]"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
