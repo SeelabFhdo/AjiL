@@ -57,7 +57,7 @@
         </edgeMappings>
         <edgeMappings name="discoveredBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='configurationNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='securityNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='usermanagementNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='discoveryNode']" targetFinderExpression="feature:discoveredBy">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:'discovered by'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -65,7 +65,7 @@
         </edgeMappings>
         <edgeMappings name="configuredBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='securityNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='usermanagementNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='discoveryNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='configurationNode']" targetFinderExpression="feature:configuredBy">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:'configured by'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -73,8 +73,16 @@
         </edgeMappings>
         <edgeMappings name="securedBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='discoveryNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='configurationNode'] //@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='usermanagementNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='securityNode']" targetFinderExpression="feature:securedBy">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:'secured by'">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="exposedBy" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='functionalNode']/@borderedNodeMappings[name='interface']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@nodeMappings[name='gatewayNode']" targetFinderExpression="feature:exposedToGateways">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="aql:'exposed by'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -160,6 +168,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="exposed by" edgeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@edgeMappings[name='exposedBy']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="discoveredBy" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="depends on" edgeMappings="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@edgeMappings[name='serviceDependency']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
@@ -201,7 +220,7 @@
           </style>
         </nodeMappings>
         <edgeMappings name="entityEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@nodeMappings[name='domainNode']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:entities">
-          <style sizeComputationExpression="2" routingStyle="tree">
+          <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -227,7 +246,7 @@
         <edgeMappings name="entityRelationEdge" sourceMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='entityContainer']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="ajiMLT::RelationT" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription labelSize="6" showIcon="false" labelExpression="aql:if (self.multiplicity.toString() = 'ONE') then 'has one' else 'has many' endif">
+            <centerLabelStyleDescription labelSize="6" showIcon="false" labelExpression="aql:if (self.multiplicity.toString() = 'ONE') then 'has one '+self.name else 'has many'+self.name endif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>

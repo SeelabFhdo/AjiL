@@ -4,29 +4,20 @@
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ajiML" value="ajiML.ecore#/"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionalServiceT" eSuperTypes="ajiML.ecore#//FunctionalService">
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratorDescriptor" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
         eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalServiceT" eSuperTypes="ajiML.ecore#//FunctionalService #//GeneratorDescriptor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="database" lowerBound="1"
         eType="#//EDatabase" defaultValueLiteral="MongoDB"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerized" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
-        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerized" lowerBound="1"
+        eType="#//EContainer" defaultValueLiteral="None"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiscoveryServiceT" eSuperTypes="ajiML.ecore#//DiscoveryService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
-        eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="APIServiceT" eSuperTypes="ajiML.ecore#//APIService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
-        eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationServiceT" eSuperTypes="ajiML.ecore#//ConfigurationService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
-        eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SecurityServiceT" eSuperTypes="ajiML.ecore#//SecurityService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
-        eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiscoveryServiceT" eSuperTypes="ajiML.ecore#//DiscoveryService #//GeneratorDescriptor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="APIServiceT" eSuperTypes="ajiML.ecore#//APIService #//GeneratorDescriptor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationServiceT" eSuperTypes="ajiML.ecore#//ConfigurationService #//GeneratorDescriptor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityServiceT" eSuperTypes="ajiML.ecore#//SecurityService #//GeneratorDescriptor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="certificatePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="certificatePassword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="KeyPairName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -36,20 +27,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mechanism" lowerBound="1"
         eType="#//ECommunicationMechanism" defaultValueLiteral="RESTfulHTTP"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserManagementServiceT" eSuperTypes="ajiML.ecore#//UserManagementService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generator" lowerBound="1"
-        eType="#//EGenerator" defaultValueLiteral="SpringCloud"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserManagementServiceT" eSuperTypes="ajiML.ecore#//UserManagementService #//GeneratorDescriptor"/>
   <eClassifiers xsi:type="ecore:EEnum" name="EGenerator">
     <eLiterals name="SpringCloud"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ECommunicationMechanism">
-    <eLiterals name="RESTfulHTTP"/>
-    <eLiterals name="PublishSubscribe" value="1"/>
+    <eLiterals name="RESTfulHTTP" value="1"/>
+    <eLiterals name="MQTT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EDatabase">
     <eLiterals name="MongoDB"/>
     <eLiterals name="MySQL" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EContainer">
+    <eLiterals name="None" value="1"/>
+    <eLiterals name="Docker"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EMultiplicity">
     <eLiterals name="ONE"/>
