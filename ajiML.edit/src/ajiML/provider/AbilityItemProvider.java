@@ -63,6 +63,7 @@ public class AbilityItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addSubjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,6 +86,28 @@ public class AbilityItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Subject feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSubjectPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Ability_subject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Ability_subject_feature", "_UI_Ability_type"),
+				 AjiMLPackage.Literals.ABILITY__SUBJECT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

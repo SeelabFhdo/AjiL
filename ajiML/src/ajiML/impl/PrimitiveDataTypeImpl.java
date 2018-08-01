@@ -7,8 +7,6 @@ import ajiML.PrimitiveDataType;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Primitive Data Type</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class PrimitiveDataTypeImpl extends MinimalEObjectImpl.Container implements PrimitiveDataType {
+public abstract class PrimitiveDataTypeImpl extends DataTypeImpl implements PrimitiveDataType {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

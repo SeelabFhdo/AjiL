@@ -1073,6 +1073,62 @@ public interface AjiMLPackage extends EPackage {
 	int DATA_MODEL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link ajiML.impl.DataTypeImpl <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiML.impl.DataTypeImpl
+	 * @see ajiML.impl.AjiMLPackageImpl#getDataType()
+	 * @generated
+	 */
+	int DATA_TYPE = 28;
+
+	/**
+	 * The number of structural features of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ajiML.impl.ComplexDataTypeImpl <em>Complex Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiML.impl.ComplexDataTypeImpl
+	 * @see ajiML.impl.AjiMLPackageImpl#getComplexDataType()
+	 * @generated
+	 */
+	int COMPLEX_DATA_TYPE = 27;
+
+	/**
+	 * The number of structural features of the '<em>Complex Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_DATA_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Complex Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_DATA_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ajiML.impl.EntityImpl <em>Entity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1089,7 +1145,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = 0;
+	int ENTITY__NAME = COMPLEX_DATA_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1098,7 +1154,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__PARENT = 1;
+	int ENTITY__PARENT = COMPLEX_DATA_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1107,7 +1163,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ATTRIBUTES = 2;
+	int ENTITY__ATTRIBUTES = COMPLEX_DATA_TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
@@ -1116,7 +1172,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__RELATIONS = 3;
+	int ENTITY__RELATIONS = COMPLEX_DATA_TYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Domain Model</b></em>' container reference.
@@ -1125,7 +1181,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__DOMAIN_MODEL = 4;
+	int ENTITY__DOMAIN_MODEL = COMPLEX_DATA_TYPE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -1134,7 +1190,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = 5;
+	int ENTITY_FEATURE_COUNT = COMPLEX_DATA_TYPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -1143,7 +1199,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_OPERATION_COUNT = 0;
+	int ENTITY_OPERATION_COUNT = COMPLEX_DATA_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ajiML.impl.RelationImpl <em>Relation</em>}' class.
@@ -1238,13 +1294,22 @@ public interface AjiMLPackage extends EPackage {
 	int ABILITY__OWNER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABILITY__SUBJECT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Ability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABILITY_FEATURE_COUNT = 2;
+	int ABILITY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Ability</em>' class.
@@ -1290,7 +1355,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE__SUBJECT = ABILITY_FEATURE_COUNT + 0;
+	int CREATE__SUBJECT = ABILITY__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Create</em>' class.
@@ -1299,7 +1364,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+	int CREATE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Create</em>' class.
@@ -1345,7 +1410,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int READ__SUBJECT = ABILITY_FEATURE_COUNT + 0;
+	int READ__SUBJECT = ABILITY__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Read</em>' class.
@@ -1354,7 +1419,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int READ_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+	int READ_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Read</em>' class.
@@ -1400,7 +1465,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_READ__SUBJECT = ABILITY_FEATURE_COUNT + 0;
+	int MULTI_READ__SUBJECT = ABILITY__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Multi Read</em>' class.
@@ -1409,7 +1474,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MULTI_READ_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+	int MULTI_READ_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Multi Read</em>' class.
@@ -1455,7 +1520,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE__SUBJECT = ABILITY_FEATURE_COUNT + 0;
+	int UPDATE__SUBJECT = ABILITY__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Update</em>' class.
@@ -1464,7 +1529,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+	int UPDATE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Update</em>' class.
@@ -1510,7 +1575,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE__SUBJECT = ABILITY_FEATURE_COUNT + 0;
+	int DELETE__SUBJECT = ABILITY__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Delete</em>' class.
@@ -1519,7 +1584,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 1;
+	int DELETE_FEATURE_COUNT = ABILITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Delete</em>' class.
@@ -1559,6 +1624,15 @@ public interface AjiMLPackage extends EPackage {
 	int CUSTOM__OWNER = ABILITY__OWNER;
 
 	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM__SUBJECT = ABILITY__SUBJECT;
+
+	/**
 	 * The number of structural features of the '<em>Custom</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1593,7 +1667,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_FEATURE_COUNT = 0;
+	int PRIMITIVE_DATA_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Primitive Data Type</em>' class.
@@ -1602,7 +1676,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_OPERATION_COUNT = 0;
+	int PRIMITIVE_DATA_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ajiML.impl.IntegerImpl <em>Integer</em>}' class.
@@ -1835,6 +1909,98 @@ public interface AjiMLPackage extends EPackage {
 	int CHAR_OPERATION_COUNT = PRIMITIVE_DATA_TYPE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ajiML.impl.DateImpl <em>Date</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiML.impl.DateImpl
+	 * @see ajiML.impl.AjiMLPackageImpl#getDate()
+	 * @generated
+	 */
+	int DATE = 29;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE__NAME = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE__TYPE = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Date</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_FEATURE_COUNT = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Date</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_OPERATION_COUNT = PRIMITIVE_DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiML.impl.LongImpl <em>Long</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiML.impl.LongImpl
+	 * @see ajiML.impl.AjiMLPackageImpl#getLong()
+	 * @generated
+	 */
+	int LONG = 30;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG__NAME = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG__TYPE = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Long</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_FEATURE_COUNT = PRIMITIVE_DATA_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Long</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_OPERATION_COUNT = PRIMITIVE_DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ajiML.EMultiplicity <em>EMultiplicity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1842,7 +2008,7 @@ public interface AjiMLPackage extends EPackage {
 	 * @see ajiML.impl.AjiMLPackageImpl#getEMultiplicity()
 	 * @generated
 	 */
-	int EMULTIPLICITY = 27;
+	int EMULTIPLICITY = 31;
 
 
 	/**
@@ -2392,6 +2558,17 @@ public interface AjiMLPackage extends EPackage {
 	EReference getAbility_Owner();
 
 	/**
+	 * Returns the meta object for the reference '{@link ajiML.Ability#getSubject <em>Subject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Subject</em>'.
+	 * @see ajiML.Ability#getSubject()
+	 * @see #getAbility()
+	 * @generated
+	 */
+	EReference getAbility_Subject();
+
+	/**
 	 * Returns the meta object for class '{@link ajiML.Create <em>Create</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2400,17 +2577,6 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCreate();
-
-	/**
-	 * Returns the meta object for the reference '{@link ajiML.Create#getSubject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subject</em>'.
-	 * @see ajiML.Create#getSubject()
-	 * @see #getCreate()
-	 * @generated
-	 */
-	EReference getCreate_Subject();
 
 	/**
 	 * Returns the meta object for class '{@link ajiML.Read <em>Read</em>}'.
@@ -2423,17 +2589,6 @@ public interface AjiMLPackage extends EPackage {
 	EClass getRead();
 
 	/**
-	 * Returns the meta object for the reference '{@link ajiML.Read#getSubject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subject</em>'.
-	 * @see ajiML.Read#getSubject()
-	 * @see #getRead()
-	 * @generated
-	 */
-	EReference getRead_Subject();
-
-	/**
 	 * Returns the meta object for class '{@link ajiML.MultiRead <em>Multi Read</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2442,17 +2597,6 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMultiRead();
-
-	/**
-	 * Returns the meta object for the reference '{@link ajiML.MultiRead#getSubject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subject</em>'.
-	 * @see ajiML.MultiRead#getSubject()
-	 * @see #getMultiRead()
-	 * @generated
-	 */
-	EReference getMultiRead_Subject();
 
 	/**
 	 * Returns the meta object for class '{@link ajiML.Update <em>Update</em>}'.
@@ -2465,17 +2609,6 @@ public interface AjiMLPackage extends EPackage {
 	EClass getUpdate();
 
 	/**
-	 * Returns the meta object for the reference '{@link ajiML.Update#getSubject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subject</em>'.
-	 * @see ajiML.Update#getSubject()
-	 * @see #getUpdate()
-	 * @generated
-	 */
-	EReference getUpdate_Subject();
-
-	/**
 	 * Returns the meta object for class '{@link ajiML.Delete <em>Delete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2484,17 +2617,6 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDelete();
-
-	/**
-	 * Returns the meta object for the reference '{@link ajiML.Delete#getSubject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subject</em>'.
-	 * @see ajiML.Delete#getSubject()
-	 * @see #getDelete()
-	 * @generated
-	 */
-	EReference getDelete_Subject();
 
 	/**
 	 * Returns the meta object for class '{@link ajiML.Custom <em>Custom</em>}'.
@@ -2675,6 +2797,90 @@ public interface AjiMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getChar_Type();
+
+	/**
+	 * Returns the meta object for class '{@link ajiML.ComplexDataType <em>Complex Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Complex Data Type</em>'.
+	 * @see ajiML.ComplexDataType
+	 * @generated
+	 */
+	EClass getComplexDataType();
+
+	/**
+	 * Returns the meta object for class '{@link ajiML.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Type</em>'.
+	 * @see ajiML.DataType
+	 * @generated
+	 */
+	EClass getDataType();
+
+	/**
+	 * Returns the meta object for class '{@link ajiML.Date <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date</em>'.
+	 * @see ajiML.Date
+	 * @generated
+	 */
+	EClass getDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiML.Date#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ajiML.Date#getName()
+	 * @see #getDate()
+	 * @generated
+	 */
+	EAttribute getDate_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiML.Date#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see ajiML.Date#getType()
+	 * @see #getDate()
+	 * @generated
+	 */
+	EAttribute getDate_Type();
+
+	/**
+	 * Returns the meta object for class '{@link ajiML.Long <em>Long</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Long</em>'.
+	 * @see ajiML.Long
+	 * @generated
+	 */
+	EClass getLong();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiML.Long#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ajiML.Long#getName()
+	 * @see #getLong()
+	 * @generated
+	 */
+	EAttribute getLong_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiML.Long#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see ajiML.Long#getType()
+	 * @see #getLong()
+	 * @generated
+	 */
+	EAttribute getLong_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link ajiML.EMultiplicity <em>EMultiplicity</em>}'.
@@ -3148,6 +3354,14 @@ public interface AjiMLPackage extends EPackage {
 		EReference ABILITY__OWNER = eINSTANCE.getAbility_Owner();
 
 		/**
+		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABILITY__SUBJECT = eINSTANCE.getAbility_Subject();
+
+		/**
 		 * The meta object literal for the '{@link ajiML.impl.CreateImpl <em>Create</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3156,14 +3370,6 @@ public interface AjiMLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CREATE = eINSTANCE.getCreate();
-
-		/**
-		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CREATE__SUBJECT = eINSTANCE.getCreate_Subject();
 
 		/**
 		 * The meta object literal for the '{@link ajiML.impl.ReadImpl <em>Read</em>}' class.
@@ -3176,14 +3382,6 @@ public interface AjiMLPackage extends EPackage {
 		EClass READ = eINSTANCE.getRead();
 
 		/**
-		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference READ__SUBJECT = eINSTANCE.getRead_Subject();
-
-		/**
 		 * The meta object literal for the '{@link ajiML.impl.MultiReadImpl <em>Multi Read</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3192,14 +3390,6 @@ public interface AjiMLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MULTI_READ = eINSTANCE.getMultiRead();
-
-		/**
-		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MULTI_READ__SUBJECT = eINSTANCE.getMultiRead_Subject();
 
 		/**
 		 * The meta object literal for the '{@link ajiML.impl.UpdateImpl <em>Update</em>}' class.
@@ -3212,14 +3402,6 @@ public interface AjiMLPackage extends EPackage {
 		EClass UPDATE = eINSTANCE.getUpdate();
 
 		/**
-		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UPDATE__SUBJECT = eINSTANCE.getUpdate_Subject();
-
-		/**
 		 * The meta object literal for the '{@link ajiML.impl.DeleteImpl <em>Delete</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3228,14 +3410,6 @@ public interface AjiMLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DELETE = eINSTANCE.getDelete();
-
-		/**
-		 * The meta object literal for the '<em><b>Subject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DELETE__SUBJECT = eINSTANCE.getDelete_Subject();
 
 		/**
 		 * The meta object literal for the '{@link ajiML.impl.CustomImpl <em>Custom</em>}' class.
@@ -3386,6 +3560,78 @@ public interface AjiMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CHAR__TYPE = eINSTANCE.getChar_Type();
+
+		/**
+		 * The meta object literal for the '{@link ajiML.impl.ComplexDataTypeImpl <em>Complex Data Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiML.impl.ComplexDataTypeImpl
+		 * @see ajiML.impl.AjiMLPackageImpl#getComplexDataType()
+		 * @generated
+		 */
+		EClass COMPLEX_DATA_TYPE = eINSTANCE.getComplexDataType();
+
+		/**
+		 * The meta object literal for the '{@link ajiML.impl.DataTypeImpl <em>Data Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiML.impl.DataTypeImpl
+		 * @see ajiML.impl.AjiMLPackageImpl#getDataType()
+		 * @generated
+		 */
+		EClass DATA_TYPE = eINSTANCE.getDataType();
+
+		/**
+		 * The meta object literal for the '{@link ajiML.impl.DateImpl <em>Date</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiML.impl.DateImpl
+		 * @see ajiML.impl.AjiMLPackageImpl#getDate()
+		 * @generated
+		 */
+		EClass DATE = eINSTANCE.getDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE__NAME = eINSTANCE.getDate_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE__TYPE = eINSTANCE.getDate_Type();
+
+		/**
+		 * The meta object literal for the '{@link ajiML.impl.LongImpl <em>Long</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiML.impl.LongImpl
+		 * @see ajiML.impl.AjiMLPackageImpl#getLong()
+		 * @generated
+		 */
+		EClass LONG = eINSTANCE.getLong();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LONG__NAME = eINSTANCE.getLong_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LONG__TYPE = eINSTANCE.getLong_Type();
 
 		/**
 		 * The meta object literal for the '{@link ajiML.EMultiplicity <em>EMultiplicity</em>}' enum.

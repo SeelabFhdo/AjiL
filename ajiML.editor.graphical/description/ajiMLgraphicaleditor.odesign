@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="ajiMLgraphicaleditor" version="12.0.0.2017041100">
   <ownedViewpoints name="AjiL Viewpoint">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="overviewDiagram" titleExpression="feature:name+' Overview'" initialisation="true" showOnStartup="true" domainClass="ajiMLT::SystemT" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="overviewDiagram" titleExpression="feature:name+' Overview'" showOnStartup="true" domainClass="ajiMLT::SystemT" enablePopupBars="true">
       <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
+      <metamodel href="../../ajiML/model/ajiML.ecore#/"/>
       <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
       <defaultLayer name="Default">
         <nodeMappings name="functionalNode" detailDescriptions="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='overviewDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='create%20detailed%20Diagram']" semanticCandidatesExpression="feature:services" domainClass="ajiMLT::FunctionalServiceT">
@@ -208,9 +209,9 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="detailedDiagram" titleExpression="aql:self.name+'Diagram'" domainClass="ajiMLT::FunctionalServiceT" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="detailedDiagram" titleExpression="aql:self.name+'Diagram'" showOnStartup="true" domainClass="ajiMLT::FunctionalServiceT" enablePopupBars="true">
       <metamodel href="../../ajiML/model/ajiMLT.ecore#/"/>
-      <layout xsi:type="description_1:OrderedTreeLayout" childrenExpression="feature:abilities" nodeMapping="//@ownedViewpoints[name='AjiL%20Viewpoint']/@ownedRepresentations[name='detailedDiagram']/@defaultLayer/@containerMappings[name='interfaceContainer']"/>
+      <metamodel href="../../ajiML/model/ajiML.ecore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="domainNode" semanticCandidatesExpression="feature:domain" domainClass="ajiMLT::DataModelT">
           <style xsi:type="style:DotDescription" showIcon="false" resizeKind="NSEW">
@@ -267,7 +268,7 @@
           </style>
         </containerMappings>
         <containerMappings name="entityContainer" semanticCandidatesExpression="aql:self.oclAsType(ajiMLT::FunctionalServiceT).domain.oclAsType(ajiMLT::DataModelT).entities" domainClass="ajiMLT::EntityT" childrenPresentation="List">
-          <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::PrimitiveDataType">
+          <subNodeMappings name="attributeNode" semanticCandidatesExpression="feature:attributes" domainClass="ajiML::DataType">
             <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.name + ' : '+self.type" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -301,7 +302,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:ToolGroup" name="add Attributes">
-            <tools xsi:type="tool_1:ToolDescription" name="new String" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new String attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -310,7 +311,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Integer" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Integer attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -319,7 +320,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Boolean" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Boolean attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -328,7 +329,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Float" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Float attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -337,12 +338,39 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Char" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Char attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::CharT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Date attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::DateT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Long attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::DateT" referenceName="attributes"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="new Entity attribute" precondition="aql:self.oclIsKindOf(ajiMLT::EntityT)">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ajiMLT::EntityT" referenceName="attributes"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>
@@ -383,7 +411,7 @@
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:ToolGroup" name="add Abilities">
-            <tools xsi:type="tool_1:ToolDescription" name="new Create" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Create ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>
@@ -394,7 +422,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Read" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Read ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>
@@ -405,7 +433,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new MultiRead" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new MultiRead ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>
@@ -416,7 +444,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Update" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Update ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>
@@ -427,7 +455,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Delete" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Delete ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>
@@ -438,7 +466,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ToolDescription" name="new Custom" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
+            <tools xsi:type="tool_1:ToolDescription" name="new Custom ability" precondition="aql:self.oclIsKindOf(ajiMLT::ServiceInterfaceT)">
               <element name="ability"/>
               <elementView name="abilityView"/>
               <initialOperation>

@@ -4,8 +4,8 @@ package ajiML.impl;
 
 import ajiML.AjiMLPackage;
 import ajiML.DataModel;
+import ajiML.DataType;
 import ajiML.Entity;
-import ajiML.PrimitiveDataType;
 import ajiML.Relation;
 
 import java.lang.String;
@@ -21,8 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -44,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
+public class EntityImpl extends ComplexDataTypeImpl implements Entity {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,7 +81,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PrimitiveDataType> attributes;
+	protected EList<DataType> attributes;
 
 	/**
 	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
@@ -178,9 +176,9 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PrimitiveDataType> getAttributes() {
+	public EList<DataType> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectContainmentEList<PrimitiveDataType>(PrimitiveDataType.class, this, AjiMLPackage.ENTITY__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<DataType>(DataType.class, this, AjiMLPackage.ENTITY__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -298,7 +296,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 				return;
 			case AjiMLPackage.ENTITY__ATTRIBUTES:
 				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends PrimitiveDataType>)newValue);
+				getAttributes().addAll((Collection<? extends DataType>)newValue);
 				return;
 			case AjiMLPackage.ENTITY__RELATIONS:
 				getRelations().clear();
@@ -363,7 +361,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

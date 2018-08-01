@@ -69,9 +69,9 @@ public class SecurityServiceTItemProvider extends SecurityServiceItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SecurityServiceT_generator_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SecurityServiceT_generator_feature", "_UI_SecurityServiceT_type"),
-				 AjiMLTPackage.Literals.SECURITY_SERVICE_T__GENERATOR,
+				 getString("_UI_GeneratorDescriptor_generator_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeneratorDescriptor_generator_feature", "_UI_GeneratorDescriptor_type"),
+				 AjiMLTPackage.Literals.GENERATOR_DESCRIPTOR__GENERATOR,
 				 true,
 				 false,
 				 false,

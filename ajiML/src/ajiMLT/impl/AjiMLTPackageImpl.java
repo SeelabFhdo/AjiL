@@ -15,16 +15,21 @@ import ajiMLT.ConfigurationServiceT;
 import ajiMLT.CreateT;
 import ajiMLT.CustomT;
 import ajiMLT.DataModelT;
+import ajiMLT.DateT;
 import ajiMLT.DeleteT;
 import ajiMLT.DiscoveryServiceT;
 import ajiMLT.ECommunicationMechanism;
+import ajiMLT.EContainer;
 import ajiMLT.EDatabase;
+import ajiMLT.EEntitySpecifier;
 import ajiMLT.EGenerator;
 import ajiMLT.EMultiplicity;
 import ajiMLT.EntityT;
 import ajiMLT.FloatT;
 import ajiMLT.FunctionalServiceT;
+import ajiMLT.GeneratorDescriptor;
 import ajiMLT.IntegerT;
+import ajiMLT.LongT;
 import ajiMLT.MultiReadT;
 import ajiMLT.ReadT;
 import ajiMLT.RelationT;
@@ -49,6 +54,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass generatorDescriptorEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,6 +220,20 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass longTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateTEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum eGeneratorEEnum = null;
 
 	/**
@@ -229,7 +255,21 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum eContainerEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum eMultiplicityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum eEntitySpecifierEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -259,7 +299,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AjiMLTPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -273,12 +313,14 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		if (isInited) return (AjiMLTPackage)EPackage.Registry.INSTANCE.getEPackage(AjiMLTPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AjiMLTPackageImpl theAjiMLTPackage = (AjiMLTPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AjiMLTPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AjiMLTPackageImpl());
+		Object registeredAjiMLTPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AjiMLTPackageImpl theAjiMLTPackage = registeredAjiMLTPackage instanceof AjiMLTPackageImpl ? (AjiMLTPackageImpl)registeredAjiMLTPackage : new AjiMLTPackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		AjiMLPackageImpl theAjiMLPackage = (AjiMLPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AjiMLPackage.eNS_URI) instanceof AjiMLPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AjiMLPackage.eNS_URI) : AjiMLPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AjiMLPackage.eNS_URI);
+		AjiMLPackageImpl theAjiMLPackage = (AjiMLPackageImpl)(registeredPackage instanceof AjiMLPackageImpl ? registeredPackage : AjiMLPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAjiMLTPackage.createPackageContents();
@@ -291,10 +333,27 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		// Mark meta-data to indicate it can't be changed
 		theAjiMLTPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AjiMLTPackage.eNS_URI, theAjiMLTPackage);
 		return theAjiMLTPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGeneratorDescriptor() {
+		return generatorDescriptorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeneratorDescriptor_Generator() {
+		return (EAttribute)generatorDescriptorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -311,7 +370,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionalServiceT_Generator() {
+	public EAttribute getFunctionalServiceT_Database() {
 		return (EAttribute)functionalServiceTEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -320,17 +379,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionalServiceT_Database() {
-		return (EAttribute)functionalServiceTEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getFunctionalServiceT_Containerized() {
-		return (EAttribute)functionalServiceTEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)functionalServiceTEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -347,26 +397,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDiscoveryServiceT_Generator() {
-		return (EAttribute)discoveryServiceTEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAPIServiceT() {
 		return apiServiceTEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAPIServiceT_Generator() {
-		return (EAttribute)apiServiceTEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -383,15 +415,6 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConfigurationServiceT_Generator() {
-		return (EAttribute)configurationServiceTEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSecurityServiceT() {
 		return securityServiceTEClass;
 	}
@@ -401,7 +424,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSecurityServiceT_Generator() {
+	public EAttribute getSecurityServiceT_CertificatePath() {
 		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -410,7 +433,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSecurityServiceT_CertificatePath() {
+	public EAttribute getSecurityServiceT_CertificatePassword() {
 		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -419,7 +442,7 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSecurityServiceT_CertificatePassword() {
+	public EAttribute getSecurityServiceT_KeyPairName() {
 		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -428,17 +451,8 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSecurityServiceT_KeyPairName() {
-		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSecurityServiceT_PublicKey() {
-		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)securityServiceTEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -473,15 +487,6 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUserManagementServiceT_Generator() {
-		return (EAttribute)userManagementServiceTEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSystemT() {
 		return systemTEClass;
 	}
@@ -502,6 +507,15 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 */
 	public EClass getEntityT() {
 		return entityTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntityT_Type() {
+		return (EAttribute)entityTEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -617,6 +631,24 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLongT() {
+		return longTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDateT() {
+		return dateTEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEGenerator() {
 		return eGeneratorEEnum;
 	}
@@ -644,8 +676,26 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEContainer() {
+		return eContainerEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEMultiplicity() {
 		return eMultiplicityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEEntitySpecifier() {
+		return eEntitySpecifierEEnum;
 	}
 
 	/**
@@ -676,22 +726,20 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		generatorDescriptorEClass = createEClass(GENERATOR_DESCRIPTOR);
+		createEAttribute(generatorDescriptorEClass, GENERATOR_DESCRIPTOR__GENERATOR);
+
 		functionalServiceTEClass = createEClass(FUNCTIONAL_SERVICE_T);
-		createEAttribute(functionalServiceTEClass, FUNCTIONAL_SERVICE_T__GENERATOR);
 		createEAttribute(functionalServiceTEClass, FUNCTIONAL_SERVICE_T__DATABASE);
 		createEAttribute(functionalServiceTEClass, FUNCTIONAL_SERVICE_T__CONTAINERIZED);
 
 		discoveryServiceTEClass = createEClass(DISCOVERY_SERVICE_T);
-		createEAttribute(discoveryServiceTEClass, DISCOVERY_SERVICE_T__GENERATOR);
 
 		apiServiceTEClass = createEClass(API_SERVICE_T);
-		createEAttribute(apiServiceTEClass, API_SERVICE_T__GENERATOR);
 
 		configurationServiceTEClass = createEClass(CONFIGURATION_SERVICE_T);
-		createEAttribute(configurationServiceTEClass, CONFIGURATION_SERVICE_T__GENERATOR);
 
 		securityServiceTEClass = createEClass(SECURITY_SERVICE_T);
-		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__GENERATOR);
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__CERTIFICATE_PATH);
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__CERTIFICATE_PASSWORD);
 		createEAttribute(securityServiceTEClass, SECURITY_SERVICE_T__KEY_PAIR_NAME);
@@ -701,13 +749,13 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		createEAttribute(serviceInterfaceTEClass, SERVICE_INTERFACE_T__MECHANISM);
 
 		userManagementServiceTEClass = createEClass(USER_MANAGEMENT_SERVICE_T);
-		createEAttribute(userManagementServiceTEClass, USER_MANAGEMENT_SERVICE_T__GENERATOR);
 
 		systemTEClass = createEClass(SYSTEM_T);
 
 		dataModelTEClass = createEClass(DATA_MODEL_T);
 
 		entityTEClass = createEClass(ENTITY_T);
+		createEAttribute(entityTEClass, ENTITY_T__TYPE);
 
 		relationTEClass = createEClass(RELATION_T);
 
@@ -733,11 +781,17 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		charTEClass = createEClass(CHAR_T);
 
+		longTEClass = createEClass(LONG_T);
+
+		dateTEClass = createEClass(DATE_T);
+
 		// Create enums
 		eGeneratorEEnum = createEEnum(EGENERATOR);
 		eCommunicationMechanismEEnum = createEEnum(ECOMMUNICATION_MECHANISM);
 		eDatabaseEEnum = createEEnum(EDATABASE);
+		eContainerEEnum = createEEnum(ECONTAINER);
 		eMultiplicityEEnum = createEEnum(EMULTIPLICITY);
+		eEntitySpecifierEEnum = createEEnum(EENTITY_SPECIFIER);
 	}
 
 	/**
@@ -772,12 +826,18 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		// Add supertypes to classes
 		functionalServiceTEClass.getESuperTypes().add(theAjiMLPackage.getFunctionalService());
+		functionalServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		discoveryServiceTEClass.getESuperTypes().add(theAjiMLPackage.getDiscoveryService());
+		discoveryServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		apiServiceTEClass.getESuperTypes().add(theAjiMLPackage.getAPIService());
+		apiServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		configurationServiceTEClass.getESuperTypes().add(theAjiMLPackage.getConfigurationService());
+		configurationServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		securityServiceTEClass.getESuperTypes().add(theAjiMLPackage.getSecurityService());
+		securityServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		serviceInterfaceTEClass.getESuperTypes().add(theAjiMLPackage.getServiceInterface());
 		userManagementServiceTEClass.getESuperTypes().add(theAjiMLPackage.getUserManagementService());
+		userManagementServiceTEClass.getESuperTypes().add(this.getGeneratorDescriptor());
 		systemTEClass.getESuperTypes().add(theAjiMLPackage.getSystem());
 		dataModelTEClass.getESuperTypes().add(theAjiMLPackage.getDataModel());
 		entityTEClass.getESuperTypes().add(theAjiMLPackage.getEntity());
@@ -793,24 +853,24 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		floatTEClass.getESuperTypes().add(theAjiMLPackage.getFloat());
 		stringTEClass.getESuperTypes().add(theAjiMLPackage.getString());
 		charTEClass.getESuperTypes().add(theAjiMLPackage.getChar());
+		longTEClass.getESuperTypes().add(theAjiMLPackage.getLong());
+		dateTEClass.getESuperTypes().add(theAjiMLPackage.getDate());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(generatorDescriptorEClass, GeneratorDescriptor.class, "GeneratorDescriptor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGeneratorDescriptor_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, GeneratorDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(functionalServiceTEClass, FunctionalServiceT.class, "FunctionalServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFunctionalServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, FunctionalServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFunctionalServiceT_Database(), this.getEDatabase(), "database", "MongoDB", 1, 1, FunctionalServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFunctionalServiceT_Containerized(), ecorePackage.getEBooleanObject(), "containerized", "false", 0, 1, FunctionalServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionalServiceT_Containerized(), this.getEContainer(), "containerized", "None", 1, 1, FunctionalServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(discoveryServiceTEClass, DiscoveryServiceT.class, "DiscoveryServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDiscoveryServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, DiscoveryServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(apiServiceTEClass, APIServiceT.class, "APIServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAPIServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, APIServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(configurationServiceTEClass, ConfigurationServiceT.class, "ConfigurationServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConfigurationServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, ConfigurationServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(securityServiceTEClass, SecurityServiceT.class, "SecurityServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSecurityServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecurityServiceT_CertificatePath(), ecorePackage.getEString(), "certificatePath", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecurityServiceT_CertificatePassword(), ecorePackage.getEString(), "certificatePassword", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSecurityServiceT_KeyPairName(), ecorePackage.getEString(), "KeyPairName", null, 0, 1, SecurityServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -820,13 +880,13 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 		initEAttribute(getServiceInterfaceT_Mechanism(), this.getECommunicationMechanism(), "mechanism", "RESTfulHTTP", 1, 1, ServiceInterfaceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userManagementServiceTEClass, UserManagementServiceT.class, "UserManagementServiceT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUserManagementServiceT_Generator(), this.getEGenerator(), "generator", "SpringCloud", 1, 1, UserManagementServiceT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemTEClass, SystemT.class, "SystemT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dataModelTEClass, DataModelT.class, "DataModelT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entityTEClass, EntityT.class, "EntityT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntityT_Type(), this.getEEntitySpecifier(), "type", "NORMAL", 0, 1, EntityT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationTEClass, RelationT.class, "RelationT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -852,21 +912,34 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 
 		initEClass(charTEClass, CharT.class, "CharT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(longTEClass, LongT.class, "LongT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dateTEClass, DateT.class, "DateT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(eGeneratorEEnum, EGenerator.class, "EGenerator");
 		addEEnumLiteral(eGeneratorEEnum, EGenerator.SPRING_CLOUD);
 
 		initEEnum(eCommunicationMechanismEEnum, ECommunicationMechanism.class, "ECommunicationMechanism");
 		addEEnumLiteral(eCommunicationMechanismEEnum, ECommunicationMechanism.RES_TFUL_HTTP);
-		addEEnumLiteral(eCommunicationMechanismEEnum, ECommunicationMechanism.PUBLISH_SUBSCRIBE);
+		addEEnumLiteral(eCommunicationMechanismEEnum, ECommunicationMechanism.MQTT);
 
 		initEEnum(eDatabaseEEnum, EDatabase.class, "EDatabase");
 		addEEnumLiteral(eDatabaseEEnum, EDatabase.MONGO_DB);
 		addEEnumLiteral(eDatabaseEEnum, EDatabase.MY_SQL);
 
+		initEEnum(eContainerEEnum, EContainer.class, "EContainer");
+		addEEnumLiteral(eContainerEEnum, EContainer.NONE);
+		addEEnumLiteral(eContainerEEnum, EContainer.DOCKER);
+
 		initEEnum(eMultiplicityEEnum, EMultiplicity.class, "EMultiplicity");
 		addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.ONE);
 		addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.MANY);
+
+		initEEnum(eEntitySpecifierEEnum, EEntitySpecifier.class, "EEntitySpecifier");
+		addEEnumLiteral(eEntitySpecifierEEnum, EEntitySpecifier.NORMAL);
+		addEEnumLiteral(eEntitySpecifierEEnum, EEntitySpecifier.PROXY);
+		addEEnumLiteral(eEntitySpecifierEEnum, EEntitySpecifier.DATATRANSFER);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -883,12 +956,12 @@ public class AjiMLTPackageImpl extends EPackageImpl implements AjiMLTPackage {
 	 * @generated
 	 */
 	protected void createImportAnnotations() {
-		String source = "http://www.eclipse.org/OCL/Import";	
+		String source = "http://www.eclipse.org/OCL/Import";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "ajiML", "ajiML.ecore#/"
+			   "ajiML", "ajiML.ecore#/"
 		   });
 	}
 

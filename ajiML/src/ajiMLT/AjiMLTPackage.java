@@ -60,6 +60,43 @@ public interface AjiMLTPackage extends EPackage {
 	AjiMLTPackage eINSTANCE = ajiMLT.impl.AjiMLTPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link ajiMLT.impl.GeneratorDescriptorImpl <em>Generator Descriptor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.GeneratorDescriptorImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getGeneratorDescriptor()
+	 * @generated
+	 */
+	int GENERATOR_DESCRIPTOR = 0;
+
+	/**
+	 * The feature id for the '<em><b>Generator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_DESCRIPTOR__GENERATOR = 0;
+
+	/**
+	 * The number of structural features of the '<em>Generator Descriptor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_DESCRIPTOR_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Generator Descriptor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATOR_DESCRIPTOR_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link ajiMLT.impl.FunctionalServiceTImpl <em>Functional Service T</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +104,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getFunctionalServiceT()
 	 * @generated
 	 */
-	int FUNCTIONAL_SERVICE_T = 0;
+	int FUNCTIONAL_SERVICE_T = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -212,7 +249,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDiscoveryServiceT()
 	 * @generated
 	 */
-	int DISCOVERY_SERVICE_T = 1;
+	int DISCOVERY_SERVICE_T = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -321,7 +358,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getAPIServiceT()
 	 * @generated
 	 */
-	int API_SERVICE_T = 2;
+	int API_SERVICE_T = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -430,7 +467,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getConfigurationServiceT()
 	 * @generated
 	 */
-	int CONFIGURATION_SERVICE_T = 3;
+	int CONFIGURATION_SERVICE_T = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -539,7 +576,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getSecurityServiceT()
 	 * @generated
 	 */
-	int SECURITY_SERVICE_T = 4;
+	int SECURITY_SERVICE_T = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -684,7 +721,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getServiceInterfaceT()
 	 * @generated
 	 */
-	int SERVICE_INTERFACE_T = 5;
+	int SERVICE_INTERFACE_T = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -766,7 +803,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getUserManagementServiceT()
 	 * @generated
 	 */
-	int USER_MANAGEMENT_SERVICE_T = 6;
+	int USER_MANAGEMENT_SERVICE_T = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -875,7 +912,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getSystemT()
 	 * @generated
 	 */
-	int SYSTEM_T = 7;
+	int SYSTEM_T = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -921,7 +958,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDataModelT()
 	 * @generated
 	 */
-	int DATA_MODEL_T = 8;
+	int DATA_MODEL_T = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -976,7 +1013,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEntityT()
 	 * @generated
 	 */
-	int ENTITY_T = 9;
+	int ENTITY_T = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1024,13 +1061,22 @@ public interface AjiMLTPackage extends EPackage {
 	int ENTITY_T__DOMAIN_MODEL = AjiMLPackage.ENTITY__DOMAIN_MODEL;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_T__TYPE = AjiMLPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Entity T</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_T_FEATURE_COUNT = AjiMLPackage.ENTITY_FEATURE_COUNT + 0;
+	int ENTITY_T_FEATURE_COUNT = AjiMLPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Entity T</em>' class.
@@ -1049,7 +1095,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getRelationT()
 	 * @generated
 	 */
-	int RELATION_T = 10;
+	int RELATION_T = 11;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' attribute.
@@ -1113,7 +1159,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCreateT()
 	 * @generated
 	 */
-	int CREATE_T = 11;
+	int CREATE_T = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1168,7 +1214,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getReadT()
 	 * @generated
 	 */
-	int READ_T = 12;
+	int READ_T = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1223,7 +1269,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getUpdateT()
 	 * @generated
 	 */
-	int UPDATE_T = 13;
+	int UPDATE_T = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1278,7 +1324,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDeleteT()
 	 * @generated
 	 */
-	int DELETE_T = 14;
+	int DELETE_T = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1333,7 +1379,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getMultiReadT()
 	 * @generated
 	 */
-	int MULTI_READ_T = 15;
+	int MULTI_READ_T = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1388,7 +1434,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCustomT()
 	 * @generated
 	 */
-	int CUSTOM_T = 16;
+	int CUSTOM_T = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1407,6 +1453,15 @@ public interface AjiMLTPackage extends EPackage {
 	 * @ordered
 	 */
 	int CUSTOM_T__OWNER = AjiMLPackage.CUSTOM__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_T__SUBJECT = AjiMLPackage.CUSTOM__SUBJECT;
 
 	/**
 	 * The number of structural features of the '<em>Custom T</em>' class.
@@ -1434,7 +1489,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getIntegerT()
 	 * @generated
 	 */
-	int INTEGER_T = 17;
+	int INTEGER_T = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1480,7 +1535,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getBooleanT()
 	 * @generated
 	 */
-	int BOOLEAN_T = 18;
+	int BOOLEAN_T = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1526,7 +1581,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getFloatT()
 	 * @generated
 	 */
-	int FLOAT_T = 19;
+	int FLOAT_T = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1572,7 +1627,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getStringT()
 	 * @generated
 	 */
-	int STRING_T = 20;
+	int STRING_T = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1618,7 +1673,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getCharT()
 	 * @generated
 	 */
-	int CHAR_T = 21;
+	int CHAR_T = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1657,6 +1712,98 @@ public interface AjiMLTPackage extends EPackage {
 	int CHAR_T_OPERATION_COUNT = AjiMLPackage.CHAR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ajiMLT.impl.LongTImpl <em>Long T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.LongTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getLongT()
+	 * @generated
+	 */
+	int LONG_T = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_T__NAME = AjiMLPackage.LONG__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_T__TYPE = AjiMLPackage.LONG__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Long T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_T_FEATURE_COUNT = AjiMLPackage.LONG_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Long T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_T_OPERATION_COUNT = AjiMLPackage.LONG_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.impl.DateTImpl <em>Date T</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.impl.DateTImpl
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getDateT()
+	 * @generated
+	 */
+	int DATE_T = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_T__NAME = AjiMLPackage.DATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_T__TYPE = AjiMLPackage.DATE__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Date T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_T_FEATURE_COUNT = AjiMLPackage.DATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Date T</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_T_OPERATION_COUNT = AjiMLPackage.DATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1664,7 +1811,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEGenerator()
 	 * @generated
 	 */
-	int EGENERATOR = 22;
+	int EGENERATOR = 25;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.ECommunicationMechanism <em>ECommunication Mechanism</em>}' enum.
@@ -1674,7 +1821,7 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getECommunicationMechanism()
 	 * @generated
 	 */
-	int ECOMMUNICATION_MECHANISM = 23;
+	int ECOMMUNICATION_MECHANISM = 26;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EDatabase <em>EDatabase</em>}' enum.
@@ -1684,7 +1831,17 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEDatabase()
 	 * @generated
 	 */
-	int EDATABASE = 24;
+	int EDATABASE = 27;
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.EContainer <em>EContainer</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.EContainer
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEContainer()
+	 * @generated
+	 */
+	int ECONTAINER = 28;
 
 	/**
 	 * The meta object id for the '{@link ajiMLT.EMultiplicity <em>EMultiplicity</em>}' enum.
@@ -1694,8 +1851,40 @@ public interface AjiMLTPackage extends EPackage {
 	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEMultiplicity()
 	 * @generated
 	 */
-	int EMULTIPLICITY = 25;
+	int EMULTIPLICITY = 29;
 
+
+	/**
+	 * The meta object id for the '{@link ajiMLT.EEntitySpecifier <em>EEntity Specifier</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ajiMLT.EEntitySpecifier
+	 * @see ajiMLT.impl.AjiMLTPackageImpl#getEEntitySpecifier()
+	 * @generated
+	 */
+	int EENTITY_SPECIFIER = 30;
+
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.GeneratorDescriptor <em>Generator Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generator Descriptor</em>'.
+	 * @see ajiMLT.GeneratorDescriptor
+	 * @generated
+	 */
+	EClass getGeneratorDescriptor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiMLT.GeneratorDescriptor#getGenerator <em>Generator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generator</em>'.
+	 * @see ajiMLT.GeneratorDescriptor#getGenerator()
+	 * @see #getGeneratorDescriptor()
+	 * @generated
+	 */
+	EAttribute getGeneratorDescriptor_Generator();
 
 	/**
 	 * Returns the meta object for class '{@link ajiMLT.FunctionalServiceT <em>Functional Service T</em>}'.
@@ -1706,17 +1895,6 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunctionalServiceT();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.FunctionalServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.FunctionalServiceT#getGenerator()
-	 * @see #getFunctionalServiceT()
-	 * @generated
-	 */
-	EAttribute getFunctionalServiceT_Generator();
 
 	/**
 	 * Returns the meta object for the attribute '{@link ajiMLT.FunctionalServiceT#getDatabase <em>Database</em>}'.
@@ -1751,17 +1929,6 @@ public interface AjiMLTPackage extends EPackage {
 	EClass getDiscoveryServiceT();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.DiscoveryServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.DiscoveryServiceT#getGenerator()
-	 * @see #getDiscoveryServiceT()
-	 * @generated
-	 */
-	EAttribute getDiscoveryServiceT_Generator();
-
-	/**
 	 * Returns the meta object for class '{@link ajiMLT.APIServiceT <em>API Service T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1770,17 +1937,6 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAPIServiceT();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.APIServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.APIServiceT#getGenerator()
-	 * @see #getAPIServiceT()
-	 * @generated
-	 */
-	EAttribute getAPIServiceT_Generator();
 
 	/**
 	 * Returns the meta object for class '{@link ajiMLT.ConfigurationServiceT <em>Configuration Service T</em>}'.
@@ -1793,17 +1949,6 @@ public interface AjiMLTPackage extends EPackage {
 	EClass getConfigurationServiceT();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.ConfigurationServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.ConfigurationServiceT#getGenerator()
-	 * @see #getConfigurationServiceT()
-	 * @generated
-	 */
-	EAttribute getConfigurationServiceT_Generator();
-
-	/**
 	 * Returns the meta object for class '{@link ajiMLT.SecurityServiceT <em>Security Service T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1812,17 +1957,6 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSecurityServiceT();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.SecurityServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.SecurityServiceT#getGenerator()
-	 * @see #getSecurityServiceT()
-	 * @generated
-	 */
-	EAttribute getSecurityServiceT_Generator();
 
 	/**
 	 * Returns the meta object for the attribute '{@link ajiMLT.SecurityServiceT#getCertificatePath <em>Certificate Path</em>}'.
@@ -1900,17 +2034,6 @@ public interface AjiMLTPackage extends EPackage {
 	EClass getUserManagementServiceT();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ajiMLT.UserManagementServiceT#getGenerator <em>Generator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Generator</em>'.
-	 * @see ajiMLT.UserManagementServiceT#getGenerator()
-	 * @see #getUserManagementServiceT()
-	 * @generated
-	 */
-	EAttribute getUserManagementServiceT_Generator();
-
-	/**
 	 * Returns the meta object for class '{@link ajiMLT.SystemT <em>System T</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1939,6 +2062,17 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEntityT();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ajiMLT.EntityT#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see ajiMLT.EntityT#getType()
+	 * @see #getEntityT()
+	 * @generated
+	 */
+	EAttribute getEntityT_Type();
 
 	/**
 	 * Returns the meta object for class '{@link ajiMLT.RelationT <em>Relation T</em>}'.
@@ -2061,6 +2195,26 @@ public interface AjiMLTPackage extends EPackage {
 	EClass getCharT();
 
 	/**
+	 * Returns the meta object for class '{@link ajiMLT.LongT <em>Long T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Long T</em>'.
+	 * @see ajiMLT.LongT
+	 * @generated
+	 */
+	EClass getLongT();
+
+	/**
+	 * Returns the meta object for class '{@link ajiMLT.DateT <em>Date T</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date T</em>'.
+	 * @see ajiMLT.DateT
+	 * @generated
+	 */
+	EClass getDateT();
+
+	/**
 	 * Returns the meta object for enum '{@link ajiMLT.EGenerator <em>EGenerator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2091,6 +2245,16 @@ public interface AjiMLTPackage extends EPackage {
 	EEnum getEDatabase();
 
 	/**
+	 * Returns the meta object for enum '{@link ajiMLT.EContainer <em>EContainer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EContainer</em>'.
+	 * @see ajiMLT.EContainer
+	 * @generated
+	 */
+	EEnum getEContainer();
+
+	/**
 	 * Returns the meta object for enum '{@link ajiMLT.EMultiplicity <em>EMultiplicity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2099,6 +2263,16 @@ public interface AjiMLTPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEMultiplicity();
+
+	/**
+	 * Returns the meta object for enum '{@link ajiMLT.EEntitySpecifier <em>EEntity Specifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>EEntity Specifier</em>'.
+	 * @see ajiMLT.EEntitySpecifier
+	 * @generated
+	 */
+	EEnum getEEntitySpecifier();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2124,6 +2298,24 @@ public interface AjiMLTPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.GeneratorDescriptorImpl <em>Generator Descriptor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.GeneratorDescriptorImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getGeneratorDescriptor()
+		 * @generated
+		 */
+		EClass GENERATOR_DESCRIPTOR = eINSTANCE.getGeneratorDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATOR_DESCRIPTOR__GENERATOR = eINSTANCE.getGeneratorDescriptor_Generator();
+
+		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.FunctionalServiceTImpl <em>Functional Service T</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2132,14 +2324,6 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FUNCTIONAL_SERVICE_T = eINSTANCE.getFunctionalServiceT();
-
-		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTIONAL_SERVICE_T__GENERATOR = eINSTANCE.getFunctionalServiceT_Generator();
 
 		/**
 		 * The meta object literal for the '<em><b>Database</b></em>' attribute feature.
@@ -2168,14 +2352,6 @@ public interface AjiMLTPackage extends EPackage {
 		EClass DISCOVERY_SERVICE_T = eINSTANCE.getDiscoveryServiceT();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISCOVERY_SERVICE_T__GENERATOR = eINSTANCE.getDiscoveryServiceT_Generator();
-
-		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.APIServiceTImpl <em>API Service T</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2184,14 +2360,6 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass API_SERVICE_T = eINSTANCE.getAPIServiceT();
-
-		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute API_SERVICE_T__GENERATOR = eINSTANCE.getAPIServiceT_Generator();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.ConfigurationServiceTImpl <em>Configuration Service T</em>}' class.
@@ -2204,14 +2372,6 @@ public interface AjiMLTPackage extends EPackage {
 		EClass CONFIGURATION_SERVICE_T = eINSTANCE.getConfigurationServiceT();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONFIGURATION_SERVICE_T__GENERATOR = eINSTANCE.getConfigurationServiceT_Generator();
-
-		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.SecurityServiceTImpl <em>Security Service T</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2220,14 +2380,6 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SECURITY_SERVICE_T = eINSTANCE.getSecurityServiceT();
-
-		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SECURITY_SERVICE_T__GENERATOR = eINSTANCE.getSecurityServiceT_Generator();
 
 		/**
 		 * The meta object literal for the '<em><b>Certificate Path</b></em>' attribute feature.
@@ -2290,14 +2442,6 @@ public interface AjiMLTPackage extends EPackage {
 		EClass USER_MANAGEMENT_SERVICE_T = eINSTANCE.getUserManagementServiceT();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute USER_MANAGEMENT_SERVICE_T__GENERATOR = eINSTANCE.getUserManagementServiceT_Generator();
-
-		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.SystemTImpl <em>System T</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2326,6 +2470,14 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENTITY_T = eINSTANCE.getEntityT();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY_T__TYPE = eINSTANCE.getEntityT_Type();
 
 		/**
 		 * The meta object literal for the '{@link ajiMLT.impl.RelationTImpl <em>Relation T</em>}' class.
@@ -2448,6 +2600,26 @@ public interface AjiMLTPackage extends EPackage {
 		EClass CHAR_T = eINSTANCE.getCharT();
 
 		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.LongTImpl <em>Long T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.LongTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getLongT()
+		 * @generated
+		 */
+		EClass LONG_T = eINSTANCE.getLongT();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.impl.DateTImpl <em>Date T</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.impl.DateTImpl
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getDateT()
+		 * @generated
+		 */
+		EClass DATE_T = eINSTANCE.getDateT();
+
+		/**
 		 * The meta object literal for the '{@link ajiMLT.EGenerator <em>EGenerator</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2478,6 +2650,16 @@ public interface AjiMLTPackage extends EPackage {
 		EEnum EDATABASE = eINSTANCE.getEDatabase();
 
 		/**
+		 * The meta object literal for the '{@link ajiMLT.EContainer <em>EContainer</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.EContainer
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getEContainer()
+		 * @generated
+		 */
+		EEnum ECONTAINER = eINSTANCE.getEContainer();
+
+		/**
 		 * The meta object literal for the '{@link ajiMLT.EMultiplicity <em>EMultiplicity</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2486,6 +2668,16 @@ public interface AjiMLTPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EMULTIPLICITY = eINSTANCE.getEMultiplicity();
+
+		/**
+		 * The meta object literal for the '{@link ajiMLT.EEntitySpecifier <em>EEntity Specifier</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ajiMLT.EEntitySpecifier
+		 * @see ajiMLT.impl.AjiMLTPackageImpl#getEEntitySpecifier()
+		 * @generated
+		 */
+		EEnum EENTITY_SPECIFIER = eINSTANCE.getEEntitySpecifier();
 
 	}
 

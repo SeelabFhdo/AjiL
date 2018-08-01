@@ -10,6 +10,7 @@ import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.EMultiplicity;
@@ -98,6 +99,8 @@ public class AjiMLFactoryImpl extends EFactoryImpl implements AjiMLFactory {
 			case AjiMLPackage.FLOAT: return createFloat();
 			case AjiMLPackage.STRING: return createString();
 			case AjiMLPackage.CHAR: return createChar();
+			case AjiMLPackage.DATE: return createDate();
+			case AjiMLPackage.LONG: return createLong();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -351,6 +354,26 @@ public class AjiMLFactoryImpl extends EFactoryImpl implements AjiMLFactory {
 	public Char createChar() {
 		CharImpl char_ = new CharImpl();
 		return char_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date createDate() {
+		DateImpl date = new DateImpl();
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ajiML.Long createLong() {
+		LongImpl long_ = new LongImpl();
+		return long_;
 	}
 
 	/**

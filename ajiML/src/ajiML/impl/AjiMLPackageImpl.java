@@ -7,10 +7,13 @@ import ajiML.Ability;
 import ajiML.AjiMLFactory;
 import ajiML.AjiMLPackage;
 import ajiML.Char;
+import ajiML.ComplexDataType;
 import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.DataType;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.EMultiplicity;
@@ -244,6 +247,34 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass complexDataTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass longEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum eMultiplicityEEnum = null;
 
 	/**
@@ -274,7 +305,7 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AjiMLPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -288,12 +319,14 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		if (isInited) return (AjiMLPackage)EPackage.Registry.INSTANCE.getEPackage(AjiMLPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AjiMLPackageImpl theAjiMLPackage = (AjiMLPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AjiMLPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AjiMLPackageImpl());
+		Object registeredAjiMLPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AjiMLPackageImpl theAjiMLPackage = registeredAjiMLPackage instanceof AjiMLPackageImpl ? (AjiMLPackageImpl)registeredAjiMLPackage : new AjiMLPackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		AjiMLTPackageImpl theAjiMLTPackage = (AjiMLTPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AjiMLTPackage.eNS_URI) instanceof AjiMLTPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AjiMLTPackage.eNS_URI) : AjiMLTPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AjiMLTPackage.eNS_URI);
+		AjiMLTPackageImpl theAjiMLTPackage = (AjiMLTPackageImpl)(registeredPackage instanceof AjiMLTPackageImpl ? registeredPackage : AjiMLTPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAjiMLPackage.createPackageContents();
@@ -305,7 +338,7 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theAjiMLPackage, 
+			(theAjiMLPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return AjiMLValidator.INSTANCE;
@@ -315,7 +348,6 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		// Mark meta-data to indicate it can't be changed
 		theAjiMLPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AjiMLPackage.eNS_URI, theAjiMLPackage);
 		return theAjiMLPackage;
@@ -785,8 +817,8 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCreate() {
-		return createEClass;
+	public EReference getAbility_Subject() {
+		return (EReference)abilityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -794,8 +826,8 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCreate_Subject() {
-		return (EReference)createEClass.getEStructuralFeatures().get(0);
+	public EClass getCreate() {
+		return createEClass;
 	}
 
 	/**
@@ -812,26 +844,8 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRead_Subject() {
-		return (EReference)readEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMultiRead() {
 		return multiReadEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMultiRead_Subject() {
-		return (EReference)multiReadEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -848,26 +862,8 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUpdate_Subject() {
-		return (EReference)updateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDelete() {
 		return deleteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDelete_Subject() {
-		return (EReference)deleteEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1028,6 +1024,78 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getComplexDataType() {
+		return complexDataTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataType() {
+		return dataTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDate() {
+		return dateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDate_Name() {
+		return (EAttribute)dateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDate_Type() {
+		return (EAttribute)dateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLong() {
+		return longEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLong_Name() {
+		return (EAttribute)longEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLong_Type() {
+		return (EAttribute)longEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEMultiplicity() {
 		return eMultiplicityEEnum;
 	}
@@ -1125,21 +1193,17 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		abilityEClass = createEClass(ABILITY);
 		createEAttribute(abilityEClass, ABILITY__NAME);
 		createEReference(abilityEClass, ABILITY__OWNER);
+		createEReference(abilityEClass, ABILITY__SUBJECT);
 
 		createEClass = createEClass(CREATE);
-		createEReference(createEClass, CREATE__SUBJECT);
 
 		readEClass = createEClass(READ);
-		createEReference(readEClass, READ__SUBJECT);
 
 		multiReadEClass = createEClass(MULTI_READ);
-		createEReference(multiReadEClass, MULTI_READ__SUBJECT);
 
 		updateEClass = createEClass(UPDATE);
-		createEReference(updateEClass, UPDATE__SUBJECT);
 
 		deleteEClass = createEClass(DELETE);
-		createEReference(deleteEClass, DELETE__SUBJECT);
 
 		customEClass = createEClass(CUSTOM);
 
@@ -1164,6 +1228,18 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		charEClass = createEClass(CHAR);
 		createEAttribute(charEClass, CHAR__NAME);
 		createEAttribute(charEClass, CHAR__TYPE);
+
+		complexDataTypeEClass = createEClass(COMPLEX_DATA_TYPE);
+
+		dataTypeEClass = createEClass(DATA_TYPE);
+
+		dateEClass = createEClass(DATE);
+		createEAttribute(dateEClass, DATE__NAME);
+		createEAttribute(dateEClass, DATE__TYPE);
+
+		longEClass = createEClass(LONG);
+		createEAttribute(longEClass, LONG__NAME);
+		createEAttribute(longEClass, LONG__TYPE);
 
 		// Create enums
 		eMultiplicityEEnum = createEEnum(EMULTIPLICITY);
@@ -1204,6 +1280,7 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		configurationServiceEClass.getESuperTypes().add(this.getInfrastructureService());
 		securityServiceEClass.getESuperTypes().add(this.getInfrastructureService());
 		userManagementServiceEClass.getESuperTypes().add(this.getInfrastructureService());
+		entityEClass.getESuperTypes().add(this.getComplexDataType());
 		relationEClass.getESuperTypes().add(this.getMultiplicity());
 		createEClass.getESuperTypes().add(this.getAbility());
 		readEClass.getESuperTypes().add(this.getAbility());
@@ -1211,11 +1288,15 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		updateEClass.getESuperTypes().add(this.getAbility());
 		deleteEClass.getESuperTypes().add(this.getAbility());
 		customEClass.getESuperTypes().add(this.getAbility());
+		primitiveDataTypeEClass.getESuperTypes().add(this.getDataType());
 		integerEClass.getESuperTypes().add(this.getPrimitiveDataType());
 		booleanEClass.getESuperTypes().add(this.getPrimitiveDataType());
 		floatEClass.getESuperTypes().add(this.getPrimitiveDataType());
 		stringEClass.getESuperTypes().add(this.getPrimitiveDataType());
 		charEClass.getESuperTypes().add(this.getPrimitiveDataType());
+		complexDataTypeEClass.getESuperTypes().add(this.getDataType());
+		dateEClass.getESuperTypes().add(this.getPrimitiveDataType());
+		longEClass.getESuperTypes().add(this.getPrimitiveDataType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1271,7 +1352,7 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", "myEntity", 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Parent(), this.getEntity(), null, "parent", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Attributes(), this.getPrimitiveDataType(), null, "attributes", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Attributes(), this.getDataType(), null, "attributes", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Relations(), this.getRelation(), this.getRelation_Source(), "relations", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_DomainModel(), this.getDataModel(), this.getDataModel_Entities(), "domainModel", null, 1, 1, Entity.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1283,21 +1364,17 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		initEClass(abilityEClass, Ability.class, "Ability", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbility_Name(), ecorePackage.getEString(), "name", null, 1, 1, Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbility_Owner(), this.getServiceInterface(), this.getServiceInterface_Abilities(), "owner", null, 1, 1, Ability.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbility_Subject(), this.getEntity(), null, "subject", null, 1, 1, Ability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(createEClass, Create.class, "Create", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCreate_Subject(), this.getEntity(), null, "subject", null, 1, 1, Create.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(readEClass, Read.class, "Read", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRead_Subject(), this.getEntity(), null, "subject", null, 1, 1, Read.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multiReadEClass, MultiRead.class, "MultiRead", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMultiRead_Subject(), this.getEntity(), null, "subject", null, 1, 1, MultiRead.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(updateEClass, Update.class, "Update", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUpdate_Subject(), this.getEntity(), null, "subject", null, 1, 1, Update.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deleteEClass, Delete.class, "Delete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDelete_Subject(), this.getEntity(), null, "subject", null, 1, 1, Delete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customEClass, Custom.class, "Custom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1323,6 +1400,18 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		initEAttribute(getChar_Name(), ecorePackage.getEString(), "name", "myChar", 1, 1, Char.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getChar_Type(), ecorePackage.getEString(), "type", "Char", 1, 1, Char.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(complexDataTypeEClass, ComplexDataType.class, "ComplexDataType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dataTypeEClass, DataType.class, "DataType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDate_Name(), ecorePackage.getEString(), "name", "myInteger", 1, 1, Date.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDate_Type(), ecorePackage.getEString(), "type", "Integer", 1, 1, Date.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(longEClass, ajiML.Long.class, "Long", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLong_Name(), ecorePackage.getEString(), "name", "myInteger", 1, 1, ajiML.Long.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLong_Type(), ecorePackage.getEString(), "type", "Integer", 1, 1, ajiML.Long.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(eMultiplicityEEnum, EMultiplicity.class, "EMultiplicity");
 		addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.ONE);
@@ -1347,12 +1436,12 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * @generated
 	 */
 	protected void createImportAnnotations() {
-		String source = "http://www.eclipse.org/OCL/Import";	
+		String source = "http://www.eclipse.org/OCL/Import";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
+			   "ecore", "http://www.eclipse.org/emf/2002/Ecore"
 		   });
 	}
 
@@ -1363,56 +1452,56 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });	
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
 		addAnnotation
-		  (microserviceEClass, 
-		   source, 
+		  (microserviceEClass,
+		   source,
 		   new String[] {
-			 "constraints", "uniqueServiceName uniqueServicePort"
-		   });	
+			   "constraints", "uniqueServiceName uniqueServicePort"
+		   });
 		addAnnotation
-		  (functionalServiceEClass, 
-		   source, 
+		  (functionalServiceEClass,
+		   source,
 		   new String[] {
-			 "constraints", "noSelfDependency"
-		   });	
+			   "constraints", "noSelfDependency"
+		   });
 		addAnnotation
-		  (serviceInterfaceEClass, 
-		   source, 
+		  (serviceInterfaceEClass,
+		   source,
 		   new String[] {
-			 "constraints", "uniqueInterfaceName"
-		   });	
+			   "constraints", "uniqueInterfaceName"
+		   });
 		addAnnotation
-		  (dataModelEClass, 
-		   source, 
+		  (dataModelEClass,
+		   source,
 		   new String[] {
-			 "constraints", "uniqueDomainName"
-		   });	
+			   "constraints", "uniqueDomainName"
+		   });
 		addAnnotation
-		  (entityEClass, 
-		   source, 
+		  (entityEClass,
+		   source,
 		   new String[] {
-			 "constraints", "sealedDomainInheritance uniqueEntityName"
-		   });	
+			   "constraints", "sealedDomainInheritance uniqueEntityName"
+		   });
 		addAnnotation
-		  (relationEClass, 
-		   source, 
+		  (relationEClass,
+		   source,
 		   new String[] {
-			 "constraints", "sealedDomain noSelfRelation"
-		   });	
+			   "constraints", "sealedDomain noSelfRelation"
+		   });
 		addAnnotation
-		  (abilityEClass, 
-		   source, 
+		  (abilityEClass,
+		   source,
 		   new String[] {
-			 "constraints", "uniqueCapabilityName"
+			   "constraints", "uniqueCapabilityName"
 		   });
 	}
 
@@ -1423,51 +1512,51 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
 		addAnnotation
-		  (microserviceEClass, 
-		   source, 
+		  (microserviceEClass,
+		   source,
 		   new String[] {
-			 "uniqueServiceName", "Microservice.allInstances()->forAll(s : Microservice | s <> self implies s.name <> self.name)",
-			 "uniqueServicePort", "Microservice.allInstances()->forAll(p : Microservice | p <> self implies p.port <> self.port)"
-		   });	
+			   "uniqueServiceName", "Microservice.allInstances()->forAll(s : Microservice | s <> self implies s.name <> self.name)",
+			   "uniqueServicePort", "Microservice.allInstances()->forAll(p : Microservice | p <> self implies p.port <> self.port)"
+		   });
 		addAnnotation
-		  (functionalServiceEClass, 
-		   source, 
+		  (functionalServiceEClass,
+		   source,
 		   new String[] {
-			 "noSelfDependency", "self.serviceDependencies->forAll(i : ServiceInterface | self.providedInterfaces->excludes(i))"
-		   });	
+			   "noSelfDependency", "self.serviceDependencies->forAll(i : ServiceInterface | self.providedInterfaces->excludes(i))"
+		   });
 		addAnnotation
-		  (serviceInterfaceEClass, 
-		   source, 
+		  (serviceInterfaceEClass,
+		   source,
 		   new String[] {
-			 "uniqueInterfaceName", "ServiceInterface.allInstances()->forAll(s : ServiceInterface | s <> self implies s.name <> self.name)"
-		   });	
+			   "uniqueInterfaceName", "ServiceInterface.allInstances()->forAll(s : ServiceInterface | s <> self implies s.name <> self.name)"
+		   });
 		addAnnotation
-		  (dataModelEClass, 
-		   source, 
+		  (dataModelEClass,
+		   source,
 		   new String[] {
-			 "uniqueDomainName", "DataModel.allInstances()->forAll(d : DataModel | d <> self implies d.name <> self.name)"
-		   });	
+			   "uniqueDomainName", "DataModel.allInstances()->forAll(d : DataModel | d <> self implies d.name <> self.name)"
+		   });
 		addAnnotation
-		  (entityEClass, 
-		   source, 
+		  (entityEClass,
+		   source,
 		   new String[] {
-			 "sealedDomainInheritance", "if self.parent.oclIsUndefined() then true else if self.parent.domainModel = self.domainModel then true else false \nendif endif",
-			 "uniqueEntityName", "Entity.allInstances()->forAll(ent : Entity | ent <> self implies ent.name <> self.name)"
-		   });	
+			   "sealedDomainInheritance", "if self.parent.oclIsUndefined() then true else if self.parent.domainModel = self.domainModel then true else false \nendif endif",
+			   "uniqueEntityName", "Entity.allInstances()->forAll(ent : Entity | ent <> self implies ent.name <> self.name)"
+		   });
 		addAnnotation
-		  (relationEClass, 
-		   source, 
+		  (relationEClass,
+		   source,
 		   new String[] {
-			 "sealedDomain", "self.source.domainModel = self.target.domainModel",
-			 "noSelfRelation", "self.source <> self.target"
-		   });	
+			   "sealedDomain", "self.source.domainModel = self.target.domainModel",
+			   "noSelfRelation", "self.source <> self.target"
+		   });
 		addAnnotation
-		  (abilityEClass, 
-		   source, 
+		  (abilityEClass,
+		   source,
 		   new String[] {
-			 "uniqueCapabilityName", "Ability.allInstances()->forAll(a : Ability | a <> self implies a.name <> self.name)"
+			   "uniqueCapabilityName", "Ability.allInstances()->forAll(a : Ability | a <> self implies a.name <> self.name)"
 		   });
 	}
 

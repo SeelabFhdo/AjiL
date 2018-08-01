@@ -2,8 +2,6 @@
  */
 package ajiML;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Primitive Data Type</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface PrimitiveDataType extends EObject {
+public interface PrimitiveDataType extends DataType {
 } // PrimitiveDataType

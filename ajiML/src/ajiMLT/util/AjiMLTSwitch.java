@@ -5,10 +5,13 @@ package ajiMLT.util;
 import ajiML.APIService;
 import ajiML.Ability;
 import ajiML.Char;
+import ajiML.ComplexDataType;
 import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.DataType;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.Entity;
@@ -89,10 +92,17 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case AjiMLTPackage.GENERATOR_DESCRIPTOR: {
+				GeneratorDescriptor generatorDescriptor = (GeneratorDescriptor)theEObject;
+				T result = caseGeneratorDescriptor(generatorDescriptor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AjiMLTPackage.FUNCTIONAL_SERVICE_T: {
 				FunctionalServiceT functionalServiceT = (FunctionalServiceT)theEObject;
 				T result = caseFunctionalServiceT(functionalServiceT);
 				if (result == null) result = caseFunctionalService(functionalServiceT);
+				if (result == null) result = caseGeneratorDescriptor(functionalServiceT);
 				if (result == null) result = caseMicroservice(functionalServiceT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -101,6 +111,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				DiscoveryServiceT discoveryServiceT = (DiscoveryServiceT)theEObject;
 				T result = caseDiscoveryServiceT(discoveryServiceT);
 				if (result == null) result = caseDiscoveryService(discoveryServiceT);
+				if (result == null) result = caseGeneratorDescriptor(discoveryServiceT);
 				if (result == null) result = caseInfrastructureService(discoveryServiceT);
 				if (result == null) result = caseMicroservice(discoveryServiceT);
 				if (result == null) result = defaultCase(theEObject);
@@ -110,6 +121,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				APIServiceT apiServiceT = (APIServiceT)theEObject;
 				T result = caseAPIServiceT(apiServiceT);
 				if (result == null) result = caseAPIService(apiServiceT);
+				if (result == null) result = caseGeneratorDescriptor(apiServiceT);
 				if (result == null) result = caseInfrastructureService(apiServiceT);
 				if (result == null) result = caseMicroservice(apiServiceT);
 				if (result == null) result = defaultCase(theEObject);
@@ -119,6 +131,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				ConfigurationServiceT configurationServiceT = (ConfigurationServiceT)theEObject;
 				T result = caseConfigurationServiceT(configurationServiceT);
 				if (result == null) result = caseConfigurationService(configurationServiceT);
+				if (result == null) result = caseGeneratorDescriptor(configurationServiceT);
 				if (result == null) result = caseInfrastructureService(configurationServiceT);
 				if (result == null) result = caseMicroservice(configurationServiceT);
 				if (result == null) result = defaultCase(theEObject);
@@ -128,6 +141,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				SecurityServiceT securityServiceT = (SecurityServiceT)theEObject;
 				T result = caseSecurityServiceT(securityServiceT);
 				if (result == null) result = caseSecurityService(securityServiceT);
+				if (result == null) result = caseGeneratorDescriptor(securityServiceT);
 				if (result == null) result = caseInfrastructureService(securityServiceT);
 				if (result == null) result = caseMicroservice(securityServiceT);
 				if (result == null) result = defaultCase(theEObject);
@@ -144,6 +158,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				UserManagementServiceT userManagementServiceT = (UserManagementServiceT)theEObject;
 				T result = caseUserManagementServiceT(userManagementServiceT);
 				if (result == null) result = caseUserManagementService(userManagementServiceT);
+				if (result == null) result = caseGeneratorDescriptor(userManagementServiceT);
 				if (result == null) result = caseInfrastructureService(userManagementServiceT);
 				if (result == null) result = caseMicroservice(userManagementServiceT);
 				if (result == null) result = defaultCase(theEObject);
@@ -167,6 +182,8 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				EntityT entityT = (EntityT)theEObject;
 				T result = caseEntityT(entityT);
 				if (result == null) result = caseEntity(entityT);
+				if (result == null) result = caseComplexDataType(entityT);
+				if (result == null) result = caseDataType(entityT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -231,6 +248,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				T result = caseIntegerT(integerT);
 				if (result == null) result = caseInteger(integerT);
 				if (result == null) result = casePrimitiveDataType(integerT);
+				if (result == null) result = caseDataType(integerT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,6 +257,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				T result = caseBooleanT(booleanT);
 				if (result == null) result = caseBoolean(booleanT);
 				if (result == null) result = casePrimitiveDataType(booleanT);
+				if (result == null) result = caseDataType(booleanT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -247,6 +266,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				T result = caseFloatT(floatT);
 				if (result == null) result = caseFloat(floatT);
 				if (result == null) result = casePrimitiveDataType(floatT);
+				if (result == null) result = caseDataType(floatT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -255,6 +275,7 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				T result = caseStringT(stringT);
 				if (result == null) result = caseString(stringT);
 				if (result == null) result = casePrimitiveDataType(stringT);
+				if (result == null) result = caseDataType(stringT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -263,11 +284,45 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 				T result = caseCharT(charT);
 				if (result == null) result = caseChar(charT);
 				if (result == null) result = casePrimitiveDataType(charT);
+				if (result == null) result = caseDataType(charT);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLTPackage.LONG_T: {
+				LongT longT = (LongT)theEObject;
+				T result = caseLongT(longT);
+				if (result == null) result = caseLong(longT);
+				if (result == null) result = casePrimitiveDataType(longT);
+				if (result == null) result = caseDataType(longT);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLTPackage.DATE_T: {
+				DateT dateT = (DateT)theEObject;
+				T result = caseDateT(dateT);
+				if (result == null) result = caseDate(dateT);
+				if (result == null) result = casePrimitiveDataType(dateT);
+				if (result == null) result = caseDataType(dateT);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generator Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generator Descriptor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeneratorDescriptor(GeneratorDescriptor object) {
+		return null;
 	}
 
 	/**
@@ -601,6 +656,36 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Long T</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Long T</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLongT(LongT object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date T</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date T</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDateT(DateT object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Microservice</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -762,6 +847,36 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDataModel(DataModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataType(DataType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complex Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complex Data Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplexDataType(ComplexDataType object) {
 		return null;
 	}
 
@@ -1002,6 +1117,36 @@ public class AjiMLTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseChar(Char object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Long</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Long</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLong(ajiML.Long object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDate(Date object) {
 		return null;
 	}
 

@@ -578,6 +578,52 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.LongT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LongTItemProvider longTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.LongT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLongTAdapter() {
+		if (longTItemProvider == null) {
+			longTItemProvider = new LongTItemProvider(this);
+		}
+
+		return longTItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ajiMLT.DateT} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DateTItemProvider dateTItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ajiMLT.DateT}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDateTAdapter() {
+		if (dateTItemProvider == null) {
+			dateTItemProvider = new DateTItemProvider(this);
+		}
+
+		return dateTItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -698,6 +744,8 @@ public class AjiMLTItemProviderAdapterFactory extends AjiMLTAdapterFactory imple
 		if (floatTItemProvider != null) floatTItemProvider.dispose();
 		if (stringTItemProvider != null) stringTItemProvider.dispose();
 		if (charTItemProvider != null) charTItemProvider.dispose();
+		if (longTItemProvider != null) longTItemProvider.dispose();
+		if (dateTItemProvider != null) dateTItemProvider.dispose();
 	}
 
 }

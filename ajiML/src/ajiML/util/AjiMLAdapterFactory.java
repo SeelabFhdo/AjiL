@@ -6,10 +6,13 @@ import ajiML.APIService;
 import ajiML.Ability;
 import ajiML.AjiMLPackage;
 import ajiML.Char;
+import ajiML.ComplexDataType;
 import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.DataType;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.Entity;
@@ -196,6 +199,22 @@ public class AjiMLAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseChar(Char object) {
 				return createCharAdapter();
+			}
+			@Override
+			public Adapter caseComplexDataType(ComplexDataType object) {
+				return createComplexDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseDataType(DataType object) {
+				return createDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseDate(Date object) {
+				return createDateAdapter();
+			}
+			@Override
+			public Adapter caseLong(ajiML.Long object) {
+				return createLongAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -592,6 +611,62 @@ public class AjiMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCharAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.ComplexDataType <em>Complex Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.ComplexDataType
+	 * @generated
+	 */
+	public Adapter createComplexDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.DataType
+	 * @generated
+	 */
+	public Adapter createDataTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Date <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Date
+	 * @generated
+	 */
+	public Adapter createDateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ajiML.Long <em>Long</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ajiML.Long
+	 * @generated
+	 */
+	public Adapter createLongAdapter() {
 		return null;
 	}
 

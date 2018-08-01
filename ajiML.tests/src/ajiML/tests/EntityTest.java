@@ -4,9 +4,6 @@ package ajiML.tests;
 
 import ajiML.AjiMLFactory;
 import ajiML.Entity;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntityTest extends TestCase {
-
-	/**
-	 * The fixture for this Entity test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Entity fixture = null;
+public class EntityTest extends ComplexDataTypeTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class EntityTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Entity test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Entity fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Entity test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Entity getFixture() {
-		return fixture;
+		return (Entity)fixture;
 	}
 
 	/**

@@ -6,10 +6,13 @@ import ajiML.APIService;
 import ajiML.Ability;
 import ajiML.AjiMLPackage;
 import ajiML.Char;
+import ajiML.ComplexDataType;
 import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.DataType;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.Entity;
@@ -175,6 +178,8 @@ public class AjiMLSwitch<T> extends Switch<T> {
 			case AjiMLPackage.ENTITY: {
 				Entity entity = (Entity)theEObject;
 				T result = caseEntity(entity);
+				if (result == null) result = caseComplexDataType(entity);
+				if (result == null) result = caseDataType(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -236,6 +241,7 @@ public class AjiMLSwitch<T> extends Switch<T> {
 			case AjiMLPackage.PRIMITIVE_DATA_TYPE: {
 				PrimitiveDataType primitiveDataType = (PrimitiveDataType)theEObject;
 				T result = casePrimitiveDataType(primitiveDataType);
+				if (result == null) result = caseDataType(primitiveDataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -243,6 +249,7 @@ public class AjiMLSwitch<T> extends Switch<T> {
 				ajiML.Integer integer = (ajiML.Integer)theEObject;
 				T result = caseInteger(integer);
 				if (result == null) result = casePrimitiveDataType(integer);
+				if (result == null) result = caseDataType(integer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -250,6 +257,7 @@ public class AjiMLSwitch<T> extends Switch<T> {
 				ajiML.Boolean boolean_ = (ajiML.Boolean)theEObject;
 				T result = caseBoolean(boolean_);
 				if (result == null) result = casePrimitiveDataType(boolean_);
+				if (result == null) result = caseDataType(boolean_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,6 +265,7 @@ public class AjiMLSwitch<T> extends Switch<T> {
 				ajiML.Float float_ = (ajiML.Float)theEObject;
 				T result = caseFloat(float_);
 				if (result == null) result = casePrimitiveDataType(float_);
+				if (result == null) result = caseDataType(float_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -264,6 +273,7 @@ public class AjiMLSwitch<T> extends Switch<T> {
 				ajiML.String string = (ajiML.String)theEObject;
 				T result = caseString(string);
 				if (result == null) result = casePrimitiveDataType(string);
+				if (result == null) result = caseDataType(string);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -271,6 +281,36 @@ public class AjiMLSwitch<T> extends Switch<T> {
 				Char char_ = (Char)theEObject;
 				T result = caseChar(char_);
 				if (result == null) result = casePrimitiveDataType(char_);
+				if (result == null) result = caseDataType(char_);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLPackage.COMPLEX_DATA_TYPE: {
+				ComplexDataType complexDataType = (ComplexDataType)theEObject;
+				T result = caseComplexDataType(complexDataType);
+				if (result == null) result = caseDataType(complexDataType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLPackage.DATA_TYPE: {
+				DataType dataType = (DataType)theEObject;
+				T result = caseDataType(dataType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLPackage.DATE: {
+				Date date = (Date)theEObject;
+				T result = caseDate(date);
+				if (result == null) result = casePrimitiveDataType(date);
+				if (result == null) result = caseDataType(date);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AjiMLPackage.LONG: {
+				ajiML.Long long_ = (ajiML.Long)theEObject;
+				T result = caseLong(long_);
+				if (result == null) result = casePrimitiveDataType(long_);
+				if (result == null) result = caseDataType(long_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -680,6 +720,66 @@ public class AjiMLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseChar(Char object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complex Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complex Data Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplexDataType(ComplexDataType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataType(DataType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDate(Date object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Long</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Long</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLong(ajiML.Long object) {
 		return null;
 	}
 

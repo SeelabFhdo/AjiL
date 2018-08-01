@@ -49,7 +49,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemT" eSuperTypes="ajiML.ecore#//System"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataModelT" eSuperTypes="ajiML.ecore#//DataModel"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EntityT" eSuperTypes="ajiML.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityT" eSuperTypes="ajiML.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EEntitySpecifier"
+        defaultValueLiteral="NORMAL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EEntitySpecifier">
+    <eLiterals name="NORMAL"/>
+    <eLiterals name="PROXY" value="1"/>
+    <eLiterals name="DATATRANSFER" value="2"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationT" eSuperTypes="ajiML.ecore#//Relation"/>
   <eClassifiers xsi:type="ecore:EClass" name="CreateT" eSuperTypes="ajiML.ecore#//Create"/>
   <eClassifiers xsi:type="ecore:EClass" name="ReadT" eSuperTypes="ajiML.ecore#//Read"/>
@@ -62,4 +70,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="FloatT" eSuperTypes="ajiML.ecore#//Float"/>
   <eClassifiers xsi:type="ecore:EClass" name="StringT" eSuperTypes="ajiML.ecore#//String"/>
   <eClassifiers xsi:type="ecore:EClass" name="CharT" eSuperTypes="ajiML.ecore#//Char"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LongT" eSuperTypes="ajiML.ecore#//Long"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateT" eSuperTypes="ajiML.ecore#//Date"/>
 </ecore:EPackage>
