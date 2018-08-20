@@ -61,12 +61,23 @@ public interface Relation extends Multiplicity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' container reference.
+	 * @see #setSource(Entity)
 	 * @see ajiML.AjiMLPackage#getRelation_Source()
 	 * @see ajiML.Entity#getRelations
-	 * @model opposite="relations" required="true" transient="false" changeable="false"
+	 * @model opposite="relations" required="true" transient="false"
 	 * @generated
 	 */
 	Entity getSource();
+
+	/**
+	 * Sets the value of the '{@link ajiML.Relation#getSource <em>Source</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' container reference.
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(Entity value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.

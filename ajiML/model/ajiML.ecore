@@ -112,7 +112,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity" containment="true" eOpposite="#//Entity/domainModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//FunctionalService"
-        changeable="false" eOpposite="#//FunctionalService/domain"/>
+        eOpposite="#//FunctionalService/domain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//ComplexDataType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -143,7 +143,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="myRelation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Entity" changeable="false" eOpposite="#//Entity/relations"/>
+        eType="#//Entity" eOpposite="#//Entity/relations"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Entity"/>
   </eClassifiers>

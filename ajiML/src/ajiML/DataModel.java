@@ -83,11 +83,22 @@ public interface DataModel extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owner</em>' container reference.
+	 * @see #setOwner(FunctionalService)
 	 * @see ajiML.AjiMLPackage#getDataModel_Owner()
 	 * @see ajiML.FunctionalService#getDomain
-	 * @model opposite="domain" required="true" transient="false" changeable="false"
+	 * @model opposite="domain" required="true" transient="false"
 	 * @generated
 	 */
 	FunctionalService getOwner();
+
+	/**
+	 * Sets the value of the '{@link ajiML.DataModel#getOwner <em>Owner</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owner</em>' container reference.
+	 * @see #getOwner()
+	 * @generated
+	 */
+	void setOwner(FunctionalService value);
 
 } // DataModel
