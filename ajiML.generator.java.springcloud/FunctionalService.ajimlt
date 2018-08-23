@@ -9,12 +9,16 @@
         <attributes xsi:type="ajiMLT:StringT" name="street"/>
         <attributes xsi:type="ajiMLT:CharT" name="streetChar"/>
       </entities>
+      <entities xsi:type="ajiMLT:EntityT" name="MoonE">
+        <attributes xsi:type="ajiMLT:StringT" name="MoonName"/>
+      </entities>
     </domain>
     <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="LocationInterface">
       <abilities xsi:type="ajiMLT:CreateT" name="CreateLocation" subject="//@services.0/@domain/@entities.0"/>
       <abilities xsi:type="ajiMLT:ReadT" name="ReadLocation" subject="//@services.0/@domain/@entities.0"/>
       <abilities xsi:type="ajiMLT:UpdateT" name="UpdateLocation" subject="//@services.0/@domain/@entities.0"/>
       <abilities xsi:type="ajiMLT:DeleteT" name="DeleteLocation" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="ReadMoon" subject="//@services.0/@domain/@entities.1"/>
     </providedInterfaces>
   </services>
 </ajiMLT:SystemT>
