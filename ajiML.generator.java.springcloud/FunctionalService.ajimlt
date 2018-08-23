@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajiMLT:SystemT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajiMLT="http://www.fh-dortmund.de/idial/ajiML/tech" name="FunctionalServiceSystem">
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="LocationService" port="8081">
+    <domain xsi:type="ajiMLT:DataModelT" name="LocationModel">
+      <entities xsi:type="ajiMLT:EntityT" name="LocationE">
+        <attributes xsi:type="ajiMLT:IntegerT" name="LocationId"/>
+        <attributes xsi:type="ajiMLT:BooleanT" name="status"/>
+        <attributes xsi:type="ajiMLT:FloatT" name="price"/>
+        <attributes xsi:type="ajiMLT:StringT" name="street"/>
+        <attributes xsi:type="ajiMLT:CharT" name="streetChar"/>
+      </entities>
+    </domain>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="LocationInterface">
+      <abilities xsi:type="ajiMLT:CreateT" name="CreateLocation" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="ReadLocation" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:UpdateT" name="UpdateLocation" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:DeleteT" name="DeleteLocation" subject="//@services.0/@domain/@entities.0"/>
+    </providedInterfaces>
+  </services>
+</ajiMLT:SystemT>

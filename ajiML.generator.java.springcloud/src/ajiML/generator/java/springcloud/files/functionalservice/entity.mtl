@@ -4,10 +4,9 @@
  */]
 [module entity('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT, aEntitie : ajiMLT::EntityT)]
-[file (aFunctionalService.name + '/src/main/java/de/fh/entities/' + aEntitie.name + '.java', false, 'UTF-8')]
-package de.fh.entitie;
+[file (aFunctionalService.name + '/src/main/java/de/fh/entity/' + aEntitie.name + '.java', false, 'UTF-8')]
+package de.fh.entity;
 
-import java.util.Objects;
 import org.springframework.data.annotation.Id;
 
 public class [aEntitie.name.toUpperFirst()/] {
@@ -30,10 +29,10 @@ public class [aEntitie.name.toUpperFirst()/] {
   private float [aFloat.name.toLowerFirst()/];
 [/for]
 
-  public Customer() {
+  public [aEntitie.name.toUpperFirst()/]() {
   }
 
-  public Customer(
+  public [aEntitie.name.toUpperFirst()/](
 [for (aString : ajiMLT::StringT | aFunctionalService.eAllContents(ajiMLT::StringT))]
   			String [aString.name.toLowerFirst()/],
 [/for]
@@ -103,8 +102,8 @@ public class [aEntitie.name.toUpperFirst()/] {
     return [aChar.name.toLowerFirst()/];
   }
 
-  public void set[aChar.name.toUpperFirst()/](String [aChar.name.toUpperFirst()/]) {
-    this.[aChar.name.toUpperFirst()/] = [aChar.name.toUpperFirst()/];
+  public void set[aChar.name.toLowerFirst()/](String [aChar.name.toLowerFirst()/]) {
+    this.[aChar.name.toLowerFirst()/] = [aChar.name.toLowerFirst()/];
   }
 [/for]
 
@@ -117,6 +116,7 @@ public class [aEntitie.name.toUpperFirst()/] {
     this.[aFloat.name.toLowerFirst()/] = [aFloat.name.toLowerFirst()/];
   }
 [/for]
+
   public int getId() {
     return id;
   }

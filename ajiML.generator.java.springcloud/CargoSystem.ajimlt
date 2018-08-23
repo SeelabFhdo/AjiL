@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajiMLT:SystemT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajiMLT="http://www.fh-dortmund.de/idial/ajiML/tech" name="CargoSystem">
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="CustomerService" port="8083" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6" database="MySQL">
+    <domain xsi:type="ajiMLT:DataModelT" name="Customer">
+      <entities xsi:type="ajiMLT:EntityT" name="Customer">
+        <attributes xsi:type="ajiMLT:IntegerT" name="Id"/>
+        <attributes xsi:type="ajiMLT:BooleanT" name="trustFul"/>
+        <attributes xsi:type="ajiMLT:FloatT" name="credit"/>
+        <attributes xsi:type="ajiMLT:StringT" name="name"/>
+        <attributes xsi:type="ajiMLT:CharT" name="nameChar"/>
+      </entities>
+    </domain>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="CustomerInterface">
+      <abilities xsi:type="ajiMLT:CreateT" name="CreateCustomer" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="ReadCustomer" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:UpdateT" name="UpdateCustomer" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:DeleteT" name="DeleteCustomer" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:MultiReadT" name="ReadAllCustomer" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:CustomT" name="CustomActionCustomer" subject="//@services.0/@domain/@entities.0"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="CargoService" port="8082" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6" serviceDependencies="//@services.0/@providedInterfaces.0 //@services.1/@providedInterfaces.1">
+    <domain xsi:type="ajiMLT:DataModelT" name="Cargo">
+      <entities xsi:type="ajiMLT:EntityT" name="Cargo">
+        <attributes xsi:type="ajiMLT:IntegerT" name="id"/>
+        <attributes xsi:type="ajiMLT:BooleanT" name="paid"/>
+        <attributes xsi:type="ajiMLT:FloatT" name="price"/>
+        <attributes xsi:type="ajiMLT:StringT" name="CargoName"/>
+      </entities>
+      <entities xsi:type="ajiMLT:EntityT" name="Shipment">
+        <attributes xsi:type="ajiMLT:IntegerT" name="shippmentId"/>
+        <attributes xsi:type="ajiMLT:StringT" name="shipmentName"/>
+      </entities>
+    </domain>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="CargoInterface">
+      <abilities xsi:type="ajiMLT:CreateT" name="CreateCargo" subject="//@services.1/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="ReadCargo" subject="//@services.1/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:UpdateT" name="UpdateCargo"/>
+      <abilities xsi:type="ajiMLT:DeleteT" name="DeleteCargo" subject="//@services.1/@domain/@entities.0"/>
+    </providedInterfaces>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="ShippmentInterface">
+      <abilities xsi:type="ajiMLT:CreateT" name="CreateShippment" subject="//@services.1/@domain/@entities.1"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="ReadShippment" subject="//@services.1/@domain/@entities.1"/>
+      <abilities xsi:type="ajiMLT:UpdateT" name="UpdateShippment"/>
+      <abilities xsi:type="ajiMLT:DeleteT" name="DeleteShippment" subject="//@services.1/@domain/@entities.1"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="LocationService" port="8081" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6">
+    <domain xsi:type="ajiMLT:DataModelT" name="LocationModel">
+      <entities xsi:type="ajiMLT:EntityT" name="Location">
+        <attributes xsi:type="ajiMLT:IntegerT" name="locationId"/>
+        <attributes xsi:type="ajiMLT:IntegerT" name="postCode"/>
+        <attributes xsi:type="ajiMLT:StringT" name="city"/>
+        <attributes xsi:type="ajiMLT:StringT" name="street"/>
+      </entities>
+    </domain>
+  </services>
+  <services xsi:type="ajiMLT:DiscoveryServiceT" name="DiscoveryService" port="8761" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6" discoveredServices="//@services.7 //@services.6 //@services.5 //@services.4 //@services.3 //@services.2 //@services.0 //@services.1"/>
+  <services xsi:type="ajiMLT:APIServiceT" name="APIGateway" port="8080" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6"/>
+  <services xsi:type="ajiMLT:ConfigurationServiceT" name="ConfigurationService" port="8101" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6" configuredServices="//@services.7 //@services.6 //@services.5 //@services.4 //@services.3 //@services.2 //@services.0 //@services.1"/>
+  <services xsi:type="ajiMLT:SecurityServiceT" name="SecurityService" port="9999" discoveredBy="//@services.3" configuredBy="//@services.5" securedBy="//@services.6" securedServices="//@services.6 //@services.5 //@services.4 //@services.3 //@services.2 //@services.1 //@services.0" certificatePath="/home/phil/Entwicklung/AjiML-Dev/keystore.jks" certificatePassword="password" KeyPairName="selfsigned" publicKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgrS/8BOdDPptVdulZ58bgt8EChTvTH0M6XvSMDMArVVBqD1AZXsS3ULLxdZxRGGHDNrnjk5MP+SkKcIl0ND+ilJdSy5VV+nuOSl6lo1jrXI4ZRNi6rYrjIgVMP4SEt3qAGRvFQvSmHkcnBptu6YDdKVjeHy3GddOO+BvOX8bHNZ7dH6qlHi0AQNj3MNKaCMDVUt5rBQNoEZzv/wfbTcvv8q2bvThHR6M6kMzOBtLwAseIRqe6kOQ6Z5LRzHX/n0GdKsvrDFL8ynJrK9VmnYYE4DkVoT/sLG0XgfnLzLsnS6R/8XZb/gas0+TguiPOcnh7q/tzEDfT6MbGMXKlmmSXQIDAQAB"/>
+  <services xsi:type="ajiMLT:UserManagementServiceT" name="UserManagementService" port="8100" discoveredBy="//@services.3" configuredBy="//@services.5"/>
+</ajiMLT:SystemT>

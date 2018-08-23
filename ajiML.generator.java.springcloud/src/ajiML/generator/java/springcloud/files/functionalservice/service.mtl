@@ -7,7 +7,7 @@
 [file (aFunctionalService.name+ '/src/main/java/de/fh/service/' + aServiceInterface.name.toUpperFirst() + 'Service.java', false, 'UTF-8')]
 package de.fh.service;
 
-import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.entity.[aServiceInterface.name.toUpperFirst()/];
 
 public interface [aServiceInterface.name.toUpperFirst()/]Service {
 
@@ -22,7 +22,7 @@ public interface [aServiceInterface.name.toUpperFirst()/]Service {
 package de.fh.service.impl;
 
 import de.fh.dao.[aServiceInterface.name.toUpperFirst()/]Dao;
-import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.entity.[aServiceInterface.name.toUpperFirst()/];
 import de.fh.service.[aServiceInterface.name.toUpperFirst()/]Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
