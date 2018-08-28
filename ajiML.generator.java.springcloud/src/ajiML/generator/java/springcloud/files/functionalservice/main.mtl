@@ -4,7 +4,7 @@
  */]
 [module main('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importMain(aFunctionalService : ajiMLT::FunctionalServiceT)]
-[file (aFunctionalService.name+ '/src/main/java/de/fh/' + aFunctionalService.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
+[file (aFunctionalService.name + '/src/main/java/de/fh/' + aFunctionalService.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
 package de.fh;
 
 import org.springframework.boot.SpringApplication;
@@ -16,10 +16,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableResourceServer
 @EnableEurekaClient
-public class CustomerServiceApplication {
+public class [aFunctionalService.name/]Application {
 
   public static void main(String[ '[' /][ ']' /] args) {
-    SpringApplication.run(CustomerServiceApplication.class, args);
+    SpringApplication.run([aFunctionalService.name/]Application.class, args);
   }
 }
 

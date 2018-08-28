@@ -34,7 +34,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
  [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
   @PutMapping("/")
-  public String create(
+  public String create[aCreate.subject.name.toUpperFirst()/](
 		[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
 		[/for]
@@ -68,27 +68,27 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		  	 		[aFloat.name.toLowerFirst()/],
 		[/for]
 					  Integer.parseInt(Id));
-    [aServiceInterface.name.toLowerFirst()/]Service = [aServiceInterface.name.toLowerFirst()/]Service.create([aCreate.subject.name.toLowerFirst()/]);
+    [aCreate.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toLowerFirst()/]);
     Gson gson = new Gson();
     return gson.toJson([aCreate.subject.name.toLowerFirst()/]);
   }
- [/for]
 
+ [/for]
 [for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
   @GetMapping("/{Id}")
-  public String read(@PathVariable String Id) {
+  public String read[aRead.subject.name.toUpperFirst()/](@PathVariable String Id) {
     Gson gson = new Gson();
-	[aRead.subject.name.toUpperFirst()/] [aRead.subject.name.toLowerFirst()/] = [aServiceInterface.name.toUpperFirst()/]Service.read(Integer.parseInt(Id));
+	[aRead.subject.name.toUpperFirst()/] [aRead.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aRead.subject.name.toUpperFirst()/](Integer.parseInt(Id));
     if ([aRead.subject.name.toLowerFirst()/] == null) {
       throw new InvalidParameterException("No [aRead.subject.name.toUpperFirst()/] with Id: " + Id);
     }
     return gson.toJson([aRead.subject.name.toLowerFirst()/]);
   }	
-[/for]
 
+[/for]
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
   @PostMapping("/")
-  public String update(
+  public String update[aUpdate.subject.name.toUpperFirst()/](
 	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
 	  			@RequestParam String [aString.name.toLowerFirst()/],
 	[/for]
@@ -122,26 +122,25 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 	  	 		[aFloat.name.toLowerFirst()/],
 	[/for]
 					  Integer.parseInt(Id));
-	[aUpdate.subject.name.toLowerFirst()/] = [aServiceInterface.name.toUpperFirst()/]Service.update([aUpdate.subject.name.toLowerFirst()/]);
+	[aUpdate.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toLowerFirst()/]);
 	Gson gson = new Gson();
 	return gson.toJson([aUpdate.subject.name.toLowerFirst()/]);
 	}
-[/for]
 
+[/for]
 [for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
   @DeleteMapping("/{Id}")
-  public String delete(@PathVariable String Id) {
-  	[aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/] = [aServiceInterface.name.toUpperFirst()/]Service.read(Id);
+  public String delete[aDelete.subject.name.toUpperFirst()/](@PathVariable String Id) {
+  	[aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aDelete.subject.name.toUpperFirst()/](Integer.parseInt(Id));
 	Gson gson = new Gson();
 	if ([aDelete.subject.name.toLowerFirst()/] != null) {
-      [aServiceInterface.name.toUpperFirst()/]Service.delete([aDelete.subject.name.toLowerFirst()/]);
+      [aServiceInterface.name.toLowerFirst()/]Service.delete[aDelete.subject.name.toUpperFirst()/]([aDelete.subject.name.toLowerFirst()/]);
       return gson.toJson([aDelete.subject.name.toLowerFirst()/]);
     } else
       throw new InvalidParameterException("No LocationInterface with Id: " + Id);
   }
+
 [/for]
-
-
 }
 
 [/file]

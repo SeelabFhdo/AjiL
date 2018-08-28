@@ -4,16 +4,18 @@
  */]
 [module dao('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importDao(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
-[file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aServiceInterface.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
+[for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aEntity.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
 package de.fh.dao;
 
-import de.fh.entity.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.entity.*;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface [aServiceInterface.name.toUpperFirst()/]Dao extends MongoRepository<[aServiceInterface.name.toUpperFirst()/], Integer> {
+public interface [aEntity.name.toUpperFirst()/]Dao extends MongoRepository<[aEntity.name.toUpperFirst()/], Integer> {
 
-  public [aServiceInterface.name.toUpperFirst()/] findById(Integer Id);
+  public [aEntity.name.toUpperFirst()/] findById(Integer Id);
 }
 
 [/file]
+[/for]
 [/template]
