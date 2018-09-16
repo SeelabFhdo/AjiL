@@ -6,6 +6,7 @@
 [template public importDao(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
 [for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
 [file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aEntity.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
 package de.fh.dao;
 
 import de.fh.entity.*;
@@ -15,6 +16,17 @@ public interface [aEntity.name.toUpperFirst()/]Dao extends MongoRepository<[aEnt
 
   public [aEntity.name.toUpperFirst()/] findById(Integer Id);
 }
+[/if]
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MySQL'))]
+package de.fh.dao;
+
+import de.fh.entity.*;
+import org.springframework.data.repository.CrudRepository;
+
+public interface [aEntity.name.toUpperFirst()/]Dao extends CrudRepository<[aEntity.name.toUpperFirst()/], Integer> {
+	public [aEntity.name.toUpperFirst()/] findById(Integer Id);
+}
+[/if]
 
 [/file]
 [/for]

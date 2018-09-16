@@ -8,15 +8,29 @@
 spring:
   application:
     name: [aFunctionalService.name.toLower()/]
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
   data:
     mongodb:
       host: localhost
       port: 27017
-      database: customerdb
+      database: [aFunctionalService.name.toLowerCase()/]
+[/if]
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MySQL'))]
+  datasource:
+    url: jdbc:mysql://localhost:3306/[aFunctionalService.name.toLowerCase()/]
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+[/if]
   cloud:
     config:
       enabled: false
-
+[if (aFunctionalService.discoveredBy <> null)]
 eureka:
   client:
     serviceUrl:
@@ -25,7 +39,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
-
+[/if]
 server:
   port: [aFunctionalService.port/]
   compression:
@@ -37,7 +51,7 @@ logging:
     org:
       springframework:
         security: DEBUG
-
+[if (aFunctionalService.securedBy <> null)]
 security:
   oauth2:
     resource:
@@ -46,5 +60,6 @@ security:
           -----BEGIN PUBLIC KEY-----
           [aFunctionalService.securedBy.eGet('publicKey')/]
           -----END PUBLIC KEY-----
+[/if]
 [/file]
 [/template]

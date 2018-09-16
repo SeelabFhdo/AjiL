@@ -6,9 +6,17 @@
 [template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT, aEntitie : ajiMLT::EntityT)]
 [file (aFunctionalService.name + '/src/main/java/de/fh/entity/' + aEntitie.name + '.java', false, 'UTF-8')]
 package de.fh.entity;
-
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
 import org.springframework.data.annotation.Id;
+[/if]
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MySQL'))]
+import javax.persistence.Id;
+import javax.persistence.Entity;
+[/if]
 
+[if (aFunctionalService.database.toString().equalsIgnoreCase('MySQL'))]
+@Entity
+[/if]
 public class [aEntitie.name.toUpperFirst()/] {
 
   @Id

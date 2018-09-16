@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="ajiML.generator.java.springcloud">
-    <property name="ECLIPSE_HOME" value="../../../Ubuntu/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../Ubuntu/workspace"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../Applications/EclipseModeling.app/Contents/Eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="ajiML.generator.java.springcloud.libraryclasspath">

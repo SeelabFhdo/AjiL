@@ -33,7 +33,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
   }
 
  [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
-  @PutMapping("/")
+  @PutMapping("/[aCreate.name/]/")
   public String create[aCreate.subject.name.toUpperFirst()/](
 		[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
@@ -75,7 +75,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
  [/for]
 [for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
-  @GetMapping("/{Id}")
+  @GetMapping("/[aRead.name/]/{Id}")
   public String read[aRead.subject.name.toUpperFirst()/](@PathVariable String Id) {
     Gson gson = new Gson();
 	[aRead.subject.name.toUpperFirst()/] [aRead.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aRead.subject.name.toUpperFirst()/](Integer.parseInt(Id));
@@ -87,7 +87,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
 [/for]
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
-  @PostMapping("/")
+  @PostMapping("/[aUpdate.name/]/")
   public String update[aUpdate.subject.name.toUpperFirst()/](
 	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
 	  			@RequestParam String [aString.name.toLowerFirst()/],
@@ -129,7 +129,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
 [/for]
 [for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
-  @DeleteMapping("/{Id}")
+  @DeleteMapping("/[aDelete.name/]/{Id}")
   public String delete[aDelete.subject.name.toUpperFirst()/](@PathVariable String Id) {
   	[aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aDelete.subject.name.toUpperFirst()/](Integer.parseInt(Id));
 	Gson gson = new Gson();
