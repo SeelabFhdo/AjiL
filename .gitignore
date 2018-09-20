@@ -102,3 +102,9 @@ ajiML\.generator\.springcloud/build\.properties
 ajiML.generator.jav
 
 ajiML.generator.java.springcloud/gen/*
+
+#exceptions
+!ajiML.updateSite/artifacts.jar
+!ajiML.updateSite/content.jat
+!ajiML.updateSite/features/
+!ajiML.updateSite/plugins/
