@@ -15,12 +15,11 @@
 
 [for (aServiceInterFace : ajiMLT::ServiceInterfaceT | aFunctionalService.eAllContents(ajiMLT::ServiceInterfaceT))]
 [importController(aFunctionalService, aServiceInterFace)/]
-[importDao(aFunctionalService, aServiceInterFace)/]
 [importService(aFunctionalService, aServiceInterFace)/]
 [/for]
 
-[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
-[importEntitie(aFunctionalService, aEntitie)/]
+[for (aEntitiy : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[importEntitie(aFunctionalService, aEntitiy)/]
 [/for]
 
 [importApplicaitonYml(aFunctionalService)/]

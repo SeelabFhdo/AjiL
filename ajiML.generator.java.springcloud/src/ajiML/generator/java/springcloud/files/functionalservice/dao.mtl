@@ -3,7 +3,7 @@
  * The documentation of the module generate.
  */]
 [module dao('http://www.fh-dortmund.de/idial/ajiML/tech')]
-[template public importDao(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
+[template public importDao(aFunctionalService : ajiMLT::FunctionalServiceT, aEntity : ajiMLT::EntityT)]
 [for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
 [file (aFunctionalService.name+ '/src/main/java/de/fh/dao/' + aEntity.name.toUpperFirst() + 'Dao.java', false, 'UTF-8')]
 [if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
