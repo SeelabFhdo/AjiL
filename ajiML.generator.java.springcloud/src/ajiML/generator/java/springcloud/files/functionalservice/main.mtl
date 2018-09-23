@@ -23,10 +23,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 [if (aFunctionalService.discoveredBy <> null)]
 @EnableEurekaClient
 [/if]
-public class [aFunctionalService.name/]Application {
+public class [aFunctionalService.name.toUpperFirst()/]Application {
 
   public static void main(String[ '[' /][ ']' /] args) {
-    SpringApplication.run([aFunctionalService.name/]Application.class, args);
+    SpringApplication.run([aFunctionalService.name.toUpperFirst()/]Application.class, args);
   }
 }
 

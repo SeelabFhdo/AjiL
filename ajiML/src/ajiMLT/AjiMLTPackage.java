@@ -869,15 +869,6 @@ public interface AjiMLTPackage extends EPackage {
 	int USER_MANAGEMENT_SERVICE_T__SECURED_BY = AjiMLPackage.USER_MANAGEMENT_SERVICE__SECURED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Provides Users</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_MANAGEMENT_SERVICE_T__PROVIDES_USERS = AjiMLPackage.USER_MANAGEMENT_SERVICE__PROVIDES_USERS;
-
-	/**
 	 * The feature id for the '<em><b>Generator</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

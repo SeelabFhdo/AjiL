@@ -2,7 +2,7 @@
 <feature
       id="ajiML.editorFeature"
       label="AjiML Editor"
-      version="1.0.0.qualifier"
+      version="1.0.1.qualifier"
       provider-name="University of Applied Sciences and Arts Dortmund">
 
    <description url="https://github.com/SeelabFhdo/AjiL">

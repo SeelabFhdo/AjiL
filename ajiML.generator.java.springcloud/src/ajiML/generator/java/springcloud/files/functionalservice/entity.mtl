@@ -4,7 +4,7 @@
  */]
 [module entity('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importEntitie(aFunctionalService : ajiMLT::FunctionalServiceT, aEntitie : ajiMLT::EntityT)]
-[file (aFunctionalService.name + '/src/main/java/de/fh/entity/' + aEntitie.name + '.java', false, 'UTF-8')]
+[file (aFunctionalService.name + '/src/main/java/de/fh/entity/' + aEntitie.name.toUpperFirst() + '.java', false, 'UTF-8')]
 package de.fh.entity;
 [if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
 import org.springframework.data.annotation.Id;

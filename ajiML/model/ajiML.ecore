@@ -78,10 +78,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="securedServices" upperBound="-1"
         eType="#//Microservice" eOpposite="#//Microservice/securedBy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserManagementService" eSuperTypes="#//InfrastructureService">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providesUsers" upperBound="-1"
-        eType="#//Microservice"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserManagementService" eSuperTypes="#//InfrastructureService"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueInterfaceName"/>

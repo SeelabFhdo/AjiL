@@ -918,22 +918,13 @@ public interface AjiMLPackage extends EPackage {
 	int USER_MANAGEMENT_SERVICE__SECURED_BY = INFRASTRUCTURE_SERVICE__SECURED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Provides Users</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_MANAGEMENT_SERVICE__PROVIDES_USERS = INFRASTRUCTURE_SERVICE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>User Management Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_MANAGEMENT_SERVICE_FEATURE_COUNT = INFRASTRUCTURE_SERVICE_FEATURE_COUNT + 1;
+	int USER_MANAGEMENT_SERVICE_FEATURE_COUNT = INFRASTRUCTURE_SERVICE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>User Management Service</em>' class.
@@ -2299,17 +2290,6 @@ public interface AjiMLPackage extends EPackage {
 	EClass getUserManagementService();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ajiML.UserManagementService#getProvidesUsers <em>Provides Users</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Provides Users</em>'.
-	 * @see ajiML.UserManagementService#getProvidesUsers()
-	 * @see #getUserManagementService()
-	 * @generated
-	 */
-	EReference getUserManagementService_ProvidesUsers();
-
-	/**
 	 * Returns the meta object for class '{@link ajiML.ServiceInterface <em>Service Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3150,14 +3130,6 @@ public interface AjiMLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass USER_MANAGEMENT_SERVICE = eINSTANCE.getUserManagementService();
-
-		/**
-		 * The meta object literal for the '<em><b>Provides Users</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USER_MANAGEMENT_SERVICE__PROVIDES_USERS = eINSTANCE.getUserManagementService_ProvidesUsers();
 
 		/**
 		 * The meta object literal for the '{@link ajiML.impl.ServiceInterfaceImpl <em>Service Interface</em>}' class.

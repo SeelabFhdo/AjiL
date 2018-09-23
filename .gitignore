@@ -104,6 +104,7 @@ ajiML.generator.jav
 ajiML.generator.java.springcloud/gen/*
 
 #exceptions
+!ajiML.releases/updateSite/*.zip
 !ajiML.updateSite/*.jar
 !ajiML.updateSite/features/*.jar
 !ajiML.updateSite/plugins/*.jar

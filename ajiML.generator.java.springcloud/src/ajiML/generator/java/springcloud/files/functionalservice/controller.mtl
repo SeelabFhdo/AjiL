@@ -51,7 +51,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		  	 		@RequestParam float [aFloat.name.toLowerFirst()/],
 		[/for]
 					 @RequestParam String Id) {
-    [aCreate.subject.name/] [aCreate.subject.name.toLowerFirst()/] = new [aCreate.subject.name.toUpperFirst()/](
+    [aCreate.subject.name.toUpperFirst()/] [aCreate.subject.name.toLowerFirst()/] = new [aCreate.subject.name.toUpperFirst()/](
 		[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
 		  			[aString.name.toLowerFirst()/],
 		[/for]

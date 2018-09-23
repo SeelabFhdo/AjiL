@@ -108,9 +108,7 @@
     <genClasses ecoreClass="ajiML.ecore#//SecurityService">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//SecurityService/securedServices"/>
     </genClasses>
-    <genClasses ecoreClass="ajiML.ecore#//UserManagementService">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ajiML.ecore#//UserManagementService/providesUsers"/>
-    </genClasses>
+    <genClasses ecoreClass="ajiML.ecore#//UserManagementService"/>
     <genClasses ecoreClass="ajiML.ecore#//ServiceInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//ServiceInterface/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ajiML.ecore#//ServiceInterface/version"/>

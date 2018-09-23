@@ -601,15 +601,6 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUserManagementService_ProvidesUsers() {
-		return (EReference)userManagementServiceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getServiceInterface() {
 		return serviceInterfaceEClass;
 	}
@@ -1164,7 +1155,6 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		createEReference(securityServiceEClass, SECURITY_SERVICE__SECURED_SERVICES);
 
 		userManagementServiceEClass = createEClass(USER_MANAGEMENT_SERVICE);
-		createEReference(userManagementServiceEClass, USER_MANAGEMENT_SERVICE__PROVIDES_USERS);
 
 		serviceInterfaceEClass = createEClass(SERVICE_INTERFACE);
 		createEAttribute(serviceInterfaceEClass, SERVICE_INTERFACE__NAME);
@@ -1335,7 +1325,6 @@ public class AjiMLPackageImpl extends EPackageImpl implements AjiMLPackage {
 		initEReference(getSecurityService_SecuredServices(), this.getMicroservice(), this.getMicroservice_SecuredBy(), "securedServices", null, 0, -1, SecurityService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userManagementServiceEClass, UserManagementService.class, "UserManagementService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUserManagementService_ProvidesUsers(), this.getMicroservice(), null, "providesUsers", null, 0, -1, UserManagementService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceInterfaceEClass, ServiceInterface.class, "ServiceInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getServiceInterface_Name(), ecorePackage.getEString(), "name", "myInterface", 1, 1, ServiceInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

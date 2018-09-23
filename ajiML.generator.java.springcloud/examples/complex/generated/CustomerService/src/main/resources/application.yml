@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: customerservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerservice
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  cloud:
+    config:
+      enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+server:
+  port: 8083
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+security:
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgrS/8BOdDPptVdulZ58bgt8EChTvTH0M6XvSMDMArVVBqD1AZXsS3ULLxdZxRGGHDNrnjk5MP+SkKcIl0ND+ilJdSy5VV+nuOSl6lo1jrXI4ZRNi6rYrjIgVMP4SEt3qAGRvFQvSmHkcnBptu6YDdKVjeHy3GddOO+BvOX8bHNZ7dH6qlHi0AQNj3MNKaCMDVUt5rBQNoEZzv/wfbTcvv8q2bvThHR6M6kMzOBtLwAseIRqe6kOQ6Z5LRzHX/n0GdKsvrDFL8ynJrK9VmnYYE4DkVoT/sLG0XgfnLzLsnS6R/8XZb/gas0+TguiPOcnh7q/tzEDfT6MbGMXKlmmSXQIDAQAB
+          -----END PUBLIC KEY-----

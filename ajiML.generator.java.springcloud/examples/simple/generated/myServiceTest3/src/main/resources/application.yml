@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: myservicetest3
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: myservicetest3
+  cloud:
+    config:
+      enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+server:
+  port: 8890
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
