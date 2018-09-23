@@ -8,6 +8,7 @@ import ajiMLT.AjiMLTPackage;
 import ajiMLT.DiscoveryServiceT;
 import ajiMLT.EGenerator;
 
+import ajiMLT.GeneratorDescriptor;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -152,10 +153,42 @@ public class DiscoveryServiceTImpl extends DiscoveryServiceImpl implements Disco
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == GeneratorDescriptor.class) {
+			switch (derivedFeatureID) {
+				case AjiMLTPackage.DISCOVERY_SERVICE_T__GENERATOR: return AjiMLTPackage.GENERATOR_DESCRIPTOR__GENERATOR;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == GeneratorDescriptor.class) {
+			switch (baseFeatureID) {
+				case AjiMLTPackage.GENERATOR_DESCRIPTOR__GENERATOR: return AjiMLTPackage.DISCOVERY_SERVICE_T__GENERATOR;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (generator: ");
 		result.append(generator);
 		result.append(')');

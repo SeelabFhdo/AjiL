@@ -4,6 +4,7 @@ package ajiML.impl;
 
 import ajiML.Ability;
 import ajiML.AjiMLPackage;
+import ajiML.Entity;
 import ajiML.ServiceInterface;
 
 import java.lang.String;
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link ajiML.impl.AbilityImpl#getName <em>Name</em>}</li>
  *   <li>{@link ajiML.impl.AbilityImpl#getOwner <em>Owner</em>}</li>
+ *   <li>{@link ajiML.impl.AbilityImpl#getSubject <em>Subject</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +53,16 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSubject() <em>Subject</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected Entity subject;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,6 +112,44 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 	public ServiceInterface getOwner() {
 		if (eContainerFeatureID() != AjiMLPackage.ABILITY__OWNER) return null;
 		return (ServiceInterface)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity getSubject() {
+		if (subject != null && subject.eIsProxy()) {
+			InternalEObject oldSubject = (InternalEObject)subject;
+			subject = (Entity)eResolveProxy(oldSubject);
+			if (subject != oldSubject) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AjiMLPackage.ABILITY__SUBJECT, oldSubject, subject));
+			}
+		}
+		return subject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetSubject() {
+		return subject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSubject(Entity newSubject) {
+		Entity oldSubject = subject;
+		subject = newSubject;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AjiMLPackage.ABILITY__SUBJECT, oldSubject, subject));
 	}
 
 	/**
@@ -158,6 +208,9 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 				return getName();
 			case AjiMLPackage.ABILITY__OWNER:
 				return getOwner();
+			case AjiMLPackage.ABILITY__SUBJECT:
+				if (resolve) return getSubject();
+				return basicGetSubject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,6 +226,9 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 			case AjiMLPackage.ABILITY__NAME:
 				setName((String)newValue);
 				return;
+			case AjiMLPackage.ABILITY__SUBJECT:
+				setSubject((Entity)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -187,6 +243,9 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case AjiMLPackage.ABILITY__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AjiMLPackage.ABILITY__SUBJECT:
+				setSubject((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -204,6 +263,8 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case AjiMLPackage.ABILITY__OWNER:
 				return getOwner() != null;
+			case AjiMLPackage.ABILITY__SUBJECT:
+				return subject != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,7 +278,7 @@ public abstract class AbilityImpl extends MinimalEObjectImpl.Container implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

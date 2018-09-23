@@ -4,22 +4,29 @@
  */]
 [module main('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importMain(aFunctionalService : ajiMLT::FunctionalServiceT)]
-[file (aFunctionalService.name+ '/src/main/java/de/fh/' + aFunctionalService.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
+[file (aFunctionalService.name + '/src/main/java/de/fh/' + aFunctionalService.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
 package de.fh;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+[if (aFunctionalService.discoveredBy <> null)]
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+[/if]
+[if (aFunctionalService.securedBy <> null)]
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-
+[/if]
 
 @SpringBootApplication
+[if (aFunctionalService.securedBy <> null)]
 @EnableResourceServer
+[/if]
+[if (aFunctionalService.discoveredBy <> null)]
 @EnableEurekaClient
-public class CustomerServiceApplication {
+[/if]
+public class [aFunctionalService.name.toUpperFirst()/]Application {
 
   public static void main(String[ '[' /][ ']' /] args) {
-    SpringApplication.run(CustomerServiceApplication.class, args);
+    SpringApplication.run([aFunctionalService.name.toUpperFirst()/]Application.class, args);
   }
 }
 

@@ -78,10 +78,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="securedServices" upperBound="-1"
         eType="#//Microservice" eOpposite="#//Microservice/securedBy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserManagementService" eSuperTypes="#//InfrastructureService">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providesUsers" upperBound="-1"
-        eType="#//Microservice"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserManagementService" eSuperTypes="#//InfrastructureService"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="uniqueInterfaceName"/>
@@ -112,9 +109,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity" containment="true" eOpposite="#//Entity/domainModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//FunctionalService"
-        changeable="false" eOpposite="#//FunctionalService/domain"/>
+        eOpposite="#//FunctionalService/domain"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//ComplexDataType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="sealedDomainInheritance uniqueEntityName"/>
     </eAnnotations>
@@ -126,7 +123,7 @@
         defaultValueLiteral="myEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//PrimitiveDataType" containment="true"/>
+        eType="#//DataType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
         eType="#//Relation" containment="true" eOpposite="#//Relation/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainModel" lowerBound="1"
@@ -143,7 +140,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="myRelation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Entity" changeable="false" eOpposite="#//Entity/relations"/>
+        eType="#//Entity" eOpposite="#//Entity/relations"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Entity"/>
   </eClassifiers>
@@ -157,29 +154,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//ServiceInterface"
         changeable="false" transient="true" eOpposite="#//ServiceInterface/abilities"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Ability">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
         eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MultiRead" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Ability">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Ability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//Ability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiRead" eSuperTypes="#//Ability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Ability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Ability"/>
   <eClassifiers xsi:type="ecore:EClass" name="Custom" eSuperTypes="#//Ability"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" abstract="true" eSuperTypes="#//DataType"/>
   <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//PrimitiveDataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="myInteger"/>
@@ -209,5 +193,19 @@
         defaultValueLiteral="myChar"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" defaultValueLiteral="Char"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexDataType" abstract="true" eSuperTypes="#//DataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Date" eSuperTypes="#//PrimitiveDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="myInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" defaultValueLiteral="Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Long" eSuperTypes="#//PrimitiveDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="myInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" defaultValueLiteral="Integer"/>
   </eClassifiers>
 </ecore:EPackage>

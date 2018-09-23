@@ -220,6 +220,24 @@ public interface AjiMLTFactory extends EFactory {
 	CharT createCharT();
 
 	/**
+	 * Returns a new object of class '<em>Long T</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Long T</em>'.
+	 * @generated
+	 */
+	LongT createLongT();
+
+	/**
+	 * Returns a new object of class '<em>Date T</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date T</em>'.
+	 * @generated
+	 */
+	DateT createDateT();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

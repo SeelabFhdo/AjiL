@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ajiMLT:SystemT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ajiMLT="http://www.fh-dortmund.de/idial/ajiML/tech">
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="myServiceTest2" port="8891" discoveredBy="//@services.2" serviceDependencies="//@services.1/@providedInterfaces.0">
+    <domain xsi:type="ajiMLT:DataModelT">
+      <entities xsi:type="ajiMLT:EntityT">
+        <attributes xsi:type="ajiMLT:IntegerT" name="age"/>
+        <attributes xsi:type="ajiMLT:BooleanT" name="booleanAttribute"/>
+      </entities>
+      <entities xsi:type="ajiMLT:EntityT" name="mySecondEntity" type="PROXY"/>
+    </domain>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT">
+      <abilities xsi:type="ajiMLT:CreateT" name="createE1Ability" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="readE1Ability" subject="//@services.0/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:ReadT" name="readE2Ability" subject="//@services.0/@domain/@entities.1"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="myServiceTest3" port="8890" discoveredBy="//@services.2">
+    <domain xsi:type="ajiMLT:DataModelT">
+      <entities xsi:type="ajiMLT:EntityT"/>
+    </domain>
+    <providedInterfaces xsi:type="ajiMLT:ServiceInterfaceT" name="mySecondInterface">
+      <abilities xsi:type="ajiMLT:ReadT" name="readAbility" subject="//@services.1/@domain/@entities.0"/>
+      <abilities xsi:type="ajiMLT:CreateT" name="createAbility" subject="//@services.1/@domain/@entities.0"/>
+    </providedInterfaces>
+  </services>
+  <services xsi:type="ajiMLT:DiscoveryServiceT" name="myDiscoveryService" discoveredServices="//@services.1 //@services.0 //@services.3"/>
+  <services xsi:type="ajiMLT:FunctionalServiceT" port="8899" discoveredBy="//@services.2"/>
+</ajiMLT:SystemT>

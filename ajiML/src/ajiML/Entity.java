@@ -6,8 +6,6 @@ import java.lang.String;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Entity</b></em>'.
@@ -29,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL sealedDomainInheritance='if self.parent.oclIsUndefined() then true else if self.parent.domainModel = self.domainModel then true else false \nendif endif' uniqueEntityName='Entity.allInstances()-&gt;forAll(ent : Entity | ent &lt;&gt; self implies ent.name &lt;&gt; self.name)'"
  * @generated
  */
-public interface Entity extends EObject {
+public interface Entity extends ComplexDataType {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>"myEntity"</code>.
@@ -85,7 +83,7 @@ public interface Entity extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link ajiML.PrimitiveDataType}.
+	 * The list contents are of type {@link ajiML.DataType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
@@ -97,7 +95,7 @@ public interface Entity extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrimitiveDataType> getAttributes();
+	EList<DataType> getAttributes();
 
 	/**
 	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.

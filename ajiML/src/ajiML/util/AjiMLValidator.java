@@ -6,10 +6,13 @@ import ajiML.APIService;
 import ajiML.Ability;
 import ajiML.AjiMLPackage;
 import ajiML.Char;
+import ajiML.ComplexDataType;
 import ajiML.ConfigurationService;
 import ajiML.Create;
 import ajiML.Custom;
 import ajiML.DataModel;
+import ajiML.DataType;
+import ajiML.Date;
 import ajiML.Delete;
 import ajiML.DiscoveryService;
 import ajiML.EMultiplicity;
@@ -163,6 +166,14 @@ public class AjiMLValidator extends EObjectValidator {
 				return validateString((ajiML.String)value, diagnostics, context);
 			case AjiMLPackage.CHAR:
 				return validateChar((Char)value, diagnostics, context);
+			case AjiMLPackage.COMPLEX_DATA_TYPE:
+				return validateComplexDataType((ComplexDataType)value, diagnostics, context);
+			case AjiMLPackage.DATA_TYPE:
+				return validateDataType((DataType)value, diagnostics, context);
+			case AjiMLPackage.DATE:
+				return validateDate((Date)value, diagnostics, context);
+			case AjiMLPackage.LONG:
+				return validateLong((ajiML.Long)value, diagnostics, context);
 			case AjiMLPackage.EMULTIPLICITY:
 				return validateEMultiplicity((EMultiplicity)value, diagnostics, context);
 			default:
@@ -903,6 +914,42 @@ public class AjiMLValidator extends EObjectValidator {
 	 */
 	public boolean validateChar(Char char_, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(char_, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateComplexDataType(ComplexDataType complexDataType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(complexDataType, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDataType(DataType dataType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dataType, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDate(Date date, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(date, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLong(ajiML.Long long_, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(long_, diagnostics, context);
 	}
 
 	/**

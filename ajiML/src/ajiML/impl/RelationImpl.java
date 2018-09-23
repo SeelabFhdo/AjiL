@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,6 +118,37 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetSource(Entity newSource, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSource, AjiMLPackage.RELATION__SOURCE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSource(Entity newSource) {
+		if (newSource != eInternalContainer() || (eContainerFeatureID() != AjiMLPackage.RELATION__SOURCE && newSource != null)) {
+			if (EcoreUtil.isAncestor(this, newSource))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject)newSource).eInverseAdd(this, AjiMLPackage.ENTITY__RELATIONS, Entity.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AjiMLPackage.RELATION__SOURCE, newSource, newSource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Entity getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -161,7 +193,7 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 			case AjiMLPackage.RELATION__SOURCE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return eBasicSetContainer(otherEnd, AjiMLPackage.RELATION__SOURCE, msgs);
+				return basicSetSource((Entity)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -175,7 +207,7 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AjiMLPackage.RELATION__SOURCE:
-				return eBasicSetContainer(null, AjiMLPackage.RELATION__SOURCE, msgs);
+				return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -224,6 +256,9 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 			case AjiMLPackage.RELATION__NAME:
 				setName((String)newValue);
 				return;
+			case AjiMLPackage.RELATION__SOURCE:
+				setSource((Entity)newValue);
+				return;
 			case AjiMLPackage.RELATION__TARGET:
 				setTarget((Entity)newValue);
 				return;
@@ -241,6 +276,9 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 		switch (featureID) {
 			case AjiMLPackage.RELATION__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case AjiMLPackage.RELATION__SOURCE:
+				setSource((Entity)null);
 				return;
 			case AjiMLPackage.RELATION__TARGET:
 				setTarget((Entity)null);
@@ -276,7 +314,7 @@ public class RelationImpl extends MultiplicityImpl implements Relation {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

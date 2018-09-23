@@ -65,9 +65,9 @@ public class UserManagementServiceTItemProvider extends UserManagementServiceIte
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UserManagementServiceT_generator_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserManagementServiceT_generator_feature", "_UI_UserManagementServiceT_type"),
-				 AjiMLTPackage.Literals.USER_MANAGEMENT_SERVICE_T__GENERATOR,
+				 getString("_UI_GeneratorDescriptor_generator_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeneratorDescriptor_generator_feature", "_UI_GeneratorDescriptor_type"),
+				 AjiMLTPackage.Literals.GENERATOR_DESCRIPTOR__GENERATOR,
 				 true,
 				 false,
 				 false,

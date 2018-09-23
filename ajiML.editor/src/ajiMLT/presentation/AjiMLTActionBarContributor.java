@@ -163,6 +163,7 @@ public class AjiMLTActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("ajimlt-settings"));
 		toolBarManager.add(new Separator("ajimlt-additions"));
 	}

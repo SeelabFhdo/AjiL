@@ -26,17 +26,17 @@ public enum ECommunicationMechanism implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RES_TFUL_HTTP(0, "RESTfulHTTP", "RESTfulHTTP"),
+	RES_TFUL_HTTP(1, "RESTfulHTTP", "RESTfulHTTP"),
 
 	/**
-	 * The '<em><b>Publish Subscribe</b></em>' literal object.
+	 * The '<em><b>MQTT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PUBLISH_SUBSCRIBE_VALUE
+	 * @see #MQTT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PUBLISH_SUBSCRIBE(1, "PublishSubscribe", "PublishSubscribe");
+	MQTT(0, "MQTT", "MQTT");
 
 	/**
 	 * The '<em><b>RES Tful HTTP</b></em>' literal value.
@@ -51,22 +51,22 @@ public enum ECommunicationMechanism implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RES_TFUL_HTTP_VALUE = 0;
+	public static final int RES_TFUL_HTTP_VALUE = 1;
 
 	/**
-	 * The '<em><b>Publish Subscribe</b></em>' literal value.
+	 * The '<em><b>MQTT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Publish Subscribe</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>MQTT</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PUBLISH_SUBSCRIBE
-	 * @model name="PublishSubscribe"
+	 * @see #MQTT
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PUBLISH_SUBSCRIBE_VALUE = 1;
+	public static final int MQTT_VALUE = 0;
 
 	/**
 	 * An array of all the '<em><b>ECommunication Mechanism</b></em>' enumerators.
@@ -77,7 +77,7 @@ public enum ECommunicationMechanism implements Enumerator {
 	private static final ECommunicationMechanism[] VALUES_ARRAY =
 		new ECommunicationMechanism[] {
 			RES_TFUL_HTTP,
-			PUBLISH_SUBSCRIBE,
+			MQTT,
 		};
 
 	/**
@@ -135,7 +135,7 @@ public enum ECommunicationMechanism implements Enumerator {
 	public static ECommunicationMechanism get(int value) {
 		switch (value) {
 			case RES_TFUL_HTTP_VALUE: return RES_TFUL_HTTP;
-			case PUBLISH_SUBSCRIBE_VALUE: return PUBLISH_SUBSCRIBE;
+			case MQTT_VALUE: return MQTT;
 		}
 		return null;
 	}

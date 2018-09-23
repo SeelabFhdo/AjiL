@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -138,6 +139,37 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetOwner(FunctionalService newOwner, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwner, AjiMLPackage.DATA_MODEL__OWNER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwner(FunctionalService newOwner) {
+		if (newOwner != eInternalContainer() || (eContainerFeatureID() != AjiMLPackage.DATA_MODEL__OWNER && newOwner != null)) {
+			if (EcoreUtil.isAncestor(this, newOwner))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwner != null)
+				msgs = ((InternalEObject)newOwner).eInverseAdd(this, AjiMLPackage.FUNCTIONAL_SERVICE__DOMAIN, FunctionalService.class, msgs);
+			msgs = basicSetOwner(newOwner, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AjiMLPackage.DATA_MODEL__OWNER, newOwner, newOwner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -147,7 +179,7 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 			case AjiMLPackage.DATA_MODEL__OWNER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return eBasicSetContainer(otherEnd, AjiMLPackage.DATA_MODEL__OWNER, msgs);
+				return basicSetOwner((FunctionalService)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -163,7 +195,7 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 			case AjiMLPackage.DATA_MODEL__ENTITIES:
 				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
 			case AjiMLPackage.DATA_MODEL__OWNER:
-				return eBasicSetContainer(null, AjiMLPackage.DATA_MODEL__OWNER, msgs);
+				return basicSetOwner(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,6 +248,9 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
+			case AjiMLPackage.DATA_MODEL__OWNER:
+				setOwner((FunctionalService)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -233,6 +268,9 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 				return;
 			case AjiMLPackage.DATA_MODEL__ENTITIES:
 				getEntities().clear();
+				return;
+			case AjiMLPackage.DATA_MODEL__OWNER:
+				setOwner((FunctionalService)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -265,7 +303,7 @@ public class DataModelImpl extends MinimalEObjectImpl.Container implements DataM
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

@@ -1,0 +1,49 @@
+debug: true
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  aop:
+    proxy-target-class: true
+  application:
+    name: APIGateway
+  cloud:
+    config:
+      enabled: false
+
+security:
+  user:
+    password: none
+  oauth2:
+    resource:
+      jwt:
+        key-value: |
+         -----BEGIN PUBLIC KEY-----
+         MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgrS/8BOdDPptVdulZ58bgt8EChTvTH0M6XvSMDMArVVBqD1AZXsS3ULLxdZxRGGHDNrnjk5MP+SkKcIl0ND+ilJdSy5VV+nuOSl6lo1jrXI4ZRNi6rYrjIgVMP4SEt3qAGRvFQvSmHkcnBptu6YDdKVjeHy3GddOO+BvOX8bHNZ7dH6qlHi0AQNj3MNKaCMDVUt5rBQNoEZzv/wfbTcvv8q2bvThHR6M6kMzOBtLwAseIRqe6kOQ6Z5LRzHX/n0GdKsvrDFL8ynJrK9VmnYYE4DkVoT/sLG0XgfnLzLsnS6R/8XZb/gas0+TguiPOcnh7q/tzEDfT6MbGMXKlmmSXQIDAQAB
+         -----END PUBLIC KEY-----
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: client
+      clientSecret: password
+
+zuul:
+  routes:
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health

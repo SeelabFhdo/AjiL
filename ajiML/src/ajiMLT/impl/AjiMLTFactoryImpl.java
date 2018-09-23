@@ -79,6 +79,8 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 			case AjiMLTPackage.FLOAT_T: return createFloatT();
 			case AjiMLTPackage.STRING_T: return createStringT();
 			case AjiMLTPackage.CHAR_T: return createCharT();
+			case AjiMLTPackage.LONG_T: return createLongT();
+			case AjiMLTPackage.DATE_T: return createDateT();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -98,8 +100,12 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 				return createECommunicationMechanismFromString(eDataType, initialValue);
 			case AjiMLTPackage.EDATABASE:
 				return createEDatabaseFromString(eDataType, initialValue);
+			case AjiMLTPackage.ECONTAINER:
+				return createEContainerFromString(eDataType, initialValue);
 			case AjiMLTPackage.EMULTIPLICITY:
 				return createEMultiplicityFromString(eDataType, initialValue);
+			case AjiMLTPackage.EENTITY_SPECIFIER:
+				return createEEntitySpecifierFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -119,8 +125,12 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 				return convertECommunicationMechanismToString(eDataType, instanceValue);
 			case AjiMLTPackage.EDATABASE:
 				return convertEDatabaseToString(eDataType, instanceValue);
+			case AjiMLTPackage.ECONTAINER:
+				return convertEContainerToString(eDataType, instanceValue);
 			case AjiMLTPackage.EMULTIPLICITY:
 				return convertEMultiplicityToString(eDataType, instanceValue);
+			case AjiMLTPackage.EENTITY_SPECIFIER:
+				return convertEEntitySpecifierToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -351,6 +361,26 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LongT createLongT() {
+		LongTImpl longT = new LongTImpl();
+		return longT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DateT createDateT() {
+		DateTImpl dateT = new DateTImpl();
+		return dateT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EGenerator createEGeneratorFromString(EDataType eDataType, String initialValue) {
 		EGenerator result = EGenerator.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -411,6 +441,26 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EContainer createEContainerFromString(EDataType eDataType, String initialValue) {
+		EContainer result = EContainer.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEContainerToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EMultiplicity createEMultiplicityFromString(EDataType eDataType, String initialValue) {
 		EMultiplicity result = EMultiplicity.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -423,6 +473,26 @@ public class AjiMLTFactoryImpl extends EFactoryImpl implements AjiMLTFactory {
 	 * @generated
 	 */
 	public String convertEMultiplicityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEntitySpecifier createEEntitySpecifierFromString(EDataType eDataType, String initialValue) {
+		EEntitySpecifier result = EEntitySpecifier.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEEntitySpecifierToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -7,22 +7,31 @@
 [file (aFunctionalService.name+ '/src/main/java/de/fh/service/' + aServiceInterface.name.toUpperFirst() + 'Service.java', false, 'UTF-8')]
 package de.fh.service;
 
-import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.entity.*;
 
 public interface [aServiceInterface.name.toUpperFirst()/]Service {
 
-  public [aServiceInterface.name.toUpperFirst()/] create([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
-  public [aServiceInterface.name.toUpperFirst()/] read(int Id);
-  public [aServiceInterface.name.toUpperFirst()/] update ([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
-  public void delete([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]);
+[for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
+  public [aCreate.subject.name.toUpperFirst()/] create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toUpperFirst()/] [aCreate.subject.name.toLowerFirst()/]);
+[/for]
+[for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
+  public [aUpdate.subject.name.toUpperFirst()/] update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toUpperFirst()/] [aUpdate.subject.name.toLowerFirst()/]);
+[/for]
+[for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
+  public [aRead.subject.name.toUpperFirst()/] read[aRead.subject.name.toUpperFirst()/](int Id);
+[/for]
+[for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
+  public void delete[aDelete.subject.name.toUpperFirst()/]([aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/]);
+[/for]
+
 }
 [/file]
 
 [file (aFunctionalService.name+ '/src/main/java/de/fh/service/impl/' + aServiceInterface.name.toUpperFirst() + 'ServiceImpl.java', false, 'UTF-8')]
 package de.fh.service.impl;
 
-import de.fh.dao.[aServiceInterface.name.toUpperFirst()/]Dao;
-import de.fh.entitie.[aServiceInterface.name.toUpperFirst()/];
+import de.fh.dao.*;
+import de.fh.entity.*;
 import de.fh.service.[aServiceInterface.name.toUpperFirst()/]Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,36 +39,53 @@ import org.springframework.stereotype.Service;
 @Service
 public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aServiceInterface.name.toUpperFirst()/]Service {
 
-  private [aServiceInterface.name.toUpperFirst()/]Dao [aServiceInterface.name.toLowerFirst()/]Dao;
+[for (aEntityService : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
+		[if (aEntityService.name.equalsIgnoreCase(aRead.subject.name))]
+  private [aEntityService.name.toUpperFirst()/]Dao [aEntityService.name.toLowerFirst()/]Dao;
+		[/if]
+	[/for]
+[/for]
 
+  public [aServiceInterface.name.toUpperFirst()/]ServiceImpl() {
+  }
+
+[for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
   @Autowired
-  public [aServiceInterface.name.toUpperFirst()/]ServiceImpl([aServiceInterface.name.toUpperFirst()/]Dao [aServiceInterface.name.toLowerFirst()/]Dao) {
-    this.[aServiceInterface.name.toLowerFirst()/]Dao = [aServiceInterface.name.toLowerFirst()/]Dao;
+  public void set[aEntity.name.toUpperFirst()/]Dao([aEntity.name.toUpperFirst()/]Dao [aEntity.name.toLowerFirst()/]Dao) {
+    this.[aEntity.name.toLowerFirst()/]Dao = [aEntity.name.toLowerFirst()/]Dao;
   }
+[/for]
 
+[for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
   @Override
-  public [aServiceInterface.name.toUpperFirst()/] create([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
-    [aServiceInterface.name.toLowerFirst()/]Dao.save([aServiceInterface.name.toLowerFirst()/]);
-    return [aServiceInterface.name.toLowerFirst()/]Dao.findById([aServiceInterface.name.toLowerFirst()/].getId());
+  public [aCreate.subject.name.toUpperFirst()/] create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toUpperFirst()/] [aCreate.subject.name.toLowerFirst()/]) {
+    [aCreate.subject.name.toLowerFirst()/]Dao.save([aCreate.subject.name.toLowerFirst()/]);
+    return [aCreate.subject.name.toLowerFirst()/]Dao.findById([aCreate.subject.name.toLowerFirst()/].getId());
   }
+[/for]
 
+[for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
   @Override
-  public [aServiceInterface.name.toUpperFirst()/] read(int Id) {
-    return [aServiceInterface.name.toLowerFirst()/]Dao.findById(Id);
+  public [aRead.subject.name.toUpperFirst()/] read[aRead.subject.name.toUpperFirst()/](int Id) {
+    return [aRead.subject.name.toLowerFirst()/]Dao.findById(Id);
   }
+[/for]
 
+[for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
   @Override
-  public [aServiceInterface.name.toUpperFirst()/] update([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
-    [aServiceInterface.name.toLowerFirst()/]Dao.save([aServiceInterface.name.toLowerFirst()/]);
-    return [aServiceInterface.name.toLowerFirst()/]Dao.findById([aServiceInterface.name.toLowerFirst()/].getId());
+  public [aUpdate.subject.name.toUpperFirst()/] update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toUpperFirst()/] [aUpdate.subject.name.toLowerFirst()/]) {
+    [aUpdate.subject.name.toLowerFirst()/]Dao.save(locationE);
+    return [aUpdate.subject.name.toLowerFirst()/]Dao.findById(locationE.getId());
   }
+[/for]
 
+[for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
   @Override
-  public void delete([aServiceInterface.name.toUpperFirst()/] [aServiceInterface.name.toLowerFirst()/]) {
-    [aServiceInterface.name.toLowerFirst()/]Dao.delete([aServiceInterface.name.toLowerFirst()/]);
+  public void delete[aDelete.subject.name.toUpperFirst()/]([aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/]) {
+    [aDelete.subject.name.toLowerFirst()/]Dao.delete([aDelete.subject.name.toLowerFirst()/]);
   }
-
-
+[/for]
 }
 [/file]
 [/template]

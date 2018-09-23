@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link ajiML.Ability#getName <em>Name</em>}</li>
  *   <li>{@link ajiML.Ability#getOwner <em>Owner</em>}</li>
+ *   <li>{@link ajiML.Ability#getSubject <em>Subject</em>}</li>
  * </ul>
  *
  * @see ajiML.AjiMLPackage#getAbility()
@@ -68,5 +69,31 @@ public interface Ability extends EObject {
 	 * @generated
 	 */
 	ServiceInterface getOwner();
+
+	/**
+	 * Returns the value of the '<em><b>Subject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Subject</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subject</em>' reference.
+	 * @see #setSubject(Entity)
+	 * @see ajiML.AjiMLPackage#getAbility_Subject()
+	 * @model required="true"
+	 * @generated
+	 */
+	Entity getSubject();
+
+	/**
+	 * Sets the value of the '{@link ajiML.Ability#getSubject <em>Subject</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subject</em>' reference.
+	 * @see #getSubject()
+	 * @generated
+	 */
+	void setSubject(Entity value);
 
 } // Ability

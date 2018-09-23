@@ -5,10 +5,12 @@ package ajiMLT.impl;
 import ajiML.impl.FunctionalServiceImpl;
 
 import ajiMLT.AjiMLTPackage;
+import ajiMLT.EContainer;
 import ajiMLT.EDatabase;
 import ajiMLT.EGenerator;
 import ajiMLT.FunctionalServiceT;
 
+import ajiMLT.GeneratorDescriptor;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -79,7 +81,7 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Boolean CONTAINERIZED_EDEFAULT = Boolean.FALSE;
+	protected static final EContainer CONTAINERIZED_EDEFAULT = EContainer.NONE;
 
 	/**
 	 * The cached value of the '{@link #getContainerized() <em>Containerized</em>}' attribute.
@@ -89,7 +91,7 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 	 * @generated
 	 * @ordered
 	 */
-	protected Boolean containerized = CONTAINERIZED_EDEFAULT;
+	protected EContainer containerized = CONTAINERIZED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,7 +159,7 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean getContainerized() {
+	public EContainer getContainerized() {
 		return containerized;
 	}
 
@@ -166,9 +168,9 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContainerized(Boolean newContainerized) {
-		Boolean oldContainerized = containerized;
-		containerized = newContainerized;
+	public void setContainerized(EContainer newContainerized) {
+		EContainer oldContainerized = containerized;
+		containerized = newContainerized == null ? CONTAINERIZED_EDEFAULT : newContainerized;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AjiMLTPackage.FUNCTIONAL_SERVICE_T__CONTAINERIZED, oldContainerized, containerized));
 	}
@@ -206,7 +208,7 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 				setDatabase((EDatabase)newValue);
 				return;
 			case AjiMLTPackage.FUNCTIONAL_SERVICE_T__CONTAINERIZED:
-				setContainerized((Boolean)newValue);
+				setContainerized((EContainer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -246,9 +248,41 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 			case AjiMLTPackage.FUNCTIONAL_SERVICE_T__DATABASE:
 				return database != DATABASE_EDEFAULT;
 			case AjiMLTPackage.FUNCTIONAL_SERVICE_T__CONTAINERIZED:
-				return CONTAINERIZED_EDEFAULT == null ? containerized != null : !CONTAINERIZED_EDEFAULT.equals(containerized);
+				return containerized != CONTAINERIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == GeneratorDescriptor.class) {
+			switch (derivedFeatureID) {
+				case AjiMLTPackage.FUNCTIONAL_SERVICE_T__GENERATOR: return AjiMLTPackage.GENERATOR_DESCRIPTOR__GENERATOR;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == GeneratorDescriptor.class) {
+			switch (baseFeatureID) {
+				case AjiMLTPackage.GENERATOR_DESCRIPTOR__GENERATOR: return AjiMLTPackage.FUNCTIONAL_SERVICE_T__GENERATOR;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -260,7 +294,7 @@ public class FunctionalServiceTImpl extends FunctionalServiceImpl implements Fun
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (generator: ");
 		result.append(generator);
 		result.append(", database: ");

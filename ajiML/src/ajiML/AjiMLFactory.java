@@ -220,6 +220,24 @@ public interface AjiMLFactory extends EFactory {
 	Char createChar();
 
 	/**
+	 * Returns a new object of class '<em>Date</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date</em>'.
+	 * @generated
+	 */
+	Date createDate();
+
+	/**
+	 * Returns a new object of class '<em>Long</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Long</em>'.
+	 * @generated
+	 */
+	Long createLong();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
