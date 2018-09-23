@@ -50,11 +50,15 @@ public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aSe
   public [aServiceInterface.name.toUpperFirst()/]ServiceImpl() {
   }
 
-[for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[for (aEntityService : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+	[for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
+		[if (aEntityService.name.equalsIgnoreCase(aRead.subject.name))]
   @Autowired
-  public void set[aEntity.name.toUpperFirst()/]Dao([aEntity.name.toUpperFirst()/]Dao [aEntity.name.toLowerFirst()/]Dao) {
-    this.[aEntity.name.toLowerFirst()/]Dao = [aEntity.name.toLowerFirst()/]Dao;
+  public void set[aEntityService.name.toUpperFirst()/]Dao([aEntityService.name.toUpperFirst()/]Dao [aEntityService.name.toLowerFirst()/]Dao) {
+    this.[aEntityService.name.toLowerFirst()/]Dao = [aEntityService.name.toLowerFirst()/]Dao;
   }
+		[/if]
+	[/for]
 [/for]
 
 [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
@@ -75,8 +79,8 @@ public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aSe
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
   @Override
   public [aUpdate.subject.name.toUpperFirst()/] update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toUpperFirst()/] [aUpdate.subject.name.toLowerFirst()/]) {
-    [aUpdate.subject.name.toLowerFirst()/]Dao.save(locationE);
-    return [aUpdate.subject.name.toLowerFirst()/]Dao.findById(locationE.getId());
+    [aUpdate.subject.name.toLowerFirst()/]Dao.save([aUpdate.subject.name.toLowerFirst()/]);
+    return [aUpdate.subject.name.toLowerFirst()/]Dao.findById([aUpdate.subject.name.toLowerFirst()/].getId());
   }
 [/for]
 
