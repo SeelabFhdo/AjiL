@@ -116,7 +116,13 @@
 		    <version>8.0.12</version>
 		</dependency>
 [/if]
+[if (aFunctionalService.serviceDependencies <> null)]
+	 	<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
     </dependencies>
+[/if]
 
     <dependencyManagement>
         <dependencies>

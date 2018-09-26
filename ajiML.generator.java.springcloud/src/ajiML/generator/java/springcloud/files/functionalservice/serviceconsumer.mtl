@@ -4,22 +4,22 @@
  */]
 [module serviceconsumer('http://www.fh-dortmund.de/idial/ajiML/tech')]
 [template public importServiceConsumer(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
-[file (aFunctionalService.name+ '/src/main/java/de/fh/service/consumer/' + aFunctionalService.name.toUpperFirst() + 'ServiceConsumer.java', false, 'UTF-8')]
+[file (aFunctionalService.name+ '/src/main/java/de/fh/service/consumer/' + aServiceInterface.name.toUpperFirst() + 'ServiceConsumer.java', false, 'UTF-8')]
 package de.fh.service.consumer;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("[aServiceInterface.owner.name/])
-public interface LocationInterfaceFeignClient {
+@FeignClient("[aServiceInterface.owner.name/]")
+public interface [aServiceInterface.name.toUpperFirst()+ 'ServiceConsumer'/] {
 [for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
     @RequestMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aRead.name.toLowerCase()/]/{Id}")
-    String readLocation(@PathVariable("Id") String Id);
+    String [aRead.name.toLowerFirst()/](@PathVariable("Id") String Id);
 
 [/for]
 [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
 	@PutMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aCreate.name.toLowerCase()/]")
-    String createLocation(
+    String [aCreate.name.toLowerFirst()/](
 	[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
   		@RequestParam("[aString.name.toLowerFirst()/]") String [aString.name.toLowerFirst()/],
 	[/for]
@@ -40,7 +40,7 @@ public interface LocationInterfaceFeignClient {
 [/for]
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
 	@PostMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aUpdate.name.toLowerCase()/]")
-    String updateLocation(
+    String [aUpdate.name.toLowerFirst()/](
 	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
   		@RequestParam("[aString.name.toLowerFirst()/]") String [aString.name.toLowerFirst()/],
 	[/for]
@@ -61,7 +61,7 @@ public interface LocationInterfaceFeignClient {
 [/for]
 [for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
     @RequestMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aDelete.name.toLowerCase()/]/{Id}")
-    String readLocation(@PathVariable("Id") String Id);
+    String [aDelete.name.toLowerFirst()/](@PathVariable("Id") String Id);
 
 [/for]
 }
