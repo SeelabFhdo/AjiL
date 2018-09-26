@@ -1,23 +1,14 @@
-[comment encoding = UTF-8 /]
-[**
- * The documentation of the module generate.
- */]
-[module discovery('http://www.fh-dortmund.de/idial/ajiML/tech')]
-
-
-[template public importDiscovery(aDiscoveryServiceT: ajiMLT::DiscoveryServiceT)]
-[file (aDiscoveryServiceT.name + '/pom.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>system</groupId>
-  <artifactId>[aDiscoveryServiceT.name.toLower()/]</artifactId>
+  <artifactId>eureka</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>[aDiscoveryServiceT.name.toLower()/]</name>
+  <name>eureka</name>
   <description>Service Discovery for Microservice Applications</description>
 
    <parent>
@@ -73,47 +64,3 @@
     </plugins>
   </build>
 </project>
-[/file]
-
-[file (aDiscoveryServiceT.name + '/src/main/java/de/fhdortmund/server/eureka/' + aDiscoveryServiceT.name.toUpperFirst() + 'Application.java', false, 'UTF-8')]
-package de.fhdortmund.server.eureka;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-
-@SpringBootApplication
-@EnableEurekaServer
-public class [aDiscoveryServiceT.name.toUpperFirst()/]Application {
-
-  public static void main(String[ '[' /][ ']' /] args) {
-    SpringApplication.run([aDiscoveryServiceT.name.toUpperFirst()/]Application.class, args);
-  }
-}
-[/file]
-
-[file (aDiscoveryServiceT.name +'/src/main/resources/application.yml', false, 'UTF-8')]
-server:
-  port: [aDiscoveryServiceT.port/]
-  compression:
-    enabled: true
-    mime-types: application/json,application/xml,text/html,text/xml,text/plain
-
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:[aDiscoveryServiceT.port/]/eureka/  
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-
-spring:
-  application:
-    name: [aDiscoveryServiceT.name.toUpperFirst()/]Service
-
-[/file]
-
-[/template]
-
-
