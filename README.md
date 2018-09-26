@@ -51,7 +51,7 @@ Additionally, in recent development, we have extended the abstract syntax with a
 
 The concrete syntax is split into two different types of diagrams. Figure 2 shows the Overview Diagram which puts emphasis on the services and their communication structure with each other. Each service is depicted as a cube and colored according to his type, e.g. functional services are blue, discovery services are green. Interfaces are depicted as aligned circles to a service. At this stage, services are only seen as black boxes without further information about their inner parts.
 
-![AjiML Service Diagram](pictures/metamodel.png "Figure 3: AjiMLT Service Diagram")
+![AjiML Service Diagram](pictures/detail.png "Figure 3: AjiMLT Service Diagram")
 
 *Figure 3: AjiMLT Service Diagram*
 
