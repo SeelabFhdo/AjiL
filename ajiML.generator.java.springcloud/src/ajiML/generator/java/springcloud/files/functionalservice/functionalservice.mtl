@@ -10,6 +10,7 @@
 [import ajiML::generator::java::springcloud::files::functionalservice::main]
 [import ajiML::generator::java::springcloud::files::functionalservice::service]
 [import ajiML::generator::java::springcloud::files::functionalservice::applicationYml]
+[import ajiML::generator::java::springcloud::files::functionalservice::serviceconsumer]
 
 [template public importFunctionalService(aFunctionalService : ajiMLT::FunctionalServiceT)]
 
@@ -29,7 +30,11 @@
 [importApplicaitonYml(aFunctionalService)/]
 [importMain(aFunctionalService)/]
 
-
+[if (aFunctionalService.serviceDependencies <> null)]
+	[for (aServiceInterFace : ajiMLT::ServiceInterfaceT | aFunctionalService.serviceDependencies.owner.eAllContents(ajiMLT::ServiceInterfaceT))]
+		[importServiceConsumer(aFunctionalService, aServiceInterFace)/]
+	[/for]
+[/if]
 
 [file (aFunctionalService.name + '/pom.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
