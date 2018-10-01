@@ -33,7 +33,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
   }
 
  [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
-  @PutMapping("/[aCreate.name.toLowerCase()/]/")
+  @PutMapping("/[aCreate.name.toLowerCase()/]")
   public String create[aCreate.subject.name.toUpperFirst()/](
 		[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
@@ -87,7 +87,7 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
 [/for]
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
-  @PostMapping("/[aUpdate.name.toLowerCase()/]/")
+  @PostMapping("/[aUpdate.name.toLowerCase()/]")
   public String update[aUpdate.subject.name.toUpperFirst()/](
 	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
 	  			@RequestParam String [aString.name.toLowerFirst()/],

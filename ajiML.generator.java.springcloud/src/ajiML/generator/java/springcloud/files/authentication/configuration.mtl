@@ -76,8 +76,8 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
   public JwtAccessTokenConverter jwtAccessTokenConverter() {
     JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
     KeyPair keyPair = new KeyStoreKeyFactory(
-        new PathResource("/Users/phil/Dropbox/Dev/AjiML/Cert/keystore.jks"),
-        "password".toCharArray()).getKeyPair("selfsigned");
+        new PathResource("[aSecurityService.certificatePath/]"),
+        "[aSecurityService.certificatePassword/]".toCharArray()).getKeyPair("[aSecurityService.KeyPairName/]");
     converter.setKeyPair(keyPair);
     return converter;
   }

@@ -22,6 +22,6 @@
       <abilities xsi:type="ajiMLT:CreateT" name="CreateMoon" subject="//@services.0/@domain/@entities.1"/>
     </providedInterfaces>
   </services>
-  <services xsi:type="ajiMLT:DiscoveryServiceT" name="Eureka" port="8761" discoveredServices="//@services.0"/>
-  <services xsi:type="ajiMLT:FunctionalServiceT" name="CargoService" port="8082" serviceDependencies="//@services.0/@providedInterfaces.0"/>
+  <services xsi:type="ajiMLT:DiscoveryServiceT" name="Eureka" port="8761" discoveredServices="//@services.0 //@services.2"/>
+  <services xsi:type="ajiMLT:FunctionalServiceT" name="CargoService" port="8082" discoveredBy="//@services.1" serviceDependencies="//@services.0/@providedInterfaces.0"/>
 </ajiMLT:SystemT>

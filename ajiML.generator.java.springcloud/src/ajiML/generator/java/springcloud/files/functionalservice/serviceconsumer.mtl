@@ -60,10 +60,12 @@ public interface [aServiceInterface.name.toUpperFirst()+ 'ServiceConsumer'/] {
 
 [/for]
 [for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
-    @RequestMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aDelete.name.toLowerCase()/]/{Id}")
+    @DeleteMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aDelete.name.toLowerCase()/]/{Id}")
     String [aDelete.name.toLowerFirst()/](@PathVariable("Id") String Id);
 
 [/for]
 }
 [/file]
+
+
 [/template]

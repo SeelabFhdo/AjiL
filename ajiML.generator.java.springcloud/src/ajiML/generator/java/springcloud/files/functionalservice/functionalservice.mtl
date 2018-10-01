@@ -11,6 +11,7 @@
 [import ajiML::generator::java::springcloud::files::functionalservice::service]
 [import ajiML::generator::java::springcloud::files::functionalservice::applicationYml]
 [import ajiML::generator::java::springcloud::files::functionalservice::serviceconsumer]
+[import ajiML::generator::java::springcloud::files::functionalservice::config]
 
 [template public importFunctionalService(aFunctionalService : ajiMLT::FunctionalServiceT)]
 
@@ -34,6 +35,12 @@
 	[for (aServiceInterFace : ajiMLT::ServiceInterfaceT | aFunctionalService.serviceDependencies.owner.eAllContents(ajiMLT::ServiceInterfaceT))]
 		[importServiceConsumer(aFunctionalService, aServiceInterFace)/]
 	[/for]
+[/if]
+
+[if (aFunctionalService.securedBy <> null)]
+	[if(aFunctionalService.discoveredBy <> null)]
+		[importCondig(aFunctionalService)/]
+	[/if]
 [/if]
 
 [file (aFunctionalService.name + '/pom.xml', false, 'UTF-8')]
@@ -121,9 +128,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
-    </dependencies>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 [/if]
-
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
