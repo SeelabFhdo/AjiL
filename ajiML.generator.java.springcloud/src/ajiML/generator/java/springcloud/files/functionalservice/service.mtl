@@ -64,8 +64,7 @@ public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aSe
 [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
   @Override
   public [aCreate.subject.name.toUpperFirst()/] create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toUpperFirst()/] [aCreate.subject.name.toLowerFirst()/]) {
-    [aCreate.subject.name.toLowerFirst()/]Dao.save([aCreate.subject.name.toLowerFirst()/]);
-    return [aCreate.subject.name.toLowerFirst()/]Dao.findById([aCreate.subject.name.toLowerFirst()/].getId());
+    return [aCreate.subject.name.toLowerFirst()/]Dao.save([aCreate.subject.name.toLowerFirst()/]);
   }
 [/for]
 
@@ -79,8 +78,7 @@ public class [aServiceInterface.name.toUpperFirst()/]ServiceImpl implements [aSe
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
   @Override
   public [aUpdate.subject.name.toUpperFirst()/] update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toUpperFirst()/] [aUpdate.subject.name.toLowerFirst()/]) {
-    [aUpdate.subject.name.toLowerFirst()/]Dao.save([aUpdate.subject.name.toLowerFirst()/]);
-    return [aUpdate.subject.name.toLowerFirst()/]Dao.findById([aUpdate.subject.name.toLowerFirst()/].getId());
+    return [aUpdate.subject.name.toLowerFirst()/]Dao.save([aUpdate.subject.name.toLowerFirst()/]);
   }
 [/for]
 
