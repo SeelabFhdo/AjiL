@@ -24,7 +24,7 @@ import java.lang.String;
 public interface Long extends PrimitiveDataType {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"myInteger"</code>.
+	 * The default value is <code>"myLong"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -34,7 +34,7 @@ public interface Long extends PrimitiveDataType {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see ajiML.AjiMLPackage#getLong_Name()
-	 * @model default="myInteger" required="true"
+	 * @model default="myLong" required="true"
 	 * @generated
 	 */
 	String getName();
@@ -51,7 +51,7 @@ public interface Long extends PrimitiveDataType {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"Integer"</code>.
+	 * The default value is <code>"Long"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -60,7 +60,7 @@ public interface Long extends PrimitiveDataType {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see ajiML.AjiMLPackage#getLong_Type()
-	 * @model default="Integer" required="true" changeable="false"
+	 * @model default="Long" required="true" changeable="false"
 	 * @generated
 	 */
 	String getType();
