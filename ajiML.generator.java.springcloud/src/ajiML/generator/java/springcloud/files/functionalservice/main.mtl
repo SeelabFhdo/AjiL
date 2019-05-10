@@ -15,6 +15,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 [if (aFunctionalService.securedBy <> null)]
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 [/if]
+[if (aFunctionalService.serviceDependencies <> null)]
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+[/if]
 
 @SpringBootApplication
 [if (aFunctionalService.securedBy <> null)]
@@ -22,6 +25,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 [/if]
 [if (aFunctionalService.discoveredBy <> null)]
 @EnableEurekaClient
+[/if]
+[if (aFunctionalService.serviceDependencies <> null)]
+@EnableFeignClients
 [/if]
 public class [aFunctionalService.name.toUpperFirst()/]Application {
 

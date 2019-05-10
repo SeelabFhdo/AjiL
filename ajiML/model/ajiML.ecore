@@ -198,14 +198,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Date" eSuperTypes="#//PrimitiveDataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="myInteger"/>
+        defaultValueLiteral="myDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" defaultValueLiteral="Integer"/>
+        changeable="false" defaultValueLiteral="Date"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Long" eSuperTypes="#//PrimitiveDataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="myInteger"/>
+        defaultValueLiteral="myLong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        changeable="false" defaultValueLiteral="Integer"/>
+        changeable="false" defaultValueLiteral="Long"/>
   </eClassifiers>
 </ecore:EPackage>

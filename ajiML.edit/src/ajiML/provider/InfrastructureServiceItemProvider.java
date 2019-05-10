@@ -58,7 +58,7 @@ public class InfrastructureServiceItemProvider extends MicroserviceItemProvider 
 			getString("_UI_InfrastructureService_type") :
 			getString("_UI_InfrastructureService_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

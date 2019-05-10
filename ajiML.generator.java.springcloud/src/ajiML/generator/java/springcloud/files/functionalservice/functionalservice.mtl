@@ -10,23 +10,38 @@
 [import ajiML::generator::java::springcloud::files::functionalservice::main]
 [import ajiML::generator::java::springcloud::files::functionalservice::service]
 [import ajiML::generator::java::springcloud::files::functionalservice::applicationYml]
+[import ajiML::generator::java::springcloud::files::functionalservice::serviceconsumer]
+[import ajiML::generator::java::springcloud::files::functionalservice::config]
 
 [template public importFunctionalService(aFunctionalService : ajiMLT::FunctionalServiceT)]
 
+[for (aEntity : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[importDao(aFunctionalService, aEntity)/]
+[/for]
+
 [for (aServiceInterFace : ajiMLT::ServiceInterfaceT | aFunctionalService.eAllContents(ajiMLT::ServiceInterfaceT))]
 [importController(aFunctionalService, aServiceInterFace)/]
-[importDao(aFunctionalService, aServiceInterFace)/]
 [importService(aFunctionalService, aServiceInterFace)/]
 [/for]
 
-[for (aEntitie : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
-[importEntitie(aFunctionalService, aEntitie)/]
+[for (aEntitiy : ajiMLT::EntityT | aFunctionalService.eAllContents(ajiMLT::EntityT))]
+[importEntitie(aFunctionalService, aEntitiy)/]
 [/for]
 
 [importApplicaitonYml(aFunctionalService)/]
 [importMain(aFunctionalService)/]
 
+[if (aFunctionalService.serviceDependencies <> null)]
+	[for (aServiceInterFace : ajiMLT::ServiceInterfaceT | aFunctionalService.serviceDependencies.owner.eAllContents(ajiMLT::ServiceInterfaceT))]
+		[importServiceConsumer(aFunctionalService, aServiceInterFace)/]
+	[/for]
+[/if]
 
+[if (aFunctionalService.securedBy <> null)]
+	[if(aFunctionalService.discoveredBy <> null)]
+		[importCondig(aFunctionalService)/]
+	[/if]
+[/if]
 
 [file (aFunctionalService.name + '/pom.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,11 +101,6 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 [/if]
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.2</version>
-        </dependency>
 [if (aFunctionalService.database.toString().equalsIgnoreCase('MongoDB'))]
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -108,8 +118,17 @@
 		    <version>8.0.12</version>
 		</dependency>
 [/if]
+[if (aFunctionalService.serviceDependencies <> null)]
+	 	<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+[/if]
     </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>

@@ -24,7 +24,7 @@ import java.lang.String;
 public interface Date extends PrimitiveDataType {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"myInteger"</code>.
+	 * The default value is <code>"myDate"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -34,7 +34,7 @@ public interface Date extends PrimitiveDataType {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see ajiML.AjiMLPackage#getDate_Name()
-	 * @model default="myInteger" required="true"
+	 * @model default="myDate" required="true"
 	 * @generated
 	 */
 	String getName();
@@ -51,7 +51,7 @@ public interface Date extends PrimitiveDataType {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"Integer"</code>.
+	 * The default value is <code>"Date"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -60,7 +60,7 @@ public interface Date extends PrimitiveDataType {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see ajiML.AjiMLPackage#getDate_Type()
-	 * @model default="Integer" required="true" changeable="false"
+	 * @model default="Date" required="true" changeable="false"
 	 * @generated
 	 */
 	String getType();

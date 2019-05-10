@@ -4,6 +4,7 @@ package ajiML.impl;
 
 import ajiML.AjiMLPackage;
 import ajiML.UserManagementService;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

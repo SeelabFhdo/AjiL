@@ -73,7 +73,7 @@ public class MultiReadTItemProvider extends MultiReadItemProvider {
 			getString("_UI_MultiReadT_type") :
 			getString("_UI_MultiReadT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

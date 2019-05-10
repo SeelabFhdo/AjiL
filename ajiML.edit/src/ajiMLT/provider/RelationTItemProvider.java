@@ -73,7 +73,7 @@ public class RelationTItemProvider extends RelationItemProvider {
 			getString("_UI_RelationT_type") :
 			getString("_UI_RelationT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

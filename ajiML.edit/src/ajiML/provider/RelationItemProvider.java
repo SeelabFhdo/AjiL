@@ -119,7 +119,7 @@ public class RelationItemProvider extends MultiplicityItemProvider {
 			getString("_UI_Relation_type") :
 			getString("_UI_Relation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

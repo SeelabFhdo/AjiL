@@ -94,7 +94,7 @@ public class APIServiceItemProvider extends InfrastructureServiceItemProvider {
 			getString("_UI_APIService_type") :
 			getString("_UI_APIService_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

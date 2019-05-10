@@ -73,7 +73,7 @@ public class ReadTItemProvider extends ReadItemProvider {
 			getString("_UI_ReadT_type") :
 			getString("_UI_ReadT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

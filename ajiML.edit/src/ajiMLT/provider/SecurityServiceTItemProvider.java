@@ -192,7 +192,7 @@ public class SecurityServiceTItemProvider extends SecurityServiceItemProvider {
 			getString("_UI_SecurityServiceT_type") :
 			getString("_UI_SecurityServiceT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

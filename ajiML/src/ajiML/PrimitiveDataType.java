@@ -2,6 +2,7 @@
  */
 package ajiML;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Primitive Data Type</b></em>'.

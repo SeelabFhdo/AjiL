@@ -52,7 +52,7 @@ public enum EEntitySpecifier implements Enumerator {
 	 * The '<em><b>NORMAL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Normal</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>NORMAL</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -67,7 +67,7 @@ public enum EEntitySpecifier implements Enumerator {
 	 * The '<em><b>PROXY</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Proxy</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>PROXY</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

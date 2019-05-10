@@ -69,7 +69,7 @@ public class CustomItemProvider extends AbilityItemProvider {
 			getString("_UI_Custom_type") :
 			getString("_UI_Custom_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

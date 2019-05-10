@@ -2,6 +2,7 @@
  */
 package ajiML;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>User Management Service</b></em>'.
@@ -13,5 +14,4 @@ package ajiML;
  * @generated
  */
 public interface UserManagementService extends InfrastructureService {
-
 } // UserManagementService

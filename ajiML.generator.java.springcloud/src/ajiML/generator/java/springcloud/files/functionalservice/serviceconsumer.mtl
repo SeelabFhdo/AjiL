@@ -1,0 +1,71 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module serviceconsumer('http://www.fh-dortmund.de/idial/ajiML/tech')]
+[template public importServiceConsumer(aFunctionalService : ajiMLT::FunctionalServiceT, aServiceInterface : ajiMLT::ServiceInterfaceT)]
+[file (aFunctionalService.name+ '/src/main/java/de/fh/service/consumer/' + aServiceInterface.name.toUpperFirst() + 'ServiceConsumer.java', false, 'UTF-8')]
+package de.fh.service.consumer;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.*;
+
+@FeignClient("[aServiceInterface.owner.name/]")
+public interface [aServiceInterface.name.toUpperFirst()+ 'ServiceConsumer'/] {
+[for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
+    @RequestMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aRead.name.toLowerCase()/]/{Id}")
+    String [aRead.name.toLowerFirst()/](@PathVariable("Id") String Id);
+
+[/for]
+[for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
+	@PutMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aCreate.name.toLowerCase()/]")
+    String [aCreate.name.toLowerFirst()/](
+	[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
+  		@RequestParam("[aString.name.toLowerFirst()/]") String [aString.name.toLowerFirst()/],
+	[/for]
+	[for (aInteger : ajiMLT::IntegerT | aCreate.subject.eAllContents(ajiMLT::IntegerT))]
+  		@RequestParam("[aInteger.name.toLowerFirst()/]") int [aInteger.name.toLowerFirst()/],
+	[/for]
+	[for (aBoolean : ajiMLT::BooleanT | aCreate.subject.eAllContents(ajiMLT::BooleanT))]
+  		@RequestParam("[aBoolean.name.toLowerFirst()/]") boolean [aBoolean.name.toLowerFirst()/],
+	[/for]
+	[for (aChar : ajiMLT::CharT | aCreate.subject.eAllContents(ajiMLT::CharT))]
+  		@RequestParam("[aChar.name.toLowerFirst()/]") String [aChar.name.toLowerFirst()/],
+	[/for]
+	[for (aFloat : ajiMLT::FloatT | aCreate.subject.eAllContents(ajiMLT::FloatT))]
+  		@RequestParam("[aFloat.name.toLowerFirst()/]") float [aFloat.name.toLowerFirst()/],
+	[/for]
+        @RequestParam("Id") String Id);
+
+[/for]
+[for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
+	@PostMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aUpdate.name.toLowerCase()/]")
+    String [aUpdate.name.toLowerFirst()/](
+	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
+  		@RequestParam("[aString.name.toLowerFirst()/]") String [aString.name.toLowerFirst()/],
+	[/for]
+	[for (aInteger : ajiMLT::IntegerT | aUpdate.subject.eAllContents(ajiMLT::IntegerT))]
+  		@RequestParam("[aInteger.name.toLowerFirst()/]") int [aInteger.name.toLowerFirst()/],
+	[/for]
+	[for (aBoolean : ajiMLT::BooleanT | aUpdate.subject.eAllContents(ajiMLT::BooleanT))]
+  		@RequestParam("[aBoolean.name.toLowerFirst()/]") boolean [aBoolean.name.toLowerFirst()/],
+	[/for]
+	[for (aChar : ajiMLT::CharT | aUpdate.subject.eAllContents(ajiMLT::CharT))]
+  		@RequestParam("[aChar.name.toLowerFirst()/]") String [aChar.name.toLowerFirst()/],
+	[/for]
+	[for (aFloat : ajiMLT::FloatT | aUpdate.subject.eAllContents(ajiMLT::FloatT))]
+  		@RequestParam("[aFloat.name.toLowerFirst()/]") float [aFloat.name.toLowerFirst()/],
+	[/for]
+        @RequestParam("Id") String Id);
+
+[/for]
+[for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
+    @DeleteMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]/[aDelete.name.toLowerCase()/]/{Id}")
+    String [aDelete.name.toLowerFirst()/](@PathVariable("Id") String Id);
+
+[/for]
+}
+[/file]
+
+
+[/template]

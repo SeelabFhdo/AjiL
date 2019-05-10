@@ -119,7 +119,7 @@ public class CharItemProvider extends PrimitiveDataTypeItemProvider {
 			getString("_UI_Char_type") :
 			getString("_UI_Char_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

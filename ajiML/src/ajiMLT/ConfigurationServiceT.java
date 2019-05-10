@@ -15,5 +15,4 @@ import ajiML.ConfigurationService;
  * @generated
  */
 public interface ConfigurationServiceT extends ConfigurationService, GeneratorDescriptor {
-
 } // ConfigurationServiceT

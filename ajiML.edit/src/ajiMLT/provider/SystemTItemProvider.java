@@ -73,7 +73,7 @@ public class SystemTItemProvider extends SystemItemProvider {
 			getString("_UI_SystemT_type") :
 			getString("_UI_SystemT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

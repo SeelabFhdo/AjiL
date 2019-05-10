@@ -73,7 +73,7 @@ public class StringTItemProvider extends StringItemProvider {
 			getString("_UI_StringT_type") :
 			getString("_UI_StringT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

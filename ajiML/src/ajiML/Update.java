@@ -14,5 +14,4 @@ package ajiML;
  * @generated
  */
 public interface Update extends Ability {
-
 } // Update

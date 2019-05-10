@@ -103,6 +103,8 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:[aDiscoveryServiceT.port/]/eureka/  
   server:
     waitTimeInMsWhenSyncEmpty: 0
 

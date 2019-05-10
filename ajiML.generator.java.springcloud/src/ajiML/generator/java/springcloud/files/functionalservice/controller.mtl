@@ -7,7 +7,6 @@
 [file (aFunctionalService.name+ '/src/main/java/de/fh/controller/' + aServiceInterface.name.toUpperFirst() + 'RestController.java', false, 'UTF-8')]
 package de.fh.controller;
 
-import com.google.gson.Gson;
 import de.fh.entity.*;
 import de.fh.service.*;
 import java.security.InvalidParameterException;
@@ -22,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/resources/[aServiceInterface.name.toLowerFirst()/]", produces = "application/json")
+@RequestMapping(value = "/resources/[aServiceInterface.name.toLowerCase()/]", produces = "application/json")
 public class [aServiceInterface.name.toUpperFirst()/]RestController {
 
   private [aServiceInterface.name.toUpperFirst()/]Service [aServiceInterface.name.toLowerFirst()/]Service;
@@ -33,14 +32,23 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
   }
 
  [for (aCreate : ajiMLT::CreateT | aServiceInterface.eAllContents(ajiMLT::CreateT))]
-  @PutMapping("/[aCreate.name/]/")
-  public String create[aCreate.subject.name.toUpperFirst()/](
+  @PutMapping("/[aCreate.name.toLowerCase()/]")
+  public [aCreate.subject.name.toUpperFirst()/] create[aCreate.subject.name.toUpperFirst()/](
 		[for (aString : ajiMLT::StringT | aCreate.subject.eAllContents(ajiMLT::StringT))]
 		  			@RequestParam String [aString.name.toLowerFirst()/],
 		[/for]
 		[for (aInteger : ajiMLT::IntegerT | aCreate.subject.eAllContents(ajiMLT::IntegerT))]
 		   			@RequestParam int [aInteger.name.toLowerFirst()/],
 		[/for]
+
+		[for (aLong : ajiMLT::LongT | aCreate.subject.eAllContents(ajiMLT::LongT))]
+		   			@RequestParam long [aLong.name.toLowerFirst()/],
+		[/for]		
+
+		[for (aDate : ajiMLT::DateT | aCreate.subject.eAllContents(ajiMLT::DateT))]
+		   			@RequestParam Date [aDate.name.toLowerFirst()/],
+		[/for]
+
 		[for (aBoolean : ajiMLT::BooleanT | aCreate.subject.eAllContents(ajiMLT::BooleanT))]
 		   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],
 		[/for]
@@ -58,6 +66,12 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aInteger : ajiMLT::IntegerT | aCreate.subject.eAllContents(ajiMLT::IntegerT))]
 		   			[aInteger.name.toLowerFirst()/],
 		[/for]
+		[for (aLong : ajiMLT::LongT | aCreate.subject.eAllContents(ajiMLT::LongT))]
+		   			[aLong.name.toLowerFirst()/],
+		[/for]
+		[for (aDate : ajiMLT::DateT | aCreate.subject.eAllContents(ajiMLT::DateT))]
+		   			[aDate.name.toLowerFirst()/],
+		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aCreate.subject.eAllContents(ajiMLT::BooleanT))]
 		   			[aBoolean.name.toLowerFirst()/],
 		[/for]
@@ -68,32 +82,35 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		  	 		[aFloat.name.toLowerFirst()/],
 		[/for]
 					  Integer.parseInt(Id));
-    [aCreate.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toLowerFirst()/]);
-    Gson gson = new Gson();
-    return gson.toJson([aCreate.subject.name.toLowerFirst()/]);
-  }
+    return [aServiceInterface.name.toLowerFirst()/]Service.create[aCreate.subject.name.toUpperFirst()/]([aCreate.subject.name.toLowerFirst()/]);
+}
 
  [/for]
 [for (aRead : ajiMLT::ReadT | aServiceInterface.eAllContents(ajiMLT::ReadT))]
-  @GetMapping("/[aRead.name/]/{Id}")
-  public String read[aRead.subject.name.toUpperFirst()/](@PathVariable String Id) {
-    Gson gson = new Gson();
+  @GetMapping("/[aRead.name.toLowerCase()/]/{Id}")
+  public [aRead.subject.name.toUpperFirst()/] read[aRead.subject.name.toUpperFirst()/](@PathVariable String Id) {
 	[aRead.subject.name.toUpperFirst()/] [aRead.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aRead.subject.name.toUpperFirst()/](Integer.parseInt(Id));
     if ([aRead.subject.name.toLowerFirst()/] == null) {
       throw new InvalidParameterException("No [aRead.subject.name.toUpperFirst()/] with Id: " + Id);
     }
-    return gson.toJson([aRead.subject.name.toLowerFirst()/]);
+    return [aRead.subject.name.toLowerFirst()/];
   }	
 
 [/for]
 [for (aUpdate : ajiMLT::UpdateT | aServiceInterface.eAllContents(ajiMLT::UpdateT))]
-  @PostMapping("/[aUpdate.name/]/")
-  public String update[aUpdate.subject.name.toUpperFirst()/](
+  @PostMapping("/[aUpdate.name.toLowerCase()/]")
+  public [aUpdate.subject.name.toUpperFirst()/] update[aUpdate.subject.name.toUpperFirst()/](
 	[for (aString : ajiMLT::StringT | aUpdate.subject.eAllContents(ajiMLT::StringT))]
 	  			@RequestParam String [aString.name.toLowerFirst()/],
 	[/for]
 	[for (aInteger : ajiMLT::IntegerT | aUpdate.subject.eAllContents(ajiMLT::IntegerT))]
 	   			@RequestParam int [aInteger.name.toLowerFirst()/],
+	[/for]
+	[for (aLong : ajiMLT::LongT | aUpdate.subject.eAllContents(ajiMLT::LongT))]
+	   			@RequestParam long [aLong.name.toLowerFirst()/],
+	[/for]
+	[for (aDate : ajiMLT::DateT | aUpdate.subject.eAllContents(ajiMLT::DateT))]
+	   			@RequestParam Date [aDate.name.toLowerFirst()/],
 	[/for]
 	[for (aBoolean : ajiMLT::BooleanT | aUpdate.subject.eAllContents(ajiMLT::BooleanT))]
 	   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],
@@ -122,20 +139,17 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 	  	 		[aFloat.name.toLowerFirst()/],
 	[/for]
 					  Integer.parseInt(Id));
-	[aUpdate.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toLowerFirst()/]);
-	Gson gson = new Gson();
-	return gson.toJson([aUpdate.subject.name.toLowerFirst()/]);
-	}
+	return [aServiceInterface.name.toLowerFirst()/]Service.update[aUpdate.subject.name.toUpperFirst()/]([aUpdate.subject.name.toLowerFirst()/]);
+}
 
 [/for]
 [for (aDelete : ajiMLT::DeleteT | aServiceInterface.eAllContents(ajiMLT::DeleteT))]
-  @DeleteMapping("/[aDelete.name/]/{Id}")
-  public String delete[aDelete.subject.name.toUpperFirst()/](@PathVariable String Id) {
+  @DeleteMapping("/[aDelete.name.toLowerCase()/]/{Id}")
+  public [aDelete.subject.name.toUpperFirst()/] delete[aDelete.subject.name.toUpperFirst()/](@PathVariable String Id) {
   	[aDelete.subject.name.toUpperFirst()/] [aDelete.subject.name.toLowerFirst()/] = [aServiceInterface.name.toLowerFirst()/]Service.read[aDelete.subject.name.toUpperFirst()/](Integer.parseInt(Id));
-	Gson gson = new Gson();
 	if ([aDelete.subject.name.toLowerFirst()/] != null) {
       [aServiceInterface.name.toLowerFirst()/]Service.delete[aDelete.subject.name.toUpperFirst()/]([aDelete.subject.name.toLowerFirst()/]);
-      return gson.toJson([aDelete.subject.name.toLowerFirst()/]);
+      return [aDelete.subject.name.toLowerFirst()/];
     } else
       throw new InvalidParameterException("No LocationInterface with Id: " + Id);
   }

@@ -118,7 +118,7 @@ public class IntegerItemProvider extends PrimitiveDataTypeItemProvider {
 			getString("_UI_Integer_type") :
 			getString("_UI_Integer_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

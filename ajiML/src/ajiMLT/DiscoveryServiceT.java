@@ -15,5 +15,4 @@ import ajiML.DiscoveryService;
  * @generated
  */
 public interface DiscoveryServiceT extends DiscoveryService, GeneratorDescriptor {
-
 } // DiscoveryServiceT

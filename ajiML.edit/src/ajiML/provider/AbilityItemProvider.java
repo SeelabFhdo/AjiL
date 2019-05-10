@@ -125,7 +125,7 @@ public class AbilityItemProvider
 			getString("_UI_Ability_type") :
 			getString("_UI_Ability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

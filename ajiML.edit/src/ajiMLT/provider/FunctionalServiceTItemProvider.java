@@ -146,7 +146,7 @@ public class FunctionalServiceTItemProvider extends FunctionalServiceItemProvide
 			getString("_UI_FunctionalServiceT_type") :
 			getString("_UI_FunctionalServiceT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

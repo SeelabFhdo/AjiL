@@ -94,7 +94,7 @@ public class ConfigurationServiceItemProvider extends InfrastructureServiceItemP
 			getString("_UI_ConfigurationService_type") :
 			getString("_UI_ConfigurationService_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

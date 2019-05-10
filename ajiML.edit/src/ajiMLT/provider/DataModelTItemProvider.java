@@ -73,7 +73,7 @@ public class DataModelTItemProvider extends DataModelItemProvider {
 			getString("_UI_DataModelT_type") :
 			getString("_UI_DataModelT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

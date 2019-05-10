@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="ajiML.generator.java.springcloud">
     <property name="ECLIPSE_HOME" value="../../../../eclipseIDE"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../eclipse-workspace-2"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../eclipse-workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="ajiML.generator.java.springcloud.libraryclasspath">
@@ -30,7 +30,6 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.14.0.v20180418-0836.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.13.0.v20180319-0813.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_21.0.0.v20170206-1425.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/ajiML_1.0.0.201809231532.jar"/>
     </path>
 
     <path id="ajiML.generator.java.springcloud.classpath">
