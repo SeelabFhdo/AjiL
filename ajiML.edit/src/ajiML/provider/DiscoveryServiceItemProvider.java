@@ -94,7 +94,7 @@ public class DiscoveryServiceItemProvider extends InfrastructureServiceItemProvi
 			getString("_UI_DiscoveryService_type") :
 			getString("_UI_DiscoveryService_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

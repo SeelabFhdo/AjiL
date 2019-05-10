@@ -73,7 +73,7 @@ public class BooleanTItemProvider extends BooleanItemProvider {
 			getString("_UI_BooleanT_type") :
 			getString("_UI_BooleanT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

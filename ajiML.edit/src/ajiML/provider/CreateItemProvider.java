@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -68,7 +69,7 @@ public class CreateItemProvider extends AbilityItemProvider {
 			getString("_UI_Create_type") :
 			getString("_UI_Create_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

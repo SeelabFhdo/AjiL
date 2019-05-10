@@ -36,7 +36,7 @@ public class DateImpl extends PrimitiveDataTypeImpl implements Date {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "myInteger";
+	protected static final String NAME_EDEFAULT = "myDate";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,7 +56,7 @@ public class DateImpl extends PrimitiveDataTypeImpl implements Date {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = "Integer";
+	protected static final String TYPE_EDEFAULT = "Date";
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

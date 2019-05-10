@@ -15,5 +15,4 @@ import ajiML.APIService;
  * @generated
  */
 public interface APIServiceT extends APIService, GeneratorDescriptor {
-
 } // APIServiceT

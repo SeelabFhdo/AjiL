@@ -118,7 +118,7 @@ public class BooleanItemProvider extends PrimitiveDataTypeItemProvider {
 			getString("_UI_Boolean_type") :
 			getString("_UI_Boolean_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

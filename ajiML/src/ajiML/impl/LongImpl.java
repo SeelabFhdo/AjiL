@@ -35,7 +35,7 @@ public class LongImpl extends PrimitiveDataTypeImpl implements ajiML.Long {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "myInteger";
+	protected static final String NAME_EDEFAULT = "myLong";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -55,7 +55,7 @@ public class LongImpl extends PrimitiveDataTypeImpl implements ajiML.Long {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = "Integer";
+	protected static final String TYPE_EDEFAULT = "Long";
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

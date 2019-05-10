@@ -131,7 +131,7 @@ public class FunctionalServiceItemProvider extends MicroserviceItemProvider {
 			getString("_UI_FunctionalService_type") :
 			getString("_UI_FunctionalService_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

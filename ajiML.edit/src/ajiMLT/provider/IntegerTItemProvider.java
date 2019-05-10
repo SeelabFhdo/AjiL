@@ -73,7 +73,7 @@ public class IntegerTItemProvider extends IntegerItemProvider {
 			getString("_UI_IntegerT_type") :
 			getString("_UI_IntegerT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

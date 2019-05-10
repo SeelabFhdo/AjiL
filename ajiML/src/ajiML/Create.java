@@ -14,5 +14,4 @@ package ajiML;
  * @generated
  */
 public interface Create extends Ability {
-
 } // Create

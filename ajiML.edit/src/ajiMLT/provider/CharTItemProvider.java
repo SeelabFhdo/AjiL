@@ -73,7 +73,7 @@ public class CharTItemProvider extends CharItemProvider {
 			getString("_UI_CharT_type") :
 			getString("_UI_CharT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

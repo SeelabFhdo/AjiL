@@ -73,7 +73,7 @@ public class UpdateTItemProvider extends UpdateItemProvider {
 			getString("_UI_UpdateT_type") :
 			getString("_UI_UpdateT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

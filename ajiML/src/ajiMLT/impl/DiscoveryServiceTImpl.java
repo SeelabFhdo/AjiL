@@ -7,8 +7,8 @@ import ajiML.impl.DiscoveryServiceImpl;
 import ajiMLT.AjiMLTPackage;
 import ajiMLT.DiscoveryServiceT;
 import ajiMLT.EGenerator;
-
 import ajiMLT.GeneratorDescriptor;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

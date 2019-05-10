@@ -40,6 +40,15 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[for (aInteger : ajiMLT::IntegerT | aCreate.subject.eAllContents(ajiMLT::IntegerT))]
 		   			@RequestParam int [aInteger.name.toLowerFirst()/],
 		[/for]
+
+		[for (aLong : ajiMLT::LongT | aCreate.subject.eAllContents(ajiMLT::LongT))]
+		   			@RequestParam long [aLong.name.toLowerFirst()/],
+		[/for]		
+
+		[for (aDate : ajiMLT::DateT | aCreate.subject.eAllContents(ajiMLT::DateT))]
+		   			@RequestParam Date [aDate.name.toLowerFirst()/],
+		[/for]
+
 		[for (aBoolean : ajiMLT::BooleanT | aCreate.subject.eAllContents(ajiMLT::BooleanT))]
 		   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],
 		[/for]
@@ -56,6 +65,12 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 		[/for]
 		[for (aInteger : ajiMLT::IntegerT | aCreate.subject.eAllContents(ajiMLT::IntegerT))]
 		   			[aInteger.name.toLowerFirst()/],
+		[/for]
+		[for (aLong : ajiMLT::LongT | aCreate.subject.eAllContents(ajiMLT::LongT))]
+		   			[aLong.name.toLowerFirst()/],
+		[/for]
+		[for (aDate : ajiMLT::DateT | aCreate.subject.eAllContents(ajiMLT::DateT))]
+		   			[aDate.name.toLowerFirst()/],
 		[/for]
 		[for (aBoolean : ajiMLT::BooleanT | aCreate.subject.eAllContents(ajiMLT::BooleanT))]
 		   			[aBoolean.name.toLowerFirst()/],
@@ -90,6 +105,12 @@ public class [aServiceInterface.name.toUpperFirst()/]RestController {
 	[/for]
 	[for (aInteger : ajiMLT::IntegerT | aUpdate.subject.eAllContents(ajiMLT::IntegerT))]
 	   			@RequestParam int [aInteger.name.toLowerFirst()/],
+	[/for]
+	[for (aLong : ajiMLT::LongT | aUpdate.subject.eAllContents(ajiMLT::LongT))]
+	   			@RequestParam long [aLong.name.toLowerFirst()/],
+	[/for]
+	[for (aDate : ajiMLT::DateT | aUpdate.subject.eAllContents(ajiMLT::DateT))]
+	   			@RequestParam Date [aDate.name.toLowerFirst()/],
 	[/for]
 	[for (aBoolean : ajiMLT::BooleanT | aUpdate.subject.eAllContents(ajiMLT::BooleanT))]
 	   			@RequestParam boolean [aBoolean.name.toLowerFirst()/],

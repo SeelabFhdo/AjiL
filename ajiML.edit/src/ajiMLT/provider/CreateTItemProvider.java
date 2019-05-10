@@ -73,7 +73,7 @@ public class CreateTItemProvider extends CreateItemProvider {
 			getString("_UI_CreateT_type") :
 			getString("_UI_CreateT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

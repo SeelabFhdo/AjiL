@@ -15,5 +15,4 @@ import ajiML.UserManagementService;
  * @generated
  */
 public interface UserManagementServiceT extends UserManagementService, GeneratorDescriptor {
-
 } // UserManagementServiceT

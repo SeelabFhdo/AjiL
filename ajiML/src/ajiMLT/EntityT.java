@@ -21,7 +21,6 @@ import ajiML.Entity;
  * @generated
  */
 public interface EntityT extends Entity {
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The default value is <code>"NORMAL"</code>.
@@ -51,4 +50,5 @@ public interface EntityT extends Entity {
 	 * @generated
 	 */
 	void setType(EEntitySpecifier value);
+
 } // EntityT

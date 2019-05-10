@@ -9,7 +9,9 @@ import ajiMLT.EEntitySpecifier;
 import ajiMLT.EntityT;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -35,6 +37,7 @@ public class EntityTImpl extends EntityImpl implements EntityT {
 	 * @ordered
 	 */
 	protected static final EEntitySpecifier TYPE_EDEFAULT = EEntitySpecifier.NORMAL;
+
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -100,7 +100,7 @@ public class UserManagementServiceTItemProvider extends UserManagementServiceIte
 			getString("_UI_UserManagementServiceT_type") :
 			getString("_UI_UserManagementServiceT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

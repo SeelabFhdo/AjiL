@@ -4,6 +4,7 @@ package ajiML.impl;
 
 import ajiML.AjiMLPackage;
 import ajiML.MultiRead;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

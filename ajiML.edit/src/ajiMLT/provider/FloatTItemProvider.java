@@ -73,7 +73,7 @@ public class FloatTItemProvider extends FloatItemProvider {
 			getString("_UI_FloatT_type") :
 			getString("_UI_FloatT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

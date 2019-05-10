@@ -9,8 +9,8 @@ import ajiMLT.EContainer;
 import ajiMLT.EDatabase;
 import ajiMLT.EGenerator;
 import ajiMLT.FunctionalServiceT;
-
 import ajiMLT.GeneratorDescriptor;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

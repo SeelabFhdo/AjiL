@@ -1844,7 +1844,6 @@ public interface AjiMLTPackage extends EPackage {
 	 */
 	int EMULTIPLICITY = 29;
 
-
 	/**
 	 * The meta object id for the '{@link ajiMLT.EEntitySpecifier <em>EEntity Specifier</em>}' enum.
 	 * <!-- begin-user-doc -->

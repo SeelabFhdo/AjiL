@@ -27,6 +27,12 @@ public class [aEntitie.name.toUpperFirst()/] {
 [for (aInteger : ajiMLT::IntegerT | aEntitie.eAllContents(ajiMLT::IntegerT))]
   private int [aInteger.name.toLowerFirst()/];
 [/for]
+[for (aLong : ajiMLT::LongT | aEntitie.eAllContents(ajiMLT::LongT))]
+  private long [aLong.name.toLowerFirst()/];
+[/for]
+[for (aDate : ajiMLT::DateT | aEntitie.eAllContents(ajiMLT::DateT))]
+  private Date [aDate.name.toLowerFirst()/];
+[/for]
 [for (aBoolean : ajiMLT::BooleanT | aEntitie.eAllContents(ajiMLT::BooleanT))]
   private boolean [aBoolean.name.toLowerFirst()/];
 [/for]
@@ -47,6 +53,12 @@ public class [aEntitie.name.toUpperFirst()/] {
 [for (aInteger : ajiMLT::IntegerT | aEntitie.eAllContents(ajiMLT::IntegerT))]
    			int [aInteger.name.toLowerFirst()/],
 [/for]
+[for (aLong : ajiMLT::LongT | aEntitie.eAllContents(ajiMLT::LongT))]
+   			long [aLong.name.toLowerFirst()/],
+[/for]
+[for (aDate : ajiMLT::DateT | aEntitie.eAllContents(ajiMLT::DateT))]
+   			Date [aDate.name.toLowerFirst()/],
+[/for]
 [for (aBoolean : ajiMLT::BooleanT | aEntitie.eAllContents(ajiMLT::BooleanT))]
    			boolean [aBoolean.name.toLowerFirst()/],
 [/for]
@@ -62,6 +74,12 @@ public class [aEntitie.name.toUpperFirst()/] {
 [/for]
 [for (aInteger : ajiMLT::IntegerT | aEntitie.eAllContents(ajiMLT::IntegerT))]
    	this.[aInteger.name.toLowerFirst()/] = [aInteger.name.toLowerFirst()/];
+[/for]
+[for (aLong : ajiMLT::LongT | aEntitie.eAllContents(ajiMLT::LongT))]
+   	this.[aLong.name.toLowerFirst()/] = [aLong.name.toLowerFirst()/];
+[/for]
+[for (aDate : ajiMLT::DateT | aEntitie.eAllContents(ajiMLT::DateT))]
+   	this.[aDate.name.toLowerFirst()/] = [aDate.name.toLowerFirst()/];
 [/for]
 [for (aBoolean : ajiMLT::BooleanT | aEntitie.eAllContents(ajiMLT::BooleanT))]
    	this.[aBoolean.name.toLowerFirst()/] = [aBoolean.name.toLowerFirst()/]; 
@@ -92,6 +110,26 @@ public class [aEntitie.name.toUpperFirst()/] {
 
   public void set[aInteger.name.toUpperFirst()/](int [aInteger.name.toLowerFirst()/]) {
     this.[aInteger.name.toLowerFirst()/] = [aInteger.name.toLowerFirst()/];
+  }
+[/for]
+
+[for (aLong : ajiMLT::LongT | aEntitie.eAllContents(ajiMLT::LongT))]
+  public long get[aLong.name.toUpperFirst()/]() {
+    return [aLong.name.toLowerFirst()/];
+  }
+
+  public void set[aLong.name.toUpperFirst()/](long [aLong.name.toLowerFirst()/]) {
+    this.[aLong.name.toLowerFirst()/] = [aLong.name.toLowerFirst()/];
+  }
+[/for]
+
+[for (aDate : ajiMLT::DateT | aEntitie.eAllContents(ajiMLT::DateT))]
+  public Date get[aDate.name.toUpperFirst()/]() {
+    return [aDate.name.toLowerFirst()/];
+  }
+
+  public void set[aDate.name.toUpperFirst()/](Date [aDate.name.toLowerFirst()/]) {
+    this.[aDate.name.toLowerFirst()/] = [aDate.name.toLowerFirst()/];
   }
 [/for]
 

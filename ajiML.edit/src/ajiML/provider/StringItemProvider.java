@@ -118,7 +118,7 @@ public class StringItemProvider extends PrimitiveDataTypeItemProvider {
 			getString("_UI_String_type") :
 			getString("_UI_String_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

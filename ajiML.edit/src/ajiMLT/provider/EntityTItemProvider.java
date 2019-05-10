@@ -100,7 +100,7 @@ public class EntityTItemProvider extends EntityItemProvider {
 			getString("_UI_EntityT_type") :
 			getString("_UI_EntityT_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

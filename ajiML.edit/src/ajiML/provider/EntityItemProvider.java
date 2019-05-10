@@ -8,11 +8,13 @@ import ajiML.AjiMLPackage;
 import ajiML.Entity;
 
 import ajiMLT.AjiMLTFactory;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -26,8 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntityItemProvider 
-	extends ComplexDataTypeItemProvider {
+public class EntityItemProvider extends ComplexDataTypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -154,7 +155,7 @@ public class EntityItemProvider
 			getString("_UI_Entity_type") :
 			getString("_UI_Entity_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
